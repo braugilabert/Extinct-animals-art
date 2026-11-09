@@ -7,6 +7,10 @@ especies que ya no están en la Tierra.
 Todo es Python más SVG: no usa APIs ni servicios de pago. Con la misma semilla
 sale siempre la misma imagen.
 
+![Ara gossei, acuarela antigua](img/ara_gossei_acuarela_antigua_s7.png)
+
+*Ejemplo: `python generate.py` (Ara gossei, paleta `acuarela_antigua`, semilla 7).*
+
 ## Instalación
 
 ```bash
