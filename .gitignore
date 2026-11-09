@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Las ilustraciones generadas no se suben (se regeneran con generate.py)
+output/*
+!output/.gitkeep
