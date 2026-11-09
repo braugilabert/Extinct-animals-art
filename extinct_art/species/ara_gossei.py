@@ -17,6 +17,11 @@ META = {
     "common_name": "Guacamayo rojo de Jamaica",
     "landscape": "jamaica",
     "status": "hipotética",
+    "description": (
+        "Interpretación artística de Ara gossei, un guacamayo descrito a partir "
+        "de relatos y una lámina posterior; su identificación con Ara tricolor "
+        "sigue siendo discutida."
+    ),
 }
 
 # Cambia aquí los colores del ave sin tocar la geometría.

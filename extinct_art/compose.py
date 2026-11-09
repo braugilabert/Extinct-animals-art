@@ -49,7 +49,7 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {CANVAS_W} {CANVAS_H}" '
         f'width="{CANVAS_W * 2}" height="{CANVAS_H * 2}" role="img">',
         f"<title>{escape(title)}</title>",
-        f"<desc>Ilustración tipo acuarela de {escape(title)}.</desc>",
+        f"<desc>{escape(meta.get('description', f'Ilustración tipo acuarela de {title}.'))}</desc>",
         "<defs>",
         f'<clipPath id="paint"><path d="{paint_edge}"/></clipPath>',
         '<radialGradient id="paperglow" cx="0.5" cy="0.45" r="0.75">'
