@@ -19,6 +19,7 @@ python generate.py ara_gossei --palette acuarela_antigua --seed 7
 - Generar SVG, PNG o ambos.
 - Quitar el rótulo, el granulado del papel o la flor de la composición.
 - Trabajar con bocetos y referencias guardándolos en `references/<identificador>/`. Sirven para estudiar anatomía, postura, color y fuentes; el dibujo final se implementa en el módulo Python de la especie.
+- Consultar las 58 fichas individuales de `references/species/`, preparadas a partir de la lista de `docs/especies-notas.md` y con enlaces para completar la investigación.
 
 El programa no convierte todavía automáticamente un texto o un boceto en una especie dibujada. La geometría debe escribirse a mano porque cada animal tiene una anatomía diferente. Sí queda preparado un flujo claro para introducir el nombre, la investigación, las fuentes, los bocetos y después traducirlos a formas SVG.
 
@@ -35,15 +36,17 @@ pip install -r requirements.txt
 
 `cairosvg` se usa para exportar a PNG. El SVG puede generarse sin esa dependencia. Si Cairo no funciona en Windows, instala Inkscape o `rsvg-convert`, o usa `--no-png`.
 
-## Crear una ilustración de una especie
+## Crear una ilustración de una especie, paso a paso
 
-### 1. Preparar la ficha de investigación
+Este es el flujo recomendado para pasar de una idea o una especie de tus notas a una lámina terminada.
 
-Copia [`docs/plantilla-especie.md`](docs/plantilla-especie.md) y guárdala como `references/<identificador>/<identificador>.md`. El identificador debe ser simple, en minúsculas y con guiones bajos: `dodo`, `pinguinus_impennis` o `capra_pyrenaica_lusitanica`.
+### Paso 1: elegir y nombrar la especie
 
-Incluye nombre científico y nombres históricos o comunes, fecha y lugar aproximados de desaparición, descripción anatómica, hábitat, grado de certeza, fuentes, decisiones visuales y advertencias para no presentar una hipótesis como un hecho.
+Escoge una especie de `docs/especies-notas.md` o añade una nueva. Define un identificador simple, en minúsculas y con guiones bajos: `dodo`, `pinguinus_impennis` o `capra_pyrenaica_lusitanica`. Ese identificador se utilizará en los nombres de archivos y en el comando de generación.
 
-Los bocetos pueden guardarse junto a la ficha:
+### Paso 2: crear la carpeta de trabajo
+
+Dentro de `references/`, crea una carpeta con el identificador:
 
 ```text
 references/
@@ -53,7 +56,13 @@ references/
     └── referencia_historica.png
 ```
 
-### 2. Crear el módulo de dibujo
+### Paso 3: completar la investigación
+
+Copia [`docs/plantilla-especie.md`](docs/plantilla-especie.md) y guárdala como `references/<identificador>/<identificador>.md`. Incluye nombre científico y nombres históricos o comunes, fecha y lugar aproximados de desaparición, descripción anatómica, hábitat, grado de certeza, fuentes, decisiones visuales y advertencias para no presentar una hipótesis como un hecho.
+
+Los bocetos pueden guardarse junto a la ficha. Anota para cada imagen su autoría, licencia y enlace de origen. Un boceto puede orientar la postura, el tamaño, la silueta o los colores, pero no se incorpora automáticamente al SVG.
+
+### Paso 4: crear el módulo de dibujo
 
 Copia `extinct_art/species/ara_gossei.py` como `extinct_art/species/<identificador>.py`. Cambia al menos `META`, `COLORS` y la función `draw(rng_for)`. `META` debe contener:
 
@@ -69,7 +78,7 @@ META = {
 
 La función `draw` devuelve fragmentos SVG. Se pueden reutilizar `wash`, `stroke`, `blob` y `scale_marks` desde `extinct_art/brush.py`; así se conserva el acabado de acuarela. No hace falta redibujar el papel, el grano, el paisaje ni la rama: `compose.py` los añade automáticamente.
 
-### 3. Registrar la especie
+### Paso 5: registrar la especie
 
 Edita `extinct_art/species/__init__.py`:
 
@@ -82,7 +91,7 @@ SPECIES = {
 }
 ```
 
-### 4. Generar y revisar
+### Paso 6: generar una primera versión
 
 ```bash
 python generate.py --list
@@ -92,6 +101,37 @@ python generate.py pinguinus_impennis --all-palettes --width 2160
 ```
 
 Los archivos aparecen en `output/`. Esa carpeta se puede borrar y regenerar; las fuentes, fichas y bocetos deben conservarse en `references/`.
+
+### Paso 7: revisar la ilustración
+
+Abre el SVG o PNG y comprueba la silueta, la postura, los colores, el paisaje, el rótulo y el grado de fidelidad de cada rasgo. Si algo no está respaldado por una fuente, indícalo como interpretación en la ficha. Ajusta `COLORS`, las formas SVG y `META["description"]`, y vuelve a generar con la misma semilla para comparar cambios.
+
+### Paso 8: conservar una versión reproducible
+
+Apunta en la ficha el comando utilizado, por ejemplo:
+
+```text
+python generate.py pinguinus_impennis --palette sepia --seed 7 --width 2160
+```
+
+Conserva la ficha, las fuentes y los bocetos. El contenido de `output/` no es necesario para reconstruir la imagen, porque el proyecto lo genera de nuevo.
+
+## Mejoras posibles del proyecto
+
+Estas son las mejoras que considero más útiles, ordenadas aproximadamente por prioridad:
+
+1. **Separar los datos del dibujo.** Mover `META` y las referencias a archivos JSON o YAML para poder crear fichas sin editar Python.
+2. **Crear una plantilla automática.** Añadir un comando como `python generate.py --new-species dodo` que cree la carpeta de referencias, la ficha y un módulo base.
+3. **Generar una composición de estudio.** Permitir incluir en una lámina el nombre, la descripción breve, el estado, la fecha y las fuentes, además del rótulo actual.
+4. **Añadir un modo de boceto.** Leer una imagen de referencia para mostrarla en una página de trabajo o generar una vista comparativa, sin copiarla automáticamente ni eliminar la autoría.
+5. **Incorporar más formas reutilizables.** Crear primitivas para mamíferos, aves, reptiles, peces y plantas, de modo que una especie nueva no tenga que empezar desde cero.
+6. **Añadir validaciones.** Comprobar que cada especie tiene nombre, paisaje válido, descripción, fuentes y advertencia de incertidumbre cuando sea necesario.
+7. **Crear una galería de previsualización.** Generar de una vez todas las especies y paletas en una cuadrícula HTML o en un contacto PNG.
+8. **Mejorar la salida editorial.** Añadir formatos para impresión, márgenes configurables, tipografías y exportación de una ficha para redes sociales.
+9. **Ampliar los tests.** Comprobar que el texto se escapa correctamente, que no faltan claves de color y que cada SVG incluye título y descripción accesibles.
+10. **Revisar taxonomía y licencias.** Mantener las fuentes, sinonimias, fechas y permisos de las imágenes en cada carpeta de referencia.
+
+La mejora más valiosa para el uso diario sería la primera: permitiría cambiar nombres, descripciones, fuentes y notas sin tocar el código que dibuja la anatomía. La generación automática a partir de un boceto podría añadirse más adelante, pero debería mantener una revisión humana porque muchas especies extintas solo se conocen de forma incompleta.
 
 ## Opciones de generación
 
@@ -119,7 +159,8 @@ Los archivos aparecen en `output/`. Esa carpeta se puede borrar y regenerar; las
 | `extinct_art/brush.py` | Manchas, pinceladas, bordes y textura |
 | `extinct_art/palettes.py` | Paletas de la lámina |
 | `extinct_art/landscapes.py` | Paisajes disponibles |
-| `references/` | Fichas, fuentes y bocetos de trabajo |
+| `references/species/` | Una ficha Markdown por cada taxón de las anotaciones |
+| `references/` | Fuentes, bocetos y material de trabajo |
 | `docs/plantilla-especie.md` | Plantilla para investigar una especie |
 | `docs/especies-notas.md` | Anotaciones recibidas para futuras ilustraciones |
 | `output/` | SVG y PNG generados |

@@ -1,0 +1,63 @@
+# Gallirallus dieffenbachii
+
+**Nombre común:** Rascón de Dieffenbach  
+**Identificador:** `gallirallus_dieffenbachii`
+
+## Identificación
+
+- Nombre científico de trabajo: *Gallirallus dieffenbachii*.
+- Nombres históricos y sinónimos: comprobar en GBIF y Catalogue of Life.
+- Grupo, familia y subespecie: completar con la clasificación aceptada.
+
+## Estado y cronología
+
+- Estado de trabajo: completar; no asumir “extinta” si la fuente distingue especie, subespecie o población.
+- Último registro o fecha aproximada: completar con la fuente más sólida.
+- Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades.
+
+## Distribución y hábitat
+
+- Localidad indicada en `docs/especies-notas.md`: completar con una fuente geográfica.
+- Hábitat: completar.
+- Paisaje: completar sin mezclar regiones.
+
+## Descripción útil para el dibujo
+
+- Tamaño y proporciones: completar con ejemplares, restos o especies próximas.
+- Cabeza, pico, hocico, cuernos o dientes: completar.
+- Plumaje, pelaje, piel o escamas: completar; marcar cualquier color inferido.
+- Alas, cola, patas o aletas: completar.
+- Postura y comportamiento: completar.
+- Rasgos confirmados:
+- Rasgos inferidos o artísticos:
+
+## Composición propuesta
+
+- Paisaje del proyecto:
+- Paleta:
+- Postura:
+- Elementos ambientales:
+- Texto breve: “*Gallirallus dieffenbachii*, Rascón de Dieffenbach”.
+- Advertencia sobre incertidumbre:
+
+## Bocetos y referencias visuales
+
+- Archivo:
+- Autoría y licencia:
+- Enlace:
+- Qué rasgo se toma como referencia:
+
+## Fuentes consultadas
+
+- [GBIF — buscar Gallirallus dieffenbachii](https://www.gbif.org/species/search?q=Gallirallus%20dieffenbachii)
+- [Catalogue of Life](https://www.catalogueoflife.org/)
+- [IUCN Red List](https://www.iucnredlist.org/)
+- Fuente primaria, museo o publicación especializada:
+
+## Pendientes de verificación
+
+- Confirmar nombre aceptado y sinonimias.
+- Confirmar distribución, fecha y causas.
+- Completar la anatomía con una fuente fiable.
+- No presentar la ilustración como reconstrucción exacta si faltan datos.
+

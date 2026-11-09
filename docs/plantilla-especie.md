@@ -1,5 +1,8 @@
 # Ficha de especie: NOMBRE CIENTÍFICO
 
+Usa esta plantilla para una especie nueva. Para las especies ya incluidas en
+las anotaciones, parte de la ficha correspondiente en `references/species/`.
+
 ## Identificación
 
 - Identificador del proyecto:
