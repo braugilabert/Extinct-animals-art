@@ -1,0 +1,84 @@
+"""Une papel, paisaje, rama y especie en una única lámina SVG (4:5, formato
+de Instagram)."""
+from __future__ import annotations
+
+import random
+from xml.sax.saxutils import escape
+
+from .brush import darken, deckle_rect, lighten, paper_grain
+from .landscapes import LANDSCAPES
+from .palettes import PALETTES
+from .scene import blooms, perch
+from .species import SPECIES
+
+CANVAS_W, CANVAS_H = 400, 500          # 4:5 -> 1080x1350 px a width=1080
+CARD = (20, 20, 340, 450)              # zona pintada (x, y, ancho, alto)
+OFFSET = (10, 0)                       # centra la zona pintada sobre el papel
+FONT = "Georgia, 'Times New Roman', serif"
+
+
+def rng_factory(seed):
+    """Un generador aleatorio independiente por capa, estable para una semilla."""
+    def rng_for(name: str) -> random.Random:
+        return random.Random(f"{seed}:{name}")
+    return rng_for
+
+
+def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
+              landscape: str | None = None, seed: int = 7, caption: bool = True,
+              grain: bool = True, flower: bool = True) -> str:
+    if species not in SPECIES:
+        raise KeyError(f"Especie desconocida: {species}. Disponibles: {', '.join(SPECIES)}")
+    if palette not in PALETTES:
+        raise KeyError(f"Paleta desconocida: {palette}. Disponibles: {', '.join(PALETTES)}")
+
+    module = SPECIES[species]
+    meta = module.META
+    pal = PALETTES[palette]
+    land_key = landscape or meta["landscape"]
+    if land_key not in LANDSCAPES:
+        raise KeyError(f"Paisaje desconocido: {land_key}. Disponibles: {', '.join(LANDSCAPES)}")
+    land = LANDSCAPES[land_key]
+    rng_for = rng_factory(seed)
+
+    x, y, w, h = CARD
+    paint_edge = deckle_rect(x, y, w, h, rng_for("deckle"))
+    title = f'{meta["scientific_name"]} ({meta["common_name"]})'
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {CANVAS_W} {CANVAS_H}" '
+        f'width="{CANVAS_W * 2}" height="{CANVAS_H * 2}" role="img">',
+        f"<title>{escape(title)}</title>",
+        f"<desc>Ilustración tipo acuarela de {escape(title)}.</desc>",
+        "<defs>",
+        f'<clipPath id="paint"><path d="{paint_edge}"/></clipPath>',
+        '<radialGradient id="paperglow" cx="0.5" cy="0.45" r="0.75">'
+        f'<stop offset="0" stop-color="{lighten(pal["paper"], 0.5)}" stop-opacity="0.55"/>'
+        f'<stop offset="1" stop-color="{darken(pal["paper"], 0.25)}" stop-opacity="0.25"/>'
+        "</radialGradient>",
+        "</defs>",
+        f'<rect width="{CANVAS_W}" height="{CANVAS_H}" fill="{pal["paper"]}"/>',
+        f'<rect width="{CANVAS_W}" height="{CANVAS_H}" fill="url(#paperglow)"/>',
+        f'<g transform="translate({OFFSET[0]} {OFFSET[1]})">',
+        '<g clip-path="url(#paint)">',
+        land["backdrop"](pal, rng_for),
+        blooms(pal, rng_for),
+        land["foliage"](pal, rng_for),
+        perch(pal, rng_for, flower=flower),
+        module.draw(rng_for),
+        "</g>",
+        f'<path d="{paint_edge}" fill="none" stroke="{darken(pal["paper"], 0.35)}" '
+        'stroke-width="0.8" stroke-opacity="0.35" stroke-linejoin="round"/>',
+        "</g>",
+    ]
+    if grain:
+        parts.append(paper_grain(CANVAS_W, CANVAS_H, pal["paper"], rng_for("grain")))
+    if caption:
+        text = f'{meta["scientific_name"]} · {land["label"]}'
+        parts.append(
+            f'<text x="{CANVAS_W / 2}" y="489" text-anchor="middle" font-size="12" '
+            f'font-style="italic" font-family="{FONT}" fill="{pal["caption"]}">'
+            f"{escape(text)}</text>"
+        )
+    parts.append("</svg>")
+    return "\n".join(parts)
