@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Loro mascarino de Reunión, conocido por pieles y relatos. Se ha descrito como loro grisáceo o pardo, de pico robusto y cola media; mantener el color apagado y la incertidumbre taxonómica.
+- Rasgos visibles: Loro de tamaño medio; plumaje gris pardo, pico robusto y cola media.
+- Guía: No representarlo verde brillante por defecto: las descripciones históricas favorecen tonos grises o pardos.
+- Comparaciones prudentes: Mascarinus mascarinus; comparación con loros de las Mascareñas.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

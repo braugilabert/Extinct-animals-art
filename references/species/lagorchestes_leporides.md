@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Canguro liebre oriental; macrópodo pequeño de orejas largas, patas posteriores desarrolladas y cola larga. Las fuentes describen tonos rojizos o pardos, con vientre más claro.
+- Rasgos visibles: Wallaby liebre; cuerpo compacto, patas posteriores largas, orejas grandes, cola larga y pelaje pardo rojizo.
+- Guía: Usar una silueta saltadora y esbelta, no la de un canguro gigante.
+- Comparaciones prudentes: Lagorchestes hirsutus.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

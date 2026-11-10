@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Emú de King Island; ave corredora no voladora, probablemente similar al emú común pero de menor tamaño insular. Cuerpo alto, cuello largo, alas reducidas y plumaje filamentoso gris pardo.
+- Rasgos visibles: Emú insular; cuerpo alto, cuello largo, patas largas y plumaje gris pardo.
+- Guía: Usar proporciones de emú, pero reducir escala y no confundirlo con un casuario crestado.
+- Comparaciones prudentes: Dromaius novaehollandiae.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

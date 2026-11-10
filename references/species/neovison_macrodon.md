@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: aproximadamente 91 cm de longitud corporal y cola de unos 25 cm; mayor que el visón americano.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: pelaje áspero pardo rojizo oscuro; el aspecto estacional es incierto.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Visón marino de la costa atlántica norte; mustélido grande y alargado, probablemente de pelaje pardo rojizo oscuro, patas cortas y cola gruesa. El tamaño se estima por restos y pieles históricas.
+- Rasgos visibles: Mustélido grande, cuerpo alargado, patas cortas, cuello robusto y pelaje pardo rojizo oscuro.
+- Guía: Representar un visón grande, no una nutria: hocico corto, orejas pequeñas y cola tupida.
+- Comparaciones prudentes: Neovison vison y mustélidos semiacuáticos actuales.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

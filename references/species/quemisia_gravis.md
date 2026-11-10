@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Roedor gigante de La Española conocido por restos incompletos. Representar un roedor corpulento de cuerpo bajo, cabeza grande, incisivos y cola media; el pelaje y el tamaño exactos son inciertos.
+- Rasgos visibles: Roedor grande y pesado; cabeza ancha, orejas pequeñas y pelaje pardo hipotético.
+- Guía: No usar la forma de una rata pequeña: la masa corporal y el hocico de roedor gigante son esenciales.
+- Comparaciones prudentes: Hutia antillana (Capromys/Plagiodontia) como comparación funcional, no identidad.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

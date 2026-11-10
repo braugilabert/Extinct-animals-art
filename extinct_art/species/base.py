@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import hashlib
 
-from ..brush import darken, lighten, mix, scale_marks, stroke, wash
+from ..brush import darken, dry_brush, lighten, mix, scale_marks, stroke, wash
 
 PALETTES = {
     "bird": {"body": "#5A6F68", "body_hi": "#8DA08B", "dark": "#33443F", "light": "#D7C49B", "accent": "#A84F3D"},
@@ -66,11 +66,36 @@ def _bird(c, r, variant, profile) -> str:
     out.append(wash(tail, c["dark"], r, layers=1, jitter=.7))
     out.append(stroke("M158 184 C145 230 154 278 180 304", c["body_hi"], 8, r, opacity=.55, jitter=.8))
     out.append(wash(wing, c["dark"], r, layers=2, jitter=.8))
+    if variant == 0:
+        out.append(dry_brush("M196 188 Q215 214 220 260 M191 206 Q207 232 212 278",
+                             c["body_hi"], r, width=1.7, passes=3, opacity=.30))
+    elif variant == 1:
+        for cx, cy in ((176, 205), (190, 232), (178, 258), (201, 278)):
+            out.append(wash(f"M{cx-5} {cy} q5 -6 10 0 q-5 7 -10 0 Z",
+                            c["light"], r, opacity=.42, layers=1, jitter=.5, edge=0))
+    else:
+        out.append(dry_brush("M204 198 Q230 207 244 224 M207 220 Q235 230 249 245 M210 244 Q232 252 246 266",
+                             c["light"], r, width=2.0, passes=2, opacity=.40))
     out.append(wash(head, c["body_hi"], r, jitter=.7))
+    if profile.get("owl"):
+        out.append('<circle cx="178" cy="111" r="13" fill="' + c["light"] + '" fill-opacity=".72"/>')
+        out.append('<circle cx="178" cy="111" r="5" fill="' + c["dark"] + '"/>')
+        out.append('<circle cx="205" cy="111" r="13" fill="' + c["light"] + '" fill-opacity=".72"/>')
+        out.append('<circle cx="205" cy="111" r="5" fill="' + c["dark"] + '"/>')
+    if profile.get("eye_ring"):
+        out.append('<circle cx="155" cy="119" r="7" fill="none" stroke="' + c["light"] + '" stroke-width="2.2"/>')
+    if profile.get("yellow_body"):
+        out.append(wash("M164 178 C151 212 160 258 188 285 C200 285 207 265 203 238 C198 207 183 184 164 178 Z", c["light"], r, opacity=.55, jitter=.7))
+    if profile.get("red_head"):
+        out.append(wash("M165 91 C176 72 202 72 214 94 C209 110 199 121 180 124 C168 116 163 103 165 91 Z", c["accent"], r, opacity=.72, jitter=.6))
+    if profile.get("dark_face"):
+        out.append(wash("M168 94 C176 83 193 82 202 91 L199 113 C185 116 174 110 168 94 Z", c["dark"], r, opacity=.72, jitter=.5))
     out.append(wash("M154 116 C128 108 105 122 108 146 C114 158 128 157 143 143 Z", c["light"], r, jitter=.5))
     out.append('<circle cx="155" cy="119" r="4.5" fill="' + c["dark"] + '"/>')
     out.append('<circle cx="156.5" cy="117.5" r="1.3" fill="#F7F1E4"/>')
     beak = "M108 150 C115 158 123 157 126 148 C120 153 114 153 108 150 Z"
+    if profile.get("large_bill") or profile.get("parrot"):
+        beak = "M108 148 C118 154 131 151 139 143 C135 160 123 170 109 164 C104 159 104 153 108 148 Z"
     if variant == 2:
         beak = "M108 148 C92 155 88 166 103 169 C116 165 123 156 127 147 Z"
     out.append(wash(beak, c["accent"], r, edge=0))
@@ -80,6 +105,12 @@ def _bird(c, r, variant, profile) -> str:
         out.append(stroke("M178 89 C170 67 176 52 184 42 M188 87 C188 63 197 52 205 45", c["body_hi"], 5, r, opacity=.75, jitter=.5))
     if profile.get("flightless"):
         out.append(stroke("M211 252 C224 276 230 296 231 315", c["body_hi"], 4, r, opacity=.5, jitter=.5))
+    if profile.get("long_legs"):
+        out.append(stroke("M182 300 Q176 350 174 404 M215 302 Q224 350 228 405", c["dark"], 4, r, jitter=.6))
+    if profile.get("long_neck"):
+        out.append(stroke("M184 145 Q174 110 185 84", c["body_hi"], 16, r, opacity=.62, jitter=1.0))
+    if profile.get("wader"):
+        out.append(stroke("M180 286 Q174 347 169 411 M212 286 Q218 348 224 411", c["dark"], 3.2, r, jitter=.5))
     if profile.get("stripes"):
         for y in (195, 215, 235, 255, 275):
             out.append(stroke(f"M215 {y} C230 {y+5} 239 {y+5} 247 {y}", c["light"], 3, r, opacity=.65, jitter=.4))
@@ -105,6 +136,13 @@ def _mammal(c, r, variant, profile) -> str:
     out.append(wash("M106 204 C88 178 92 144 118 128 C145 118 165 142 154 170 L138 208 Z", c["body_hi"], r, jitter=.8))
     out.append(wash(ear, c["dark"], r, jitter=.5))
     out.append(wash("M145 174 C126 160 115 173 119 192 C129 204 143 197 150 187 Z", c["light"], r, jitter=.5))
+    if variant == 0:
+        out.append(dry_brush("M160 185 Q195 172 231 188 M158 204 Q205 192 248 208",
+                             c["body_hi"], r, width=2.0, passes=3, opacity=.28))
+    elif variant == 1:
+        for cx, cy in ((170, 198), (194, 211), (218, 201), (238, 220)):
+            out.append(wash(f"M{cx-4} {cy} q4 -5 8 0 q-4 6 -8 0 Z",
+                            c["light"], r, opacity=.35, layers=1, jitter=.4, edge=0))
     out.append('<circle cx="130" cy="157" r="4.5" fill="' + c["dark"] + '"/>')
     out.append('<circle cx="131.5" cy="155.5" r="1.3" fill="#F7F1E4"/>')
     tail = "M245 255 C282 268 294 292 278 313"
@@ -114,6 +152,22 @@ def _mammal(c, r, variant, profile) -> str:
         tail = "M242 260 C270 290 273 326 260 347"
     out.append(stroke(tail, c["body_hi"], 7, r, opacity=.7, jitter=.7))
     out.append(stroke("M145 270 L138 327 M205 273 L210 326 M240 261 L252 307", c["dark"], 6, r, jitter=.7))
+    if profile.get("bear"):
+        out.append(wash("M96 132 C80 105 91 88 111 105 L126 136 Z", c["dark"], r, jitter=.5))
+        out.append(wash("M126 136 C144 105 161 110 163 137 Z", c["dark"], r, jitter=.5))
+    if profile.get("bat"):
+        out.append(wash("M112 185 L66 230 L118 222 L96 278 L153 244 L170 207 Z", c["dark"], r, opacity=.62, jitter=1.0))
+        out.append(wash("M238 207 L282 230 L232 222 L254 278 L199 244 L183 207 Z", c["dark"], r, opacity=.62, jitter=1.0))
+        out.append(stroke("M130 150 L104 125 M144 151 L132 116", c["dark"], 4, r, jitter=.4))
+    if profile.get("pointed_muzzle"):
+        out.append(wash("M111 174 L72 190 L118 202 Z", c["light"], r, opacity=.65, jitter=.5))
+    if profile.get("rodent"):
+        out.append(wash("M96 137 C76 116 84 95 108 111 L124 140 Z", c["body_hi"], r, jitter=.5))
+        out.append(stroke("M117 184 L101 194 M120 190 L105 202", c["light"], 2, r, opacity=.7, jitter=.3))
+    if profile.get("horse") or profile.get("marsupial"):
+        out.append(stroke("M155 141 Q142 171 151 205", c["dark"], 5, r, opacity=.6, jitter=.7))
+    if profile.get("white_tail_tip"):
+        out.append(stroke(tail, c["light"], 8, r, opacity=.8, jitter=.5))
     if profile.get("horns"):
         out.append(stroke("M112 145 C92 122 88 96 96 78 M125 143 C112 114 114 88 126 70", c["dark"], 5, r, jitter=.5))
     if profile.get("mane"):
@@ -137,9 +191,17 @@ def _reptile(c, r, variant, profile) -> str:
     out.append(wash("M259 224 C288 206 316 215 324 239 C317 259 289 267 266 276 Z", c["body_hi"], r, jitter=.7))
     points = [(145,242),(165,234),(185,230),(205,232),(225,240),(155,262),(180,258),(205,260),(230,262)]
     out.append(scale_marks(points, r, c["dark"], width=1.2, w=9, h=5, opacity=.6))
+    if variant == 0:
+        out.append(dry_brush("M120 247 Q178 220 244 244 M126 267 Q186 246 254 264",
+                             c["body_hi"], r, width=2.2, passes=3, opacity=.30))
+    elif variant == 1:
+        out.append(dry_brush("M130 232 Q190 214 250 235 M132 255 Q195 238 258 255 M140 276 Q194 262 244 274",
+                             c["light"], r, width=1.6, passes=2, opacity=.40))
     out.append('<circle cx="299" cy="235" r="3.5" fill="' + c["dark"] + '"/>')
     if profile.get("long_body"):
         out.append(stroke("M95 275 C60 290 45 310 30 330", c["body"], 14, r, opacity=.8, jitter=1.0))
+    if profile.get("gecko"):
+        out.append(scale_marks([(145, 252), (166, 247), (187, 246), (208, 250), (229, 255)], r, c["light"], width=1.5, w=8, h=4, opacity=.55))
     if profile.get("giant"):
         out.append(stroke("M110 214 C145 185 218 181 270 210", c["body_hi"], 9, r, opacity=.55, jitter=.7))
     out.append("</g>")

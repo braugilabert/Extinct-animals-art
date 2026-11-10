@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Quagga, forma delantera rayada de la cebra de llanura. Tenía cabeza y cuello con rayas marcadas, parte posterior parda lisa o con pocas rayas y patas más claras; cuerpo de cebra robusta.
+- Rasgos visibles: Cebra robusta; rayas concentradas en cabeza, cuello y tren delantero, grupa parda y patas claras.
+- Guía: No cubrir todo el cuerpo con rayas: el contraste entre frente rayada y trasera parda es el rasgo clave.
+- Comparaciones prudentes: Equus quagga y pieles históricas de quagga.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

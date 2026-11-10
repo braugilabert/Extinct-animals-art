@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Subespecie portuguesa del íbice ibérico. Machos de hasta unos 74 cm a la cruz; pelaje isabelino o pardo, marcas oscuras, barba y cuernos relativamente cortos, gruesos y menos curvados que en otras formas ibéricas.
+- Rasgos visibles: Cabra montés robusta; macho pardo-isabelino, pecho y extremidades oscuros, barba y cuernos cortos de base gruesa.
+- Guía: No usar los cuernos muy largos del íbice alpino: la forma portuguesa tenía cuernos más cortos y próximos.
+- Comparaciones prudentes: Capra pyrenaica; la fuente IUCN de 1962 describe pelaje y cuernos de la forma lusitanica.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

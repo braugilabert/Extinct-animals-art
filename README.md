@@ -260,7 +260,8 @@ new_species.py SLUG "Nombre científico" "Nombre común" --kind bird|mammal|rept
 --describe              muestra los metadatos de la especie elegida
 --validate              valida especies y fichas
 --all-species            genera una imagen por cada especie
---palette NOMBRE       acuarela_antigua, sepia o amanecer
+--palette NOMBRE       acuarela_antigua, sepia, amanecer, verde_humedal,
+                       ocaso_rojizo o niebla_azul
 --all-palettes          genera una versión por paleta
 --landscape NOMBRE      fuerza el paisaje de fondo
 --seed NÚMERO           controla la variación de la pincelada
@@ -297,6 +298,84 @@ new_species.py SLUG "Nombre científico" "Nombre común" --kind bird|mammal|rept
 Estas láminas son interpretaciones artísticas, no reconstrucciones exactas. Cuando una especie solo se conoce por relatos, restos o una lámina posterior, esa incertidumbre debe aparecer en `META`, en la ficha y, si procede, en la publicación final. Conviene distinguir entre nombre científico moderno, nombres usados históricamente y nombres populares.
 
 La lista de animales de `docs/especies-notas.md` es un punto de partida, no una verificación taxonómica definitiva. Antes de dibujar o publicar una especie, comprueba su estado, sinonimias, fecha de extinción y fuentes primarias o institucionales.
+
+## Variedad visual
+
+Ademas de las paletas originales, se pueden usar `verde_humedal`, `ocaso_rojizo`
+y `niebla_azul`. Los paisajes disponibles son `jamaica`, `generic`, `humedal`,
+`costa` y `bosque`.
+
+Si la especie usa `generic` y no se indica `--landscape`, `compose.py` elige un
+paisaje de forma automatica y reproducible segun la especie y la semilla. Para
+fijar una combinacion concreta:
+
+```bash
+python generate.py pinguinus_impennis --palette verde_humedal --landscape humedal
+```
+
+`brush.py` incluye ahora salpicaduras, pincel seco, veladuras de luz y ondas de
+agua. Estas herramientas se combinan con las siluetas de `species/base.py` para
+que las especies tengan diferencias de textura, color y ambiente.
+
+## Datos visuales investigados y perfiles anatómicos
+
+Cada especie tiene ahora una capa de información visual en
+`extinct_art/species/drawing_data.py`. Esta capa se carga automáticamente al
+iniciar el catálogo y amplía `META` con:
+
+- `description`: descripción práctica para construir la ilustración;
+- `visual_notes`: rasgos que deben verse en la silueta;
+- `drawing_notes`: qué está respaldado y qué debe tratarse como hipótesis;
+- `reference_taxa`: especies actuales usadas únicamente como comparación
+  funcional;
+- `profile`: rasgos que puede dibujar `species/base.py`;
+- `research_sources`: enlaces externos usados cuando hay información anatómica
+  especialmente detallada.
+
+Las fichas Markdown de `references/species/` contienen la misma información en
+la sección **Descripción útil para el dibujo**. La guía general está en
+[`references/species/drawing-data.md`](references/species/drawing-data.md).
+
+### Cómo se usan las especies actuales
+
+Una especie viva no se copia automáticamente. Solo se utiliza para resolver
+una estructura cuando existe una relación taxonómica o funcional razonable:
+
+```text
+fuentes, restos y descripciones históricas
+                    ↓
+rasgos confirmados de la especie extinta
+                    ↓
+especie actual comparable, solo como referencia anatómica
+                    ↓
+perfil específico de base.py + colores documentados o marcados como hipótesis
+```
+
+Por ejemplo, un *Psittacula exsul* puede tomar de otros *Psittacula* la
+proporción general del pico y la cola, pero conserva los colores históricos
+descritos para esa especie y no se convierte en una copia de un periquito vivo.
+En taxones conocidos solo por relatos o restos fragmentarios se usa una
+silueta prudente y se evita inventar patrones detallados.
+
+### Perfiles disponibles en `base.py`
+
+Además de los perfiles generales de ave, mamífero y reptil, se contemplan
+ratites y aves no voladoras, loros, palomas, búhos, garzas, limícolas,
+fringílidos, cánidos, felinos, osos, ungulados con cuernos, caballos, cebras,
+roedores, marsupiales, murciélagos, mustélidos, geckos y serpientes. Cada
+especie activa solo los rasgos compatibles con su descripción.
+
+Para revisar los datos que utilizará el programa:
+
+```bash
+python generate.py pinguinus_impennis --describe
+python generate.py dusicyon_australis --describe
+python generate.py --validate
+```
+
+Al añadir una especie nueva, completa también su entrada en
+`drawing_data.py`, actualiza la sección de descripción de su ficha Markdown y
+marca claramente cualquier color, tamaño o conducta que sea una inferencia.
 
 ## Tests
 

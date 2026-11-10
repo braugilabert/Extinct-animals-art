@@ -5,6 +5,8 @@ import importlib
 import pkgutil
 from pathlib import Path
 
+from .drawing_data import DATA as DRAWING_DATA, RESEARCH_SOURCES
+
 
 def _load_species():
     found = {}
@@ -15,6 +17,16 @@ def _load_species():
         meta = getattr(module, "META", None)
         draw = getattr(module, "draw", None)
         if isinstance(meta, dict) and callable(draw):
+            extra = DRAWING_DATA.get(meta.get("slug", module_info.name), {})
+            for key in ("description", "visual_notes", "drawing_notes", "reference_taxa"):
+                if extra.get(key):
+                    meta[key] = extra[key]
+            if slug_sources := RESEARCH_SOURCES.get(meta.get("slug", module_info.name)):
+                meta["research_sources"] = slug_sources
+            if extra.get("profile") and hasattr(module, "PROFILE"):
+                module.PROFILE.update(extra["profile"])
+            if extra.get("colors") and hasattr(module, "COLORS"):
+                module.COLORS.update(extra["colors"])
             found[meta.get("slug", module_info.name)] = module
     return dict(sorted(found.items()))
 

@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Loro de Rodrigues de cabeza y mandíbulas proporcionalmente grandes, cola larga y cuerpo robusto. Las fuentes históricas describen verdes, azules y rojo en alas o pico con variación; presentar una versión verde azulada y marcarla como reconstrucción.
+- Rasgos visibles: Loro grande, cabeza y pico muy robustos, cola larga; verde azulado con posible rojo alar.
+- Guía: La cabeza grande y la cola larga son rasgos importantes; no reducirlo a un periquito común.
+- Comparaciones prudentes: Descripción histórica de Tafforet y comparaciones con Nestor/Tanygnathus.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

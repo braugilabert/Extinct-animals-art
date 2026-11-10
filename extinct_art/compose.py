@@ -2,10 +2,11 @@
 de Instagram)."""
 from __future__ import annotations
 
+import hashlib
 import random
 from xml.sax.saxutils import escape
 
-from .brush import darken, deckle_rect, lighten, paper_grain
+from .brush import darken, deckle_rect, lighten, paper_grain, speckle_field, sun_glow
 from .landscapes import LANDSCAPES
 from .palettes import PALETTES
 from .scene import blooms, perch
@@ -24,6 +25,21 @@ def rng_factory(seed):
     return rng_for
 
 
+def _choose_landscape(meta, explicit: str | None, seed: int) -> str:
+    """Elige un fondo reproducible cuando la ficha solo dice ``generic``."""
+    if explicit:
+        return explicit
+    preferred = meta.get("landscape", "generic")
+    if preferred != "generic":
+        return preferred
+    # Las especies antiguas se benefician de un fondo variado, pero la misma
+    # semilla sigue produciendo siempre el mismo resultado.
+    options = ("generic", "humedal", "costa", "bosque")
+    token = f'{meta.get("slug", "species")}:{seed}'.encode("utf-8")
+    index = int(hashlib.sha256(token).hexdigest()[:8], 16) % len(options)
+    return options[index]
+
+
 def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
               landscape: str | None = None, seed: int = 7, caption: bool = True,
               grain: bool = True, flower: bool = True) -> str:
@@ -35,7 +51,7 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
     module = SPECIES[species]
     meta = module.META
     pal = PALETTES[palette]
-    land_key = landscape or meta["landscape"]
+    land_key = _choose_landscape(meta, landscape, seed)
     if land_key not in LANDSCAPES:
         raise KeyError(f"Paisaje desconocido: {land_key}. Disponibles: {', '.join(LANDSCAPES)}")
     land = LANDSCAPES[land_key]
@@ -51,6 +67,8 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
             ("distribution", "Distribución"),
             ("habitat", "Hábitat"),
             ("visual_notes", "Rasgos visuales"),
+            ("drawing_notes", "Guia de dibujo"),
+            ("reference_taxa", "Comparaciones prudentes"),
         )
         if meta.get(key)
     )
@@ -75,6 +93,9 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
         f'<g transform="translate({OFFSET[0]} {OFFSET[1]})">',
         '<g clip-path="url(#paint)">',
         land["backdrop"](pal, rng_for),
+        sun_glow(300, 74, 18, pal["mist"], rng_for("ambient-glow")),
+        speckle_field(25, 30, 330, 330, pal["bloom_a"], rng_for("ambient-speckles"),
+                      count=18, opacity=(.025, .07), radius=(.3, 1.2)),
         blooms(pal, rng_for),
         land["foliage"](pal, rng_for),
         perch(pal, rng_for, flower=flower),

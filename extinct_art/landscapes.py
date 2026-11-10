@@ -8,7 +8,7 @@ Coordenadas: la zona pintada va de (20, 20) a (360, 470).
 """
 from __future__ import annotations
 
-from .brush import blob, stroke, wash
+from .brush import blob, dry_brush, speckle_field, stroke, sun_glow, water_ripples, wash
 
 
 def jamaica_backdrop(pal, rng_for) -> str:
@@ -84,6 +84,90 @@ def generic_foliage(pal, rng_for) -> str:
     ])
 
 
+def wetland_backdrop(pal, rng_for) -> str:
+    """Marisma poco definida, útil para aves acuáticas y especies isleñas."""
+    r = rng_for("wetland-backdrop")
+    return "".join([
+        '<g id="backdrop">',
+        wash("M20 20 H360 V235 H20 Z", pal["sky"], r, opacity=.72, layers=3, jitter=2.2, edge=0),
+        sun_glow(286, 90, 24, pal["mist"], r),
+        wash("M20 220 C75 190 123 226 178 204 C242 180 292 218 360 190 V330 H20 Z",
+             pal["mountains_far"], r, opacity=.55, jitter=1.8),
+        wash("M20 278 C100 245 156 278 220 250 C285 222 326 266 360 242 V375 H20 Z",
+             pal["hill_near"], r, opacity=.54, jitter=1.5),
+        water_ripples(320, pal["mist"], r, count=7),
+        speckle_field(25, 235, 330, 110, pal["bloom_b"], r, count=42),
+        '</g>',
+    ])
+
+
+def wetland_foliage(pal, rng_for) -> str:
+    r = rng_for("wetland-foliage")
+    out = ['<g id="foliage">']
+    for x in (38, 330):
+        out.append(stroke(f"M{x} 470 Q{x + (18 if x < 200 else -18)} 420 {x + (4 if x < 200 else -4)} 355",
+                          pal["foliage_line"], 2.5, r, opacity=.65, jitter=.8))
+        for offset in (-18, -6, 8, 20):
+            direction = 1 if x < 200 else -1
+            out.append(stroke(f"M{x + direction * 4} {430 + offset} q{direction * 18} -16 {direction * 26} -12",
+                              pal["frond"], 4, r, opacity=.55, jitter=.8))
+    out.append('</g>')
+    return "".join(out)
+
+
+def coast_backdrop(pal, rng_for) -> str:
+    """Acantilado y horizonte marino para especies costeras o insulares."""
+    r = rng_for("coast-backdrop")
+    return "".join([
+        '<g id="backdrop">',
+        wash("M20 20 H360 V225 H20 Z", pal["sky"], r, opacity=.72, layers=2, jitter=1.8, edge=0),
+        sun_glow(90, 92, 28, pal["mist"], r),
+        wash("M20 214 C90 205 128 220 190 208 C260 194 300 216 360 202 V300 H20 Z",
+             pal["mountains_far"], r, opacity=.58, jitter=1.3),
+        wash("M20 295 C86 265 130 290 190 278 C255 265 310 289 360 268 V375 H20 Z",
+             pal["hill_near"], r, opacity=.7, jitter=1.2),
+        water_ripples(350, pal["mist"], r, count=5),
+        dry_brush("M28 305 Q100 280 170 297 T350 286", pal["hill_far"], r, width=2.5, passes=4),
+        '</g>',
+    ])
+
+
+def coast_foliage(pal, rng_for) -> str:
+    r = rng_for("coast-foliage")
+    return "".join([
+        '<g id="foliage">',
+        wash("M20 470 C34 430 72 410 112 414 C92 440 78 458 70 470 Z", pal["foliage"], r, opacity=.78, jitter=1.2),
+        wash("M360 470 C346 426 314 412 278 422 C302 446 320 462 337 470 Z", pal["foliage"], r, opacity=.78, jitter=1.2),
+        dry_brush("M30 460 Q62 432 98 426 M360 458 Q326 434 294 430", pal["foliage_line"], r, width=1.5, passes=3),
+        '</g>',
+    ])
+
+
+def forest_backdrop(pal, rng_for) -> str:
+    """Bosque denso, con manchas verticales y profundidad atmosférica."""
+    r = rng_for("forest-backdrop")
+    out = ['<g id="backdrop">']
+    out.append(wash("M20 20 H360 V340 H20 Z", pal["sky"], r, opacity=.62, layers=3, jitter=2.0, edge=0))
+    for x in (42, 92, 145, 255, 310, 350):
+        out.append(stroke(f"M{x} 330 Q{x - 8} 210 {x + r.uniform(-12, 12):.1f} 45",
+                          pal["mountains_far"], 9, r, opacity=.27, jitter=2.0))
+    out.append(wash("M20 250 C80 224 134 244 190 220 C260 194 316 224 360 205 V370 H20 Z",
+                    pal["hill_near"], r, opacity=.48, jitter=1.4))
+    out.append(speckle_field(25, 45, 330, 290, pal["bloom_b"], r, count=55))
+    out.append('</g>')
+    return "".join(out)
+
+
+def forest_foliage(pal, rng_for) -> str:
+    r = rng_for("forest-foliage")
+    return "".join([
+        '<g id="foliage">',
+        wash("M20 470 C28 408 76 372 132 392 C103 426 87 450 78 470 Z", pal["foliage"], r, opacity=.8, jitter=1.3),
+        wash("M360 470 C350 404 306 380 268 400 C295 430 316 454 334 470 Z", pal["foliage"], r, opacity=.8, jitter=1.3),
+        '</g>',
+    ])
+
+
 LANDSCAPES = {
     "jamaica": {
         "label": "Blue Mountains, Jamaica",
@@ -94,5 +178,20 @@ LANDSCAPES = {
         "label": "paisaje de referencia pendiente",
         "backdrop": generic_backdrop,
         "foliage": generic_foliage,
+    },
+    "humedal": {
+        "label": "marisma y laguna",
+        "backdrop": wetland_backdrop,
+        "foliage": wetland_foliage,
+    },
+    "costa": {
+        "label": "costa rocosa e islas",
+        "backdrop": coast_backdrop,
+        "foliage": coast_foliage,
+    },
+    "bosque": {
+        "label": "bosque húmedo",
+        "backdrop": forest_backdrop,
+        "foliage": forest_foliage,
     },
 }

@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Estornino de Kosrae, probablemente un paseriforme de bosque de tamaño medio. La especie se conoce mal; usar cuerpo compacto, pico recto y plumaje oscuro con brillo metálico moderado como hipótesis.
+- Rasgos visibles: Estornino insular; cuerpo compacto, cola media y plumaje negro o pardo oscuro posiblemente brillante.
+- Guía: Mantener la forma de estornino, no de cuervo: pico más corto y cuerpo menor.
+- Comparaciones prudentes: Aplonis tabuensis y Aplonis atrifusca como referencias de género.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

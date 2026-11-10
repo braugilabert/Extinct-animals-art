@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Nombre histórico que sugiere un guacamayo de cabeza roja, pero la identidad y la descripción son discutidas. Solo el tipo de ave y la cabeza roja pueden usarse como hipótesis visual.
+- Rasgos visibles: Guacamayo de cola larga; cabeza rojiza sugerida por el nombre; resto del plumaje desconocido.
+- Guía: Aplicar rojo solo a la cabeza y dejar el cuerpo en tonos neutros para no inventar un patrón completo.
+- Comparaciones prudentes: Ara tricolor y Ara macao, únicamente para proporciones del género.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

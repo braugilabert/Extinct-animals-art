@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Garza nocturna de Mauricio, conocida por restos y fuentes históricas. Representar una garza compacta de cuello medio, pico fuerte y patas largas; la coloración exacta no está fijada.
+- Rasgos visibles: Garza nocturna insular; cuerpo compacto, pico fuerte y plumaje gris pardo hipotético.
+- Guía: La anatomía de Nycticorax es una guía razonable, pero no prueba el patrón cromático.
+- Comparaciones prudentes: Nycticorax nycticorax.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

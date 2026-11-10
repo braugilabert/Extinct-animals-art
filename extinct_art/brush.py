@@ -194,3 +194,64 @@ def paper_grain(width: float, height: float, paper: str, rng: random.Random,
         )
     parts.append("</g>")
     return "".join(parts)
+
+
+# --------------------------------------------------------------------------
+# Texturas y atmósfera
+# --------------------------------------------------------------------------
+
+def speckle_field(x: float, y: float, width: float, height: float,
+                  color: str, rng: random.Random, count: int = 35,
+                  opacity: tuple[float, float] = (0.08, 0.22),
+                  radius: tuple[float, float] = (0.4, 1.8)) -> str:
+    """Pequeñas salpicaduras irregulares para romper fondos planos."""
+    parts = ['<g class="speckles">']
+    for _ in range(count):
+        cx, cy = rng.uniform(x, x + width), rng.uniform(y, y + height)
+        r = rng.uniform(*radius)
+        parts.append(
+            f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.2f}" '
+            f'fill="{color}" fill-opacity="{rng.uniform(*opacity):.2f}"/>'
+        )
+    parts.append("</g>")
+    return "".join(parts)
+
+
+def dry_brush(d: str, color: str, rng: random.Random, width: float = 2.0,
+              passes: int = 3, opacity: float = 0.35) -> str:
+    """Trazo discontinuo que imita un pincel seco de pigmento."""
+    return "".join(
+        stroke(d, color, width * rng.uniform(.75, 1.2), rng,
+               opacity=opacity * rng.uniform(.65, 1.0), jitter=1.4,
+               dash=f"{rng.uniform(3, 9):.1f} {rng.uniform(2, 7):.1f}")
+        for _ in range(passes)
+    )
+
+
+def sun_glow(cx: float, cy: float, radius: float, color: str,
+             rng: random.Random) -> str:
+    """Sol translúcido compuesto por veladuras, sin filtros SVG."""
+    parts = ['<g class="sun-glow">']
+    for scale, opacity in ((1.35, .06), (1.12, .10), (1.0, .20)):
+        parts.append(
+            f'<circle cx="{cx + rng.gauss(0, .8):.1f}" cy="{cy + rng.gauss(0, .8):.1f}" '
+            f'r="{radius * scale:.1f}" fill="{color}" fill-opacity="{opacity:.2f}"/>'
+        )
+    parts.append("</g>")
+    return "".join(parts)
+
+
+def water_ripples(y: float, color: str, rng: random.Random,
+                  count: int = 6) -> str:
+    """Ondas horizontales para marismas, lagunas y costas."""
+    parts = ['<g class="water-ripples">']
+    for i in range(count):
+        yy = y + i * rng.uniform(7, 13)
+        x0 = rng.uniform(35, 130)
+        x1 = rng.uniform(240, 350)
+        parts.append(stroke(f"M{x0:.1f} {yy:.1f} q35 -5 70 0 t70 0 t{x1 - x0 - 140:.1f} 0",
+                            color, rng.uniform(.7, 1.8), rng,
+                            opacity=rng.uniform(.18, .42), jitter=.8,
+                            dash=f"{rng.uniform(8, 20):.1f} {rng.uniform(5, 16):.1f}"))
+    parts.append("</g>")
+    return "".join(parts)

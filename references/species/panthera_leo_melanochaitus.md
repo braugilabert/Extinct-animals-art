@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: León del Cabo, población o subespecie histórica de Sudáfrica. Usar león grande de cuerpo musculoso; la melena oscura y extendida aparece en relatos pero no debe darse por segura para todos los machos.
+- Rasgos visibles: León robusto de sabana; pelaje leonado y posible melena oscura, especialmente en machos.
+- Guía: Mantener anatomía de león, no de tigre; la melena oscura es una variante documentada/discutida.
+- Comparaciones prudentes: Panthera leo; registros históricos del león del Cabo.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

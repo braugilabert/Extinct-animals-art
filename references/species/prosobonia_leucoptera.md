@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Correlimos de Tahití, conocido por observaciones históricas y con validez discutida. El epíteto sugiere alas blancas, pero no debe inventarse un patrón completo; usar limícola pequeño, pardo y blanco.
+- Rasgos visibles: Limícola pequeño; patas finas, pico recto y posible blanco en alas; patrón general incierto.
+- Guía: Marcar el blanco alar como sugerencia nominal, no como dato seguro.
+- Comparaciones prudentes: Prosobonia parvirostris.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

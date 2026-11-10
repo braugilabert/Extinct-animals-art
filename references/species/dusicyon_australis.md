@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: unos 97 cm de cabeza y cuerpo, 38 cm de altura; cánido mediano de patas y cola relativamente cortas.
-- Cabeza, pico, hocico, cuernos o dientes: hocico de zorro, cráneo robusto y grandes carnasiales; orejas pequeñas.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Warrah o lobo de las Malvinas: cánido mediano y robusto, de unos 97 cm de cabeza-cuerpo y unos 38 cm a la cruz. Tenía patas cortas, orejas pequeñas, cola tupida con punta blanca y manto dorsal mezclado de leonado, pardo y negro, más claro por debajo.
+- Rasgos visibles: Cánido compacto tipo zorro grande; patas cortas, orejas pequeñas, dorso pardo-leonado mezclado y punta de cola blanca.
+- Guía: La cola blanca y la baja altura son rasgos muy útiles; no dibujarlo como lobo continental alto.
+- Comparaciones prudentes: Dusicyon australis; Animal Diversity Web y comparación con Chrysocyon brachyurus.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

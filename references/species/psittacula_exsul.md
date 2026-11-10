@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Periquito de Newton de Rodrigues, de unos 40 cm según World Parrot Trust. Descripciones históricas mencionan morfos verdes o azul verdosos, cabeza más oscura, alas con rojo y pico superior rojo e inferior negro; separar estas variantes.
+- Rasgos visibles: Periquito grande de cola larga; verde o azul verdoso, cabeza oscura, posible rojo alar y pico bicolor.
+- Guía: La ficha permite una versión verde y otra azulada, pero no mezclarlas sin indicarlo como morfo histórico.
+- Comparaciones prudentes: Psittacula exsul; descripción histórica de Tafforet y World Parrot Trust.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 

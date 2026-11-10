@@ -31,13 +31,11 @@
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: usar ejemplares, restos o especies próximas; marcar toda estimación.
-- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
-- Plumaje, pelaje, piel o escamas: separar colores documentados de colores inferidos.
-- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
-- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
-- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
-- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
+- Descripción: Perico de Raiatea, conocido por registros históricos. Usar la silueta del género: cuerpo pequeño, cola larga, pico curvado y plumaje verde; cualquier frente roja o azul en alas debe rotularse como inferida.
+- Rasgos visibles: Perico insular verde de cola larga; patrón de cabeza y alas incierto.
+- Guía: Mantenerlo ligero y arborícola, sin rasgos de guacamayo.
+- Comparaciones prudentes: Cyanoramphus novaezelandiae y C. saisseti.
+- Incertidumbre: los colores o proporciones no expresamente respaldados se consideran hipótesis artística.
 
 ## Composición propuesta
 
