@@ -23,6 +23,15 @@ def _load_species():
                     meta[key] = extra[key]
             if slug_sources := RESEARCH_SOURCES.get(meta.get("slug", module_info.name)):
                 meta["research_sources"] = slug_sources
+            slug = meta.get("slug", module_info.name)
+            image_manifest = Path(__file__).resolve().parents[2] / "references" / "species" / f"{slug}_images" / "references.json"
+            if image_manifest.exists():
+                try:
+                    import json
+                    manifest = json.loads(image_manifest.read_text(encoding="utf-8"))
+                    meta["reference_images"] = [item["local_file"] for item in manifest.get("references", [])]
+                except (OSError, ValueError, KeyError):
+                    meta["reference_images"] = []
             if extra.get("profile") and hasattr(module, "PROFILE"):
                 module.PROFILE.update(extra["profile"])
             if extra.get("colors") and hasattr(module, "COLORS"):

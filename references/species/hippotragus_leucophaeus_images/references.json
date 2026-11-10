@@ -1,0 +1,22 @@
+{
+  "slug": "hippotragus_leucophaeus",
+  "scientific_name": "Hippotragus leucophaeus",
+  "common_name": "Antílope azul",
+  "query": "\"Hippotragus leucophaeus\"",
+  "references": [
+    {
+      "title": "File:BlueAntelope1801.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ABlueAntelope1801.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/BlueAntelope1801.jpg/1920px-BlueAntelope1801.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2040,
+      "artist": "Allamand",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1778",
+      "local_file": "references/species/hippotragus_leucophaeus_images/01_File_BlueAntelope1801.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

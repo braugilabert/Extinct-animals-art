@@ -1,0 +1,48 @@
+{
+  "slug": "ara_gossei",
+  "scientific_name": "Ara gossei",
+  "common_name": "Guacamayo rojo de Jamaica",
+  "query": "\"Ara gossei\"",
+  "references": [
+    {
+      "title": "Boceto del proyecto: Ara gossei y Blue Mountains",
+      "page_url": "",
+      "image_url": "",
+      "mime": "image/png",
+      "width": 1080,
+      "height": 1350,
+      "artist": "Usuario del proyecto",
+      "license": "material aportado al proyecto",
+      "license_url": "",
+      "date": "",
+      "local_file": "references/species/ara_gossei_images/00_boceto_usuario_ara_gossei.png"
+    },
+    {
+      "title": "File:Ara gossei.png",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAra_gossei.png",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Ara_gossei.png/1920px-Ara_gossei.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 2303,
+      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Joseph_Smit\" class=\"extiw\" title=\"w:en:Joseph Smit\"><span title=\"Dutch natural history illustrator (1836-1929)\">Joseph Smit</span></a></bdi>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1907",
+      "local_file": "references/species/ara_gossei_images/02_File_Ara_gossei.png.png"
+    },
+    {
+      "title": "File:Ara tricolor.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAra_tricolor.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Ara_tricolor.jpg/1920px-Ara_tricolor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1937,
+      "artist": "John Gerrard Keulemans (1842 - 1912)",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1907",
+      "local_file": "references/species/ara_gossei_images/03_File_Ara_tricolor.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

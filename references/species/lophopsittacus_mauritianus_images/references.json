@@ -1,0 +1,48 @@
+{
+  "slug": "lophopsittacus_mauritianus",
+  "scientific_name": "Lophopsittacus mauritianus",
+  "common_name": "Loro de pico ancho de Mauricio",
+  "query": "\"Lophopsittacus mauritianus\"",
+  "references": [
+    {
+      "title": "File:Extinct-Birds-1907 P7 Lophopsittacus mauritianus 0295 3520x2640px 98pz.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AExtinct-Birds-1907_P7_Lophopsittacus_mauritianus_0295_3520x2640px_98pz.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Extinct-Birds-1907_P7_Lophopsittacus_mauritianus_0295_3520x2640px_98pz.jpg/1920px-Extinct-Birds-1907_P7_Lophopsittacus_mauritianus_0295_3520x2640px_98pz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1200,
+      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Henrik_Gr%C3%B8nvold\" class=\"extiw\" title=\"w:en:Henrik Grønvold\"><span title=\"Danish illustrator (1858–1940)\">Henrik Grønvold</span></a></bdi>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1907",
+      "local_file": "references/species/lophopsittacus_mauritianus_images/01_File_Extinct-Birds-1907_P7_Lophopsittacus_mauritianus_0295_3520x2640px_98pz.jpg.jpg"
+    },
+    {
+      "title": "File:Extinctbirds1907 P7 Lophopsittacus mauritianus0295.png",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AExtinctbirds1907_P7_Lophopsittacus_mauritianus0295.png",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Extinctbirds1907_P7_Lophopsittacus_mauritianus0295.png/1920px-Extinctbirds1907_P7_Lophopsittacus_mauritianus0295.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 1131,
+      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Henrik_Gr%C3%B8nvold\" class=\"extiw\" title=\"w:en:Henrik Grønvold\"><span title=\"Danish illustrator (1858–1940)\">Henrik Grønvold</span></a></bdi>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1907",
+      "local_file": "references/species/lophopsittacus_mauritianus_images/02_File_Extinctbirds1907_P7_Lophopsittacus_mauritianus0295.png.png"
+    },
+    {
+      "title": "File:Gelderland1601-1603 Lophopsittacus mauritianus.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AGelderland1601-1603_Lophopsittacus_mauritianus.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Gelderland1601-1603_Lophopsittacus_mauritianus.jpg/1920px-Gelderland1601-1603_Lophopsittacus_mauritianus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1035,
+      "artist": "Joris Joostensz Laerle (attributed)",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "between 1601 and 1603<div style=\"display: none;\">date QS:P,+1601-00-00T00:00:00Z/8,P1319,+1601-00-00T00:00:00Z/9,P1326,+1603-00-00T00:00:00Z/9</div>",
+      "local_file": "references/species/lophopsittacus_mauritianus_images/03_File_Gelderland1601-1603_Lophopsittacus_mauritianus.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

@@ -377,6 +377,42 @@ Al añadir una especie nueva, completa también su entrada en
 `drawing_data.py`, actualiza la sección de descripción de su ficha Markdown y
 marca claramente cualquier color, tamaño o conducta que sea una inferencia.
 
+## Referencias visuales descargadas
+
+El script [`tools/download_reference_images.py`](tools/download_reference_images.py)
+busca referencias en Wikimedia Commons y crea una carpeta por especie:
+
+```text
+references/species/
+└── pinguinus_impennis_images/
+    ├── 01_referencia.jpg
+    ├── references.json
+    └── README.md
+```
+
+`references.json` conserva la URL de Commons, la autoría y la licencia. Las
+imágenes sirven para estudiar anatomía, color, postura y ambiente; no se
+incrustan automáticamente en el SVG ni se presentan como una reconstrucción
+de la especie. El programa incorpora sus rutas en `META["reference_images"]`
+y las menciona en la descripción accesible del SVG.
+
+Para descargar una especie concreta:
+
+```bash
+python tools/download_reference_images.py --species ara_gossei --limit 3
+```
+
+Para el catálogo completo conviene respetar el límite de Wikimedia Commons:
+
+```bash
+python tools/download_reference_images.py --limit 1 --delay 3
+```
+
+Si Commons responde con `HTTP 429`, espera y vuelve a ejecutar el comando. El
+script guarda cada resultado de forma progresiva y no hay que borrar las
+carpetas ya creadas. Una especie sin una imagen fiable queda documentada sin
+referencias, en lugar de rellenarse con una imagen parecida pero engañosa.
+
 ## Tests
 
 ```bash

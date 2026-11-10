@@ -1,0 +1,48 @@
+{
+  "slug": "equus_quagga_quagga",
+  "scientific_name": "Equus quagga quagga",
+  "common_name": "Quagga",
+  "query": "\"Equus quagga quagga\"",
+  "references": [
+    {
+      "title": "File:Berlin Quagga.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ABerlin_Quagga.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Berlin_Quagga.jpg/1920px-Berlin_Quagga.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1382,
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:FunkMonk\" title=\"User:FunkMonk\">FunkMonk</a>",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "date": "2012",
+      "local_file": "references/species/equus_quagga_quagga_images/01_File_Berlin_Quagga.jpg.jpg"
+    },
+    {
+      "title": "File:Equus quagga - 1700-1880 - Print - Iconographia Zoologica - Special Collections University of Amsterdam - UBA01 IZ21700033.tif",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AEquus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ21700033.tif",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Equus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ21700033.tif/lossy-page1-1920px-Equus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ21700033.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/tiff",
+      "width": 1600,
+      "height": 2073,
+      "artist": "",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "between 1700 and 1880<div style=\"display: none;\">date QS:P571,+1500-00-00T00:00:00Z/6,P1319,+1700-00-00T00:00:00Z/9,P1326,+1880-00-00T00:00:00Z/9</div>",
+      "local_file": "references/species/equus_quagga_quagga_images/02_File_Equus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_Unive.png"
+    },
+    {
+      "title": "File:Equus quagga - 1700-1880 - Print - Iconographia Zoologica - Special Collections University of Amsterdam - UBA01 IZ21700103.tif",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AEquus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ21700103.tif",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Equus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ21700103.tif/lossy-page1-1920px-Equus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ21700103.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/tiff",
+      "width": 1600,
+      "height": 1343,
+      "artist": "",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "between 1700 and 1880<div style=\"display: none;\">date QS:P571,+1500-00-00T00:00:00Z/6,P1319,+1700-00-00T00:00:00Z/9,P1326,+1880-00-00T00:00:00Z/9</div>",
+      "local_file": "references/species/equus_quagga_quagga_images/03_File_Equus_quagga_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_Unive.png"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

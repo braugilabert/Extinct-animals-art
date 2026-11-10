@@ -69,6 +69,7 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
             ("visual_notes", "Rasgos visuales"),
             ("drawing_notes", "Guia de dibujo"),
             ("reference_taxa", "Comparaciones prudentes"),
+            ("reference_images", "Referencias visuales locales"),
         )
         if meta.get(key)
     )
