@@ -36,7 +36,39 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-`cairosvg` se usa para exportar a PNG. El SVG puede generarse sin esa dependencia. Si Cairo no funciona en Windows, instala Inkscape o `rsvg-convert`, o usa `--no-png`.
+`cairosvg` se usa para exportar a PNG, pero en Windows necesita además la biblioteca nativa Cairo. Instalar solamente `cairosvg` puede producir un error como `no library called "cairo-2" was found`. La solución recomendada en Windows es instalar [Inkscape](https://inkscape.org/release/) y volver a ejecutar el comando; el exportador busca también las rutas habituales de Inkscape aunque no estén en `PATH`. Como alternativa, instala `rsvg-convert`/librsvg. Si solo necesitas la ilustración vectorial, usa `--no-png`.
+
+### Windows: Cairo e Inkscape
+
+`requirements.txt` contiene las dependencias de Python, pero no puede instalar
+Inkscape ni las DLL nativas de Cairo. En Windows se ha configurado Inkscape
+1.4.4 y se ha añadido esta carpeta al PATH de usuario:
+
+```text
+C:\Program Files\Inkscape\bin
+```
+
+Esa carpeta contiene `libcairo-2.dll`. Si instalas Inkscape en otro equipo,
+añade su carpeta `bin` al PATH o deja que el exportador la encuentre en la
+ubicación habitual. Después de modificar el PATH, cierra y vuelve a abrir
+PowerShell o VS Code.
+
+Para comprobar la instalación:
+
+```bash
+inkscape --version
+```
+
+Si aparece un error de Cairo, puedes seguir trabajando con SVG mientras
+instalas Inkscape:
+
+```bash
+# Siempre funciona sin Cairo: conserva el SVG
+python generate.py aepyornis --no-png
+
+# Después de instalar Inkscape, genera SVG y PNG
+python generate.py aepyornis
+```
 
 ## Crear una ilustración de una especie, paso a paso
 

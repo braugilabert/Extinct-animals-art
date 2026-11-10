@@ -11,6 +11,8 @@ META = {
     "description": "Interpretación artística de Porphyrio albus, Calamón blanco. Consultar la ficha de references/species antes de publicar.",
     "reference_file": "references/species/porphyrio_albus.md",
     "source_url": "https://www.gbif.org/species/search?q=Porphyrio%20albus",
+    "research_status": "investigación inicial: revisar la fuente enlazada y la ficha Markdown antes de publicar",
+    "research_limitations": "la anatomía completa, el color y la cronología pueden estar incompletos o discutidos",
 }
 
 # Colores iniciales: hipótesis visual, no reconstrucción definitiva.

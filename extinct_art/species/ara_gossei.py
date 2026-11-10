@@ -26,6 +26,8 @@ META = {
     ),
     "reference_file": "references/species/ara_gossei.md",
     "source_url": "https://www.gbif.org/species/search?q=Ara%20gossei",
+    "research_status": "investigación inicial: revisar la fuente enlazada y la ficha Markdown antes de publicar",
+    "research_limitations": "la anatomía completa, el color y la cronología pueden estar incompletos o discutidos",
 }
 
 # Cambia aquí los colores del ave sin tocar la geometría.

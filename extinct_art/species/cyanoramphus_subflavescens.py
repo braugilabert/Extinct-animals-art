@@ -11,6 +11,8 @@ META = {
     "description": "Interpretación artística de Cyanoramphus subflavescens, Perico de Lord Howe. Consultar la ficha de references/species antes de publicar.",
     "reference_file": "references/species/cyanoramphus_subflavescens.md",
     "source_url": "https://www.gbif.org/species/search?q=Cyanoramphus%20subflavescens",
+    "research_status": "investigación inicial: revisar la fuente enlazada y la ficha Markdown antes de publicar",
+    "research_limitations": "la anatomía completa, el color y la cronología pueden estar incompletos o discutidos",
 }
 
 # Colores iniciales: hipótesis visual, no reconstrucción definitiva.

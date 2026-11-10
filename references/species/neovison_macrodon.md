@@ -7,36 +7,36 @@
 
 - Nombre científico de trabajo: *Neovison macrodon*.
 - Nombres históricos y sinónimos: comprobar en GBIF y Catalogue of Life.
-- Grupo, familia y subespecie: completar con la clasificación aceptada.
+- Grupo, familia y subespecie: consultar la clasificación aceptada en GBIF/Catalogue of Life y conservar aquí la sinonimia relevante.
 
 ## Estado y cronología
 
-- Estado de trabajo: completar; no asumir “extinta” si la fuente distingue especie, subespecie o población.
-- Último registro o fecha aproximada: completar con la fuente más sólida.
-- Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades.
+- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+- Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
+- Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 
 ## Distribución y hábitat
 
 - Localidad indicada en `docs/especies-notas.md`: completar con una fuente geográfica.
-- Hábitat: completar.
-- Paisaje: completar sin mezclar regiones.
+- Hábitat: costas rocosas del Atlántico noroccidental y posibles madrigueras litorales.
+- Paisaje: usar el paisaje genérico hasta documentar una escena regional específica.
 
 ## Descripción útil para el dibujo
 
-- Tamaño y proporciones: completar con ejemplares, restos o especies próximas.
-- Cabeza, pico, hocico, cuernos o dientes: completar.
-- Plumaje, pelaje, piel o escamas: completar; marcar cualquier color inferido.
-- Alas, cola, patas o aletas: completar.
-- Postura y comportamiento: completar.
-- Rasgos confirmados:
-- Rasgos inferidos o artísticos:
+- Tamaño y proporciones: aproximadamente 91 cm de longitud corporal y cola de unos 25 cm; mayor que el visón americano.
+- Cabeza, pico, hocico, cuernos o dientes: documentar antes de dibujar.
+- Plumaje, pelaje, piel o escamas: pelaje áspero pardo rojizo oscuro; el aspecto estacional es incierto.
+- Alas, cola, patas o aletas: comprobar con ejemplares, restos o láminas históricas.
+- Postura y comportamiento: representar una conducta prudente y marcarla como hipótesis si no hay observaciones.
+- Rasgos confirmados: nombre, grupo y distribución que aparecen en la fuente taxonómica.
+- Rasgos inferidos o artísticos: cualquier detalle anatómico o cromático no respaldado por una fuente concreta.
 
 ## Composición propuesta
 
-- Paisaje del proyecto:
-- Paleta:
-- Postura:
-- Elementos ambientales:
+- Paisaje del proyecto: fondo genérico hasta verificar una escena regional concreta.
+- Paleta: acuarela_antigua como punto de partida; ajustar solo con colores respaldados.
+- Postura: naturalista y prudente; no atribuir conductas no documentadas.
+- Elementos ambientales: conservar únicamente los elementos del hábitat que estén documentados.
 - Texto breve: “*Neovison macrodon*, Visón marino”.
 - Advertencia sobre incertidumbre:
 
@@ -52,12 +52,12 @@
 - [GBIF — buscar Neovison macrodon](https://www.gbif.org/species/search?q=Neovison%20macrodon)
 - [Catalogue of Life](https://www.catalogueoflife.org/)
 - [IUCN Red List](https://www.iucnredlist.org/)
-- Fuente primaria, museo o publicación especializada:
+- Fuente primaria, museo o publicación especializada: [Animal Diversity Web](https://animaldiversity.org/accounts/Neovison_macrodon/).
 
 ## Pendientes de verificación
 
 - Confirmar nombre aceptado y sinonimias.
 - Confirmar distribución, fecha y causas.
-- Completar la anatomía con una fuente fiable.
+- Completar la anatomía con una fuente fiable antes de sustituir la silueta genérica.
 - No presentar la ilustración como reconstrucción exacta si faltan datos.
 

@@ -11,6 +11,8 @@ META = {
     "description": "Interpretación artística de Megalurus rufescens, Carricero de la isla Lord Howe. Consultar la ficha de references/species antes de publicar.",
     "reference_file": "references/species/megalurus_rufescens.md",
     "source_url": "https://www.gbif.org/species/search?q=Megalurus%20rufescens",
+    "research_status": "investigación inicial: revisar la fuente enlazada y la ficha Markdown antes de publicar",
+    "research_limitations": "la anatomía completa, el color y la cronología pueden estar incompletos o discutidos",
 }
 
 # Colores iniciales: hipótesis visual, no reconstrucción definitiva.
