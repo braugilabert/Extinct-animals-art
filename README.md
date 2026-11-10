@@ -182,7 +182,7 @@ META = {
 }
 ```
 
-La función `draw` devuelve fragmentos SVG. Las fichas nuevas reutilizan `draw_taxon` de `extinct_art/species/base.py`, que ofrece una silueta inicial de ave, mamífero o reptil. Para una ilustración fiel hay que sustituir esa silueta por geometría específica usando `wash`, `stroke`, `blob` y `scale_marks` desde `extinct_art/brush.py`. El papel, el grano, el paisaje y la rama los añade `compose.py` automáticamente. Los campos `distribution`, `habitat`, `visual_notes` y `extinction_notes` se conservan en `META` y se incluyen en la descripción accesible del SVG.
+La función `draw` devuelve fragmentos SVG. Las fichas nuevas reutilizan `draw_taxon` de `extinct_art/species/base.py`, que ofrece perfiles iniciales de ave, mamífero o reptil. El perfil se deriva del identificador de la especie, de modo que especies distintas no parten exactamente de la misma silueta, proporción, cola, pico, orejas o tono. Para una ilustración fiel hay que sustituir esa silueta inicial por geometría específica usando `wash`, `stroke`, `blob` y `scale_marks` desde `extinct_art/brush.py`. El papel, el grano, el paisaje y la rama los añade `compose.py` automáticamente. Los campos `distribution`, `habitat`, `visual_notes` y `extinction_notes` se conservan en `META` y se incluyen en la descripción accesible del SVG.
 
 ### Paso 5: registrar la especie
 
