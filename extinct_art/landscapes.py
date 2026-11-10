@@ -62,10 +62,37 @@ def jamaica_foliage(pal, rng_for) -> str:
     return "".join(out)
 
 
+def generic_backdrop(pal, rng_for) -> str:
+    """Fondo neutral para especies cuya localización aún no se ha ilustrado."""
+    r = rng_for("generic-backdrop")
+    return "".join([
+        '<g id="backdrop">',
+        wash("M20 20 H360 V220 H20 Z", pal["sky"], r, opacity=0.65, layers=2, jitter=1.5, edge=0),
+        wash("M20 250 C90 205 145 240 205 205 C270 170 315 220 360 190 V340 H20 Z", pal["mountains_far"], r, opacity=0.6, jitter=1.5),
+        wash("M20 290 C90 260 150 285 220 255 C280 230 330 270 360 245 V350 H20 Z", pal["hill_near"], r, opacity=0.55, jitter=1.2),
+        '</g>',
+    ])
+
+
+def generic_foliage(pal, rng_for) -> str:
+    r = rng_for("generic-foliage")
+    return "".join([
+        '<g id="foliage">',
+        wash("M20 470 C35 420 85 402 135 420 C105 440 88 458 75 470 Z", pal["foliage"], r, opacity=.65, jitter=1.1),
+        wash("M360 470 C350 430 315 410 278 425 C305 445 325 458 342 470 Z", pal["foliage"], r, opacity=.65, jitter=1.1),
+        '</g>',
+    ])
+
+
 LANDSCAPES = {
     "jamaica": {
         "label": "Blue Mountains, Jamaica",
         "backdrop": jamaica_backdrop,
         "foliage": jamaica_foliage,
+    },
+    "generic": {
+        "label": "paisaje de referencia pendiente",
+        "backdrop": generic_backdrop,
+        "foliage": generic_foliage,
     },
 }

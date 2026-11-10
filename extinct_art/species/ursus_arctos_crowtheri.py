@@ -1,0 +1,21 @@
+"""Ficha visual de Ursus arctos crowtheri — Oso del Atlas."""
+from .base import draw_taxon
+
+META = {
+    "slug": "ursus_arctos_crowtheri",
+    "scientific_name": "Ursus arctos crowtheri",
+    "common_name": "Oso del Atlas",
+    "kind": "mammal",
+    "landscape": "generic",
+    "status": "por verificar con la ficha de referencia",
+    "description": "Interpretación artística de Ursus arctos crowtheri, Oso del Atlas. Consultar la ficha de references/species antes de publicar.",
+    "reference_file": "references/species/ursus_arctos_crowtheri.md",
+    "source_url": "https://www.gbif.org/species/search?q=Ursus%20arctos%20crowtheri",
+}
+
+# Colores iniciales: hipótesis visual, no reconstrucción definitiva.
+COLORS = {}
+
+def draw(rng_for) -> str:
+    return draw_taxon(rng_for, META, COLORS)
+

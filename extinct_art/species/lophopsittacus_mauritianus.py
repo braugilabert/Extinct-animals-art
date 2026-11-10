@@ -1,0 +1,21 @@
+"""Ficha visual de Lophopsittacus mauritianus — Loro de pico ancho de Mauricio."""
+from .base import draw_taxon
+
+META = {
+    "slug": "lophopsittacus_mauritianus",
+    "scientific_name": "Lophopsittacus mauritianus",
+    "common_name": "Loro de pico ancho de Mauricio",
+    "kind": "bird",
+    "landscape": "generic",
+    "status": "por verificar con la ficha de referencia",
+    "description": "Interpretación artística de Lophopsittacus mauritianus, Loro de pico ancho de Mauricio. Consultar la ficha de references/species antes de publicar.",
+    "reference_file": "references/species/lophopsittacus_mauritianus.md",
+    "source_url": "https://www.gbif.org/species/search?q=Lophopsittacus%20mauritianus",
+}
+
+# Colores iniciales: hipótesis visual, no reconstrucción definitiva.
+COLORS = {}
+
+def draw(rng_for) -> str:
+    return draw_taxon(rng_for, META, COLORS)
+

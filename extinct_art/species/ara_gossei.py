@@ -15,6 +15,8 @@ from ..brush import blob, scale_marks, stroke, wash
 META = {
     "scientific_name": "Ara gossei",
     "common_name": "Guacamayo rojo de Jamaica",
+    "slug": "ara_gossei",
+    "kind": "bird",
     "landscape": "jamaica",
     "status": "hipotética",
     "description": (
@@ -22,6 +24,8 @@ META = {
         "de relatos y una lámina posterior; su identificación con Ara tricolor "
         "sigue siendo discutida."
     ),
+    "reference_file": "references/species/ara_gossei.md",
+    "source_url": "https://www.gbif.org/species/search?q=Ara%20gossei",
 }
 
 # Cambia aquí los colores del ave sin tocar la geometría.

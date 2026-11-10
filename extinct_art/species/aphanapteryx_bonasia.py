@@ -1,0 +1,21 @@
+"""Ficha visual de Aphanapteryx bonasia — Rascón rojo de Mauricio."""
+from .base import draw_taxon
+
+META = {
+    "slug": "aphanapteryx_bonasia",
+    "scientific_name": "Aphanapteryx bonasia",
+    "common_name": "Rascón rojo de Mauricio",
+    "kind": "bird",
+    "landscape": "generic",
+    "status": "por verificar con la ficha de referencia",
+    "description": "Interpretación artística de Aphanapteryx bonasia, Rascón rojo de Mauricio. Consultar la ficha de references/species antes de publicar.",
+    "reference_file": "references/species/aphanapteryx_bonasia.md",
+    "source_url": "https://www.gbif.org/species/search?q=Aphanapteryx%20bonasia",
+}
+
+# Colores iniciales: hipótesis visual, no reconstrucción definitiva.
+COLORS = {}
+
+def draw(rng_for) -> str:
+    return draw_taxon(rng_for, META, COLORS)
+

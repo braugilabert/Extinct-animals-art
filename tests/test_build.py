@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 from extinct_art.brush import jitter_path
 from extinct_art.compose import build_svg
 from extinct_art.palettes import PALETTES
-from extinct_art.species import SPECIES
+from extinct_art.species import SPECIES, validate_species
 
 import random
 
@@ -22,6 +22,17 @@ class BuildTests(unittest.TestCase):
 
     def test_different_seed_changes_image(self):
         self.assertNotEqual(build_svg(seed=3), build_svg(seed=4))
+
+    def test_species_metadata_is_complete(self):
+        self.assertEqual(validate_species(), [])
+        self.assertGreaterEqual(len(SPECIES), 50)
+
+    def test_every_species_has_drawable_metadata(self):
+        for slug, module in SPECIES.items():
+            with self.subTest(species=slug):
+                self.assertEqual(module.META["slug"], slug)
+                self.assertTrue(module.META["reference_file"].endswith(f"{slug}.md"))
+                self.assertTrue(module.META["source_url"].startswith("https://"))
 
     def test_options_remove_layers(self):
         svg = build_svg(caption=False, grain=False, flower=False)

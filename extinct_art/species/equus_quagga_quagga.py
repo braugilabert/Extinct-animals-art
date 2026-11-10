@@ -1,0 +1,21 @@
+"""Ficha visual de Equus quagga quagga — Quagga."""
+from .base import draw_taxon
+
+META = {
+    "slug": "equus_quagga_quagga",
+    "scientific_name": "Equus quagga quagga",
+    "common_name": "Quagga",
+    "kind": "mammal",
+    "landscape": "generic",
+    "status": "por verificar con la ficha de referencia",
+    "description": "Interpretación artística de Equus quagga quagga, Quagga. Consultar la ficha de references/species antes de publicar.",
+    "reference_file": "references/species/equus_quagga_quagga.md",
+    "source_url": "https://www.gbif.org/species/search?q=Equus%20quagga%20quagga",
+}
+
+# Colores iniciales: hipótesis visual, no reconstrucción definitiva.
+COLORS = {}
+
+def draw(rng_for) -> str:
+    return draw_taxon(rng_for, META, COLORS)
+
