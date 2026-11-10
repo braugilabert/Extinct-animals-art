@@ -10,7 +10,7 @@ Presunta causa de la extinción: caza, a finales del siglo XVIII.
 """
 from __future__ import annotations
 
-from ..brush import blob, scale_marks, stroke, wash
+from ..brush import blob, mix, scale_marks, stroke, wash
 
 META = {
     "scientific_name": "Ara gossei",
@@ -95,7 +95,13 @@ HEAD_SCALES_B = [(176, 100), (188, 112), (184, 124), (170, 90)]
 
 
 def draw(rng_for) -> str:
-    c = COLORS
+    c = dict(COLORS)
+    reference_palette = META.get("reference_palette", {})
+    if reference_palette.get("body"):
+        # La referencia cromática solo modula ligeramente la hipótesis de la
+        # lámina; no sustituye los colores documentados de Ara gossei.
+        c["body"] = mix(c["body"], reference_palette["body"], .10)
+        c["body_hi"] = mix(c["body_hi"], reference_palette["body_hi"], .10)
     r = rng_for("ara-gossei")
     p = ['<g id="ara-gossei">']
 

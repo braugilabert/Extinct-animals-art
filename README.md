@@ -396,6 +396,18 @@ incrustan automáticamente en el SVG ni se presentan como una reconstrucción
 de la especie. El programa incorpora sus rutas en `META["reference_images"]`
 y las menciona en la descripción accesible del SVG.
 
+Cuando existe al menos una imagen local, `extinct_art/reference.py` la analiza
+con Pillow y obtiene una paleta media de referencia. `species/base.py` mezcla
+esa paleta de forma muy suave con los colores de `COLORS` y del perfil de la
+especie. Así las ilustraciones tienen en cuenta las láminas y bocetos usados,
+pero una imagen con un fondo o un mapa no puede cambiar por sí sola la
+anatomía: la forma sigue dependiendo de `META`, `PROFILE`, `drawing_data.py` y
+la investigación Markdown.
+
+Si no hay imagen descargada o Pillow no está instalado, la generación continúa
+con los datos científicos y la paleta del módulo. Instala las dependencias con
+`pip install -r requirements.txt`.
+
 Para descargar una especie concreta:
 
 ```bash
@@ -423,6 +435,47 @@ El proceso completo no significa que todas las especies tengan tres imágenes:
 los taxones discutidos o conocidos solo por textos pueden no tener una imagen
 fiable en Commons. El objetivo es descargar todas las referencias abiertas que
 se puedan verificar, no recopilar imágenes con copyright dudoso.
+
+## Archivos nuevos para referencias
+
+- `tools/download_reference_images.py`: descarga referencias abiertas por
+  lotes y conserva sus licencias.
+- `extinct_art/reference.py`: extrae una paleta cromática de las imágenes
+  locales sin intentar sustituir la reconstrucción anatómica.
+- `references/species/reference-images-index.json`: índice acumulado de las
+  referencias encontradas.
+- `requirements.txt`: incluye Pillow para leer PNG y JPEG locales.
+
+## Uso normal: solo necesitas `generate.py`
+
+Después de instalar las dependencias, el flujo habitual es muy sencillo:
+
+```powershell
+python generate.py --list
+python generate.py ara_gossei
+python generate.py pinguinus_impennis --seed 12
+```
+
+El comando principal carga automáticamente las fichas Markdown, los datos de
+`drawing_data.py`, los perfiles de `species/base.py`, las paletas, los
+paisajes, las referencias visuales locales y las texturas. No tienes que
+ejecutar `compose.py`, `base.py`, `reference.py` ni los módulos individuales
+de `species/` directamente.
+
+Los demás archivos cumplen funciones internas:
+
+- `extinct_art/species/*.py`: instrucciones visuales de cada especie;
+- `references/species/*.md`: investigación y decisiones de dibujo;
+- `drawing_data.py`: datos visuales ampliados que conectan investigación y
+  generación;
+- `compose.py`, `base.py`, `brush.py`, `palettes.py` y `landscapes.py`:
+  componentes reutilizables cargados por `generate.py`;
+- `tools/download_reference_images.py`: herramienta opcional para actualizar
+  referencias de Internet; no hace falta ejecutarla para generar una imagen.
+
+Solo necesitarás editar archivos internos cuando quieras añadir una especie,
+corregir una fuente o mejorar su anatomía. Para el uso diario, el punto de
+entrada es siempre `generate.py`.
 
 ## Tests
 

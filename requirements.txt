@@ -1,5 +1,9 @@
 # Dependencia Python para convertir SVG a PNG.
 cairosvg>=2.7
 
+# Lee las referencias visuales locales y extrae una paleta cromática suave
+# para incorporarla a cada generación.
+Pillow>=10.0
+
 # En Windows, CairoSVG necesita una biblioteca Cairo nativa. El proyecto usa
 # Inkscape como alternativa y no se instala mediante pip.

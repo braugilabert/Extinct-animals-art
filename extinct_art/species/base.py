@@ -28,6 +28,12 @@ def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
     kind = meta.get("kind", "bird")
     variant = _profile(meta)
     c = {**PALETTES.get(kind, PALETTES["bird"]), **(colors or {})}
+    # Las referencias visuales locales aportan solo una corrección cromática
+    # suave. La anatomía continúa viniendo de META, PROFILE y la investigación.
+    reference_palette = meta.get("reference_palette", {})
+    for key in ("body", "body_hi", "dark", "light", "accent"):
+        if reference_palette.get(key) and key in c:
+            c[key] = mix(c[key], reference_palette[key], .18)
     profile = {"body_scale": 1.0, "head_scale": 1.0, "tail_scale": 1.0, **(profile or {})}
     # Variación de tono estable: evita que todas las especies de un grupo tengan
     # exactamente el mismo color aunque no se haya documentado una coloración.

@@ -6,6 +6,7 @@ import pkgutil
 from pathlib import Path
 
 from .drawing_data import DATA as DRAWING_DATA, RESEARCH_SOURCES
+from ..reference import palette_from_references
 
 
 def _load_species():
@@ -32,6 +33,9 @@ def _load_species():
                     meta["reference_images"] = [item["local_file"] for item in manifest.get("references", [])]
                 except (OSError, ValueError, KeyError):
                     meta["reference_images"] = []
+            reference_palette = palette_from_references(Path(__file__).resolve().parents[2], slug)
+            if reference_palette:
+                meta["reference_palette"] = reference_palette
             if extra.get("profile") and hasattr(module, "PROFILE"):
                 module.PROFILE.update(extra["profile"])
             if extra.get("colors") and hasattr(module, "COLORS"):

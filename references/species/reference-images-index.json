@@ -8,7 +8,7 @@
       {
         "title": "File:Aepyornis maximus (pajaroelfantgigante).png",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAepyornis_maximus_%28pajaroelfantgigante%29.png",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Aepyornis_maximus_%28pajaroelfantgigante%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Aepyornis_maximus_%28pajaroelfantgigante%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/png",
         "width": 1600,
         "height": 1600,
@@ -30,7 +30,7 @@
       {
         "title": "File:Mauritius Blue Pigeon national museum of scotland.JPG",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AMauritius_Blue_Pigeon_national_museum_of_scotland.JPG",
-        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG/1920px-Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 2102,
@@ -52,7 +52,7 @@
       {
         "title": "File:Alopochen kervazoi and Anas theodori.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAlopochen_kervazoi_and_Anas_theodori.jpg",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Alopochen_kervazoi_and_Anas_theodori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Alopochen_kervazoi_and_Anas_theodori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 1485,
@@ -74,7 +74,7 @@
       {
         "title": "File:Alopochen mauritianus.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAlopochen_mauritianus.jpg",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Alopochen_mauritianus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Alopochen_mauritianus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 2160,
@@ -96,7 +96,7 @@
       {
         "title": "File:Aphanapteryx bonasiaIbis1869P007AA.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAphanapteryx_bonasiaIbis1869P007AA.jpg",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Aphanapteryx_bonasiaIbis1869P007AA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Aphanapteryx_bonasiaIbis1869P007AA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 2205,
@@ -118,7 +118,7 @@
       {
         "title": "File:Aplonis corvina.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAplonis_corvina.jpg",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Aplonis_corvina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Aplonis_corvina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 1838,
@@ -140,7 +140,7 @@
       {
         "title": "File:LocationDominica.svg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3ALocationDominica.svg",
-        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/LocationDominica.svg/1920px-LocationDominica.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/LocationDominica.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/svg+xml",
         "width": 1600,
         "height": 800,
@@ -162,7 +162,7 @@
       {
         "title": "File:Ara erythrocephala.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAra_erythrocephala.jpg",
-        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Ara_erythrocephala.jpg/1920px-Ara_erythrocephala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ara_erythrocephala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 2220,
@@ -182,9 +182,22 @@
     "query": "\"Ara gossei\"",
     "references": [
       {
+        "title": "Boceto del proyecto: Ara gossei y Blue Mountains",
+        "page_url": "",
+        "image_url": "",
+        "mime": "image/png",
+        "width": 1080,
+        "height": 1350,
+        "artist": "Usuario del proyecto",
+        "license": "material aportado al proyecto",
+        "license_url": "",
+        "date": "",
+        "local_file": "references/species/ara_gossei_images/00_boceto_usuario_ara_gossei.png"
+      },
+      {
         "title": "File:A. tricolor.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AA._tricolor.jpg",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/A._tricolor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/A._tricolor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 2206,
@@ -206,7 +219,7 @@
       {
         "title": "File:Amazona.violacea.jpg",
         "page_url": "https://commons.wikimedia.org/wiki/File%3AAmazona.violacea.jpg",
-        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Amazona.violacea.jpg/1920px-Amazona.violacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Amazona.violacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "mime": "image/jpeg",
         "width": 1600,
         "height": 1555,
