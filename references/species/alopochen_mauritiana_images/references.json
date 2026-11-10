@@ -3,6 +3,20 @@
   "scientific_name": "Alopochen mauritiana",
   "common_name": "Ganso de Mauricio",
   "query": "\"Alopochen mauritiana\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Alopochen mauritianus.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAlopochen_mauritianus.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Alopochen_mauritianus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2160,
+      "artist": "Cambridge Engraving Company, established by looking throughout the journal issue and only finding the company attributed. Published by Edward Newton &amp; Hans Gadow.",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1895",
+      "local_file": "references/species/alopochen_mauritiana_images/01_File_Alopochen_mauritianus.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

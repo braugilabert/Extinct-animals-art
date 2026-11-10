@@ -3,6 +3,20 @@
   "scientific_name": "Alectroenas nitidissimus",
   "common_name": "Paloma azul de Mauricio",
   "query": "\"Alectroenas nitidissimus\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Mauritius Blue Pigeon national museum of scotland.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AMauritius_Blue_Pigeon_national_museum_of_scotland.JPG",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG/1920px-Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2102,
+      "artist": "Geni",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "date": "2013-06",
+      "local_file": "references/species/alectroenas_nitidissimus_images/01_File_Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

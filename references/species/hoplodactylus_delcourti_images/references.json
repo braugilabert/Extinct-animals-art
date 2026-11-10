@@ -3,46 +3,6 @@
   "scientific_name": "Hoplodactylus delcourti",
   "common_name": "Gecko gigante de Delcourt",
   "query": "\"Hoplodactylus delcourti\"",
-  "references": [
-    {
-      "title": "File:Gecko de Delcourt Hoplodactylus delcourti GLAM MHNL 2016 3741.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AGecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3741.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3741.jpg/1920px-Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3741.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 951,
-      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Lamiot\" title=\"User:Lamiot\">Lamiot</a>",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "date": "2016-02-16 14:34:00",
-      "local_file": "references/species/hoplodactylus_delcourti_images/01_File_Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3741.jpg.jpg"
-    },
-    {
-      "title": "File:Gecko de Delcourt Hoplodactylus delcourti GLAM MHNL 2016 3742.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AGecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3742.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3742.jpg/1920px-Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3742.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1050,
-      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Lamiot\" title=\"User:Lamiot\">Lamiot</a>",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "date": "2016-02-16 14:36:09",
-      "local_file": "references/species/hoplodactylus_delcourti_images/02_File_Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_3742.jpg.jpg"
-    },
-    {
-      "title": "File:Gecko de Delcourt Hoplodactylus delcourti GLAM MHNL 2016 6985.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AGecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_6985.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_6985.jpg/1920px-Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_6985.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1113,
-      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Lamiot\" title=\"User:Lamiot\">Lamiot</a>",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "date": "2016-02-16 13:47:26",
-      "local_file": "references/species/hoplodactylus_delcourti_images/03_File_Gecko_de_Delcourt_Hoplodactylus_delcourti_GLAM_MHNL_2016_6985.jpg.jpg"
-    }
-  ],
+  "references": [],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

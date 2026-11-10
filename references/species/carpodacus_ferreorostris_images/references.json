@@ -3,6 +3,20 @@
   "scientific_name": "Carpodacus ferreorostris",
   "common_name": "Pinzón de Bonin",
   "query": "\"Carpodacus ferreorostris\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Chaunoproctus ferreorostris.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AChaunoproctus_ferreorostris.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Chaunoproctus_ferreorostris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2017,
+      "artist": "F.H. von Kittlitz",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1827",
+      "local_file": "references/species/carpodacus_ferreorostris_images/01_File_Chaunoproctus_ferreorostris.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

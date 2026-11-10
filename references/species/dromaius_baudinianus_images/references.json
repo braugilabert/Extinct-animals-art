@@ -3,6 +3,20 @@
   "scientific_name": "Dromaius baudinianus",
   "common_name": "Emú de la isla King",
   "query": "\"Dromaius baudinianus\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Baudin emus.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ABaudin_emus.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Baudin_emus.jpg/1920px-Baudin_emus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1139,
+      "artist": "Charles-Alexandre Lesueur, F. Lambert",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "between 1808 and 1811<div style=\"display: none;\">date QS:P,+1850-00-00T00:00:00Z/7,P1319,+1808-00-00T00:00:00Z/9,P1326,+1811-00-00T00:00:00Z/9</div>",
+      "local_file": "references/species/dromaius_baudinianus_images/01_File_Baudin_emus.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

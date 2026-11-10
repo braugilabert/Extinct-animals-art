@@ -1,9 +1,829 @@
 [
   {
+    "slug": "aepyornis",
+    "scientific_name": "Aepyornis spp.",
+    "common_name": "Ave elefante de Madagascar",
+    "query": "\"Aepyornis\" elephant bird illustration",
+    "references": [
+      {
+        "title": "File:Aepyornis maximus (pajaroelfantgigante).png",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAepyornis_maximus_%28pajaroelfantgigante%29.png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Aepyornis_maximus_%28pajaroelfantgigante%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/png",
+        "width": 1600,
+        "height": 1600,
+        "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Pagodroma721&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Pagodroma721 (page does not exist)\">Pagodroma721</a>",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "date": "2023-01-27",
+        "local_file": "references/species/aepyornis_images/01_File_Aepyornis_maximus_pajaroelfantgigante_.png.png"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "alectroenas_nitidissimus",
+    "scientific_name": "Alectroenas nitidissimus",
+    "common_name": "Paloma azul de Mauricio",
+    "query": "\"Alectroenas nitidissimus\"",
+    "references": [
+      {
+        "title": "File:Mauritius Blue Pigeon national museum of scotland.JPG",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AMauritius_Blue_Pigeon_national_museum_of_scotland.JPG",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG/1920px-Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2102,
+        "artist": "Geni",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "date": "2013-06",
+        "local_file": "references/species/alectroenas_nitidissimus_images/01_File_Mauritius_Blue_Pigeon_national_museum_of_scotland.JPG.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "alopochen_kervazoi",
+    "scientific_name": "Alopochen kervazoi",
+    "common_name": "Ganso de Reunión / oca de Kervazo",
+    "query": "\"Alopochen kervazoi\"",
+    "references": [
+      {
+        "title": "File:Alopochen kervazoi and Anas theodori.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAlopochen_kervazoi_and_Anas_theodori.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Alopochen_kervazoi_and_Anas_theodori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1485,
+        "artist": "Julian P. Hume, published with H. Glyn Young and Simon J. Tonge",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "date": "1997",
+        "local_file": "references/species/alopochen_kervazoi_images/01_File_Alopochen_kervazoi_and_Anas_theodori.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "alopochen_mauritiana",
+    "scientific_name": "Alopochen mauritiana",
+    "common_name": "Ganso de Mauricio",
+    "query": "\"Alopochen mauritiana\"",
+    "references": [
+      {
+        "title": "File:Alopochen mauritianus.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAlopochen_mauritianus.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Alopochen_mauritianus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2160,
+        "artist": "Cambridge Engraving Company, established by looking throughout the journal issue and only finding the company attributed. Published by Edward Newton &amp; Hans Gadow.",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1895",
+        "local_file": "references/species/alopochen_mauritiana_images/01_File_Alopochen_mauritianus.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "aphanapteryx_bonasia",
+    "scientific_name": "Aphanapteryx bonasia",
+    "common_name": "Rascón rojo de Mauricio",
+    "query": "\"Aphanapteryx bonasia\"",
+    "references": [
+      {
+        "title": "File:Aphanapteryx bonasiaIbis1869P007AA.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAphanapteryx_bonasiaIbis1869P007AA.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Aphanapteryx_bonasiaIbis1869P007AA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2205,
+        "artist": "Louveau (= Marcel Eugene Louveau-Rouveyre?)",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1869",
+        "local_file": "references/species/aphanapteryx_bonasia_images/01_File_Aphanapteryx_bonasiaIbis1869P007AA.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "aplonis_corvina",
+    "scientific_name": "Aplonis corvina",
+    "common_name": "Estornino de Kosrae",
+    "query": "\"Aplonis corvina\"",
+    "references": [
+      {
+        "title": "File:Aplonis corvina.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAplonis_corvina.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Aplonis_corvina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1838,
+        "artist": "F.H. von Kittlitz",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1831",
+        "local_file": "references/species/aplonis_corvina_images/01_File_Aplonis_corvina.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "ara_atwoodi",
+    "scientific_name": "Ara atwoodi",
+    "common_name": "Guacamayo de Atwood",
+    "query": "\"Ara atwoodi\"",
+    "references": [
+      {
+        "title": "File:LocationDominica.svg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ALocationDominica.svg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/LocationDominica.svg/1920px-LocationDominica.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/svg+xml",
+        "width": 1600,
+        "height": 800,
+        "artist": "[User:Đonny]",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "date": "2011-01-09",
+        "local_file": "references/species/ara_atwoodi_images/01_File_LocationDominica.svg.png"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "ara_erythrocephala",
+    "scientific_name": "Ara erythrocephala",
+    "common_name": "Guacamayo de cabeza roja",
+    "query": "\"Ara erythrocephala\"",
+    "references": [
+      {
+        "title": "File:Ara erythrocephala.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAra_erythrocephala.jpg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Ara_erythrocephala.jpg/1920px-Ara_erythrocephala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2220,
+        "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Gerrard_Keulemans\" class=\"extiw\" title=\"w:en:John Gerrard Keulemans\"><span title=\"Dutch bird artist (1842-1912)\">John Gerrard Keulemans</span></a></bdi>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "before 1907<div style=\"display: none;\">date QS:P,+1907-00-00T00:00:00Z/7,P1326,+1907-00-00T00:00:00Z/9</div>",
+        "local_file": "references/species/ara_erythrocephala_images/01_File_Ara_erythrocephala.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "ara_gossei",
+    "scientific_name": "Ara gossei",
+    "common_name": "Guacamayo rojo de Jamaica",
+    "query": "\"Ara gossei\"",
+    "references": [
+      {
+        "title": "File:A. tricolor.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AA._tricolor.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/A._tricolor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2206,
+        "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jacques_Barraband\" class=\"extiw\" title=\"w:en:Jacques Barraband\"><span title=\"Ornithological illustrator (1767-1809)\">Jacques Barraband</span></a></bdi>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "circa 1800<div style=\"display: none;\">date QS:P,+1800-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+        "local_file": "references/species/ara_gossei_images/01_File_A._tricolor.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "ara_guadeloupensis",
+    "scientific_name": "Ara guadeloupensis",
+    "common_name": "Guacamayo de Guadalupe",
+    "query": "\"Ara guadeloupensis\"",
+    "references": [
+      {
+        "title": "File:Amazona.violacea.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAmazona.violacea.jpg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Amazona.violacea.jpg/1920px-Amazona.violacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1555,
+        "artist": "Jean Babtiste du Tertre",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1667",
+        "local_file": "references/species/ara_guadeloupensis_images/01_File_Amazona.violacea.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "borikenophis_sanctaecrucis",
+    "scientific_name": "Borikenophis sanctaecrucis",
+    "common_name": "Culebra de Santa Cruz",
+    "query": "\"Borikenophis sanctaecrucis\"",
+    "references": [
+      {
+        "title": "File:MTN25-0305c2-2001-Santa Cruz de Abranes.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AMTN25-0305c2-2001-Santa_Cruz_de_Abranes.jpg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/MTN25-0305c2-2001-Santa_Cruz_de_Abranes.jpg/1920px-MTN25-0305c2-2001-Santa_Cruz_de_Abranes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1120,
+        "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q5761415\" class=\"extiw\" title=\"d:Q5761415\"><span title=\"organization in Spain\">Centro Nacional de Información Geográfica</span></a></bdi>",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "date": "2001",
+        "local_file": "references/species/borikenophis_sanctaecrucis_images/01_File_MTN25-0305c2-2001-Santa_Cruz_de_Abranes.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "bos_primigenius_primigenius",
+    "scientific_name": "Bos primigenius primigenius",
+    "common_name": "Uro",
+    "query": "\"Bos primigenius primigenius\"",
+    "references": [
+      {
+        "title": "File:Copenhagen Aurochse.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ACopenhagen_Aurochse.jpg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Copenhagen_Aurochse.jpg/1920px-Copenhagen_Aurochse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2071,
+        "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/30669460@N06\">Marcus Sümnick</a> from Rostock, Germany",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "date": "2011-02-26 11:35",
+        "local_file": "references/species/bos_primigenius_primigenius_images/01_File_Copenhagen_Aurochse.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "canis_lupus_hattai",
+    "scientific_name": "Canis lupus hattai",
+    "common_name": "Lobo de Hokkaido",
+    "query": "\"Canis lupus hattai\"",
+    "references": [
+      {
+        "title": "File:Yezo wolf at Hokkaido University.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AYezo_wolf_at_Hokkaido_University.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Yezo_wolf_at_Hokkaido_University.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1315,
+        "artist": "<a href=\"https://en.wikipedia.org/wiki/User:William_Harris\" class=\"extiw\" title=\"en:User:William Harris\">William Harris</a>",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "date": "2016-01-18",
+        "local_file": "references/species/canis_lupus_hattai_images/01_File_Yezo_wolf_at_Hokkaido_University.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "capra_pyrenaica_lusitanica",
+    "scientific_name": "Capra pyrenaica lusitanica",
+    "common_name": "Cabra montés portuguesa",
+    "query": "\"Capra pyrenaica lusitanica\"",
+    "references": [
+      {
+        "title": "File:Ilustração Portugueza, n 131, Lisboa, 24-8-1908 0017 Capra pyrenaica lusitanica.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AIlustra%C3%A7%C3%A3o_Portugueza%2C_n_131%2C_Lisboa%2C_24-8-1908_0017_Capra_pyrenaica_lusitanica.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Ilustra%C3%A7%C3%A3o_Portugueza%2C_n_131%2C_Lisboa%2C_24-8-1908_0017_Capra_pyrenaica_lusitanica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2526,
+        "artist": "<a class=\"external text\" href=\"https://pt.wikipedia.org/wiki/Ricardo_Jorge\">Dr. Ricardo Jorge</a>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1908-08-24",
+        "local_file": "references/species/capra_pyrenaica_lusitanica_images/01_File_Ilustra_o_Portugueza_n_131_Lisboa_24-8-1908_0017_Capra_pyrenaica_lusitanica.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "carpodacus_ferreorostris",
+    "scientific_name": "Carpodacus ferreorostris",
+    "common_name": "Pinzón de Bonin",
+    "query": "\"Carpodacus ferreorostris\"",
+    "references": [
+      {
+        "title": "File:Chaunoproctus ferreorostris.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AChaunoproctus_ferreorostris.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Chaunoproctus_ferreorostris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2017,
+        "artist": "F.H. von Kittlitz",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1827",
+        "local_file": "references/species/carpodacus_ferreorostris_images/01_File_Chaunoproctus_ferreorostris.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "coturnix_novaezelandiae",
+    "scientific_name": "Coturnix novaezelandiae",
+    "common_name": "Codorniz de Nueva Zelanda / koreke",
+    "query": "\"Coturnix novaezelandiae\"",
+    "references": [
+      {
+        "title": "File:Emerald Hours in New Zealand (1906) · Lowth · 200.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AEmerald_Hours_in_New_Zealand_%281906%29_%C2%B7_Lowth_%C2%B7_200.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Emerald_Hours_in_New_Zealand_%281906%29_%C2%B7_Lowth_%C2%B7_200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1167,
+        "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1906",
+        "local_file": "references/species/coturnix_novaezelandiae_images/01_File_Emerald_Hours_in_New_Zealand_1906_Lowth_200.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "coua_delalandei",
+    "scientific_name": "Coua delalandei",
+    "common_name": "Coua de Delalande",
+    "query": "\"Coua delalandei\"",
+    "references": [
+      {
+        "title": "File:Coua delalandei.JPG",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ACoua_delalandei.JPG",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Coua_delalandei.JPG/1920px-Coua_delalandei.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1200,
+        "artist": "<a href=\"//commons.wikimedia.org/wiki/User:RicciSpeziari\" class=\"mw-redirect\" title=\"User:RicciSpeziari\">Riccardo Speziari</a>",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "date": "",
+        "local_file": "references/species/coua_delalandei_images/01_File_Coua_delalandei.JPG.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "cyanoramphus_erythrotis",
+    "scientific_name": "Cyanoramphus erythrotis",
+    "common_name": "Perico de la isla Macquarie",
+    "query": "\"Cyanoramphus erythrotis\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "cyanoramphus_subflavescens",
+    "scientific_name": "Cyanoramphus subflavescens",
+    "common_name": "Perico de Lord Howe",
+    "query": "\"Cyanoramphus subflavescens\"",
+    "references": [
+      {
+        "title": "File:CyanorhamphusSubflavescensKeulemans.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ACyanorhamphusSubflavescensKeulemans.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/CyanorhamphusSubflavescensKeulemans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2342,
+        "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Gerrard_Keulemans\" class=\"extiw\" title=\"w:en:John Gerrard Keulemans\"><span title=\"Dutch bird artist (1842-1912)\">John Gerrard Keulemans</span></a></bdi>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1891",
+        "local_file": "references/species/cyanoramphus_subflavescens_images/01_File_CyanorhamphusSubflavescensKeulemans.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "cyanoramphus_ulietanus",
+    "scientific_name": "Cyanoramphus ulietanus",
+    "common_name": "Periquito de Raiatea",
+    "query": "\"Cyanoramphus ulietanus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "cyanoramphus_zealandicus",
+    "scientific_name": "Cyanoramphus zealandicus",
+    "common_name": "Perico de la isla Norfolk",
+    "query": "\"Cyanoramphus zealandicus\"",
+    "references": [
+      {
+        "title": "File:Cyanoramphus zealandicus 1849.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ACyanoramphus_zealandicus_1849.jpg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Cyanoramphus_zealandicus_1849.jpg/1920px-Cyanoramphus_zealandicus_1849.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2040,
+        "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Marc_Athanase_Parfait_%C5%92illet_des_Murs\" class=\"extiw\" title=\"w:en:Marc Athanase Parfait Œillet des Murs\"><span title=\"French ornithologist, politician and historian (1804-1894)\">Marc Athanase Parfait Oeillet Des Murs</span></a></bdi>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1849",
+        "local_file": "references/species/cyanoramphus_zealandicus_images/01_File_Cyanoramphus_zealandicus_1849.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "dromaius_baudinianus",
+    "scientific_name": "Dromaius baudinianus",
+    "common_name": "Emú de la isla King",
+    "query": "\"Dromaius baudinianus\"",
+    "references": [
+      {
+        "title": "File:Baudin emus.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ABaudin_emus.jpg",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Baudin_emus.jpg/1920px-Baudin_emus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1139,
+        "artist": "Charles-Alexandre Lesueur, F. Lambert",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "between 1808 and 1811<div style=\"display: none;\">date QS:P,+1850-00-00T00:00:00Z/7,P1319,+1808-00-00T00:00:00Z/9,P1326,+1811-00-00T00:00:00Z/9</div>",
+        "local_file": "references/species/dromaius_baudinianus_images/01_File_Baudin_emus.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "dromaius_novaehollandiae_minor",
+    "scientific_name": "Dromaius novaehollandiae minor",
+    "common_name": "Emú de la isla Kangaroo",
+    "query": "\"Dromaius novaehollandiae minor\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "dusicyon_australis",
+    "scientific_name": "Dusicyon australis",
+    "common_name": "Zorro/lobo de las Malvinas",
+    "query": "\"Dusicyon australis\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "equus_ferus_ferus",
+    "scientific_name": "Equus ferus ferus",
+    "common_name": "Tarpán",
+    "query": "\"Equus ferus ferus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "equus_quagga_quagga",
+    "scientific_name": "Equus quagga quagga",
+    "common_name": "Quagga",
+    "query": "\"Equus quagga quagga\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "gallirallus_dieffenbachii",
+    "scientific_name": "Gallirallus dieffenbachii",
+    "common_name": "Rascón de Dieffenbach",
+    "query": "\"Gallirallus dieffenbachii\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "hippotragus_leucophaeus",
+    "scientific_name": "Hippotragus leucophaeus",
+    "common_name": "Antílope azul",
+    "query": "\"Hippotragus leucophaeus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "hoplodactylus_delcourti",
+    "scientific_name": "Hoplodactylus delcourti",
+    "common_name": "Gecko gigante de Delcourt",
+    "query": "\"Hoplodactylus delcourti\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "lagorchestes_asomatus",
+    "scientific_name": "Lagorchestes asomatus",
+    "common_name": "Canguro rata de la isla de Barrow",
+    "query": "\"Lagorchestes asomatus\"",
+    "references": [
+      {
+        "title": "File:Lag cons.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ALag_cons.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lag_cons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1033,
+        "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Gould\" class=\"extiw\" title=\"w:en:John Gould\"><span title=\"English ornithologist (1804–1881)\">John Gould</span></a></bdi>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1853",
+        "local_file": "references/species/lagorchestes_asomatus_images/01_File_Lag_cons.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "lagorchestes_leporides",
+    "scientific_name": "Lagorchestes leporides",
+    "common_name": "Canguro rata de la isla de Bernier",
+    "query": "\"Lagorchestes leporides\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "lophopsittacus_mauritianus",
+    "scientific_name": "Lophopsittacus mauritianus",
+    "common_name": "Loro de pico ancho de Mauricio",
+    "query": "\"Lophopsittacus mauritianus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "mascarenotus_grucheti",
+    "scientific_name": "Mascarenotus grucheti",
+    "common_name": "Autillo de Reunión",
+    "query": "\"Mascarenotus grucheti\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "mascarenotus_murivorus",
+    "scientific_name": "Mascarenotus murivorus",
+    "common_name": "Autillo de Rodrigues",
+    "query": "\"Mascarenotus murivorus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "mascarinus_mascarinus",
+    "scientific_name": "Mascarinus mascarinus",
+    "common_name": "Mascarinus / loro de Mascarene",
+    "query": "\"Mascarinus mascarinus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "megalurus_rufescens",
+    "scientific_name": "Megalurus rufescens",
+    "common_name": "Carricero de la isla Lord Howe",
+    "query": "\"Megalurus rufescens\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "necropsittacus_rodricanus",
+    "scientific_name": "Necropsittacus rodricanus",
+    "common_name": "Loro de Rodrigues",
+    "query": "\"Necropsittacus rodricanus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "neovison_macrodon",
+    "scientific_name": "Neovison macrodon",
+    "common_name": "Visón marino",
+    "query": "\"Neovison macrodon\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "nycticorax_duboisi",
+    "scientific_name": "Nycticorax duboisi",
+    "common_name": "Garza nocturna de Reunión",
+    "query": "\"Nycticorax duboisi\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "nycticorax_mauritianus",
+    "scientific_name": "Nycticorax mauritianus",
+    "common_name": "Garza nocturna de Mauricio",
+    "query": "\"Nycticorax mauritianus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "panthera_leo_melanochaitus",
+    "scientific_name": "Panthera leo melanochaitus",
+    "common_name": "León del Cabo",
+    "query": "\"Panthera leo melanochaitus\"",
+    "references": [
+      {
+        "title": "File:Cape Lion.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ACape_Lion.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cape_Lion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 1128,
+        "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "circa 1860<div style=\"display: none;\">date QS:P,+1860-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+        "local_file": "references/species/panthera_leo_melanochaitus_images/01_File_Cape_Lion.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "panthera_tigris_virgata",
+    "scientific_name": "Panthera tigris virgata",
+    "common_name": "Tigre del Caspio",
+    "query": "\"Panthera tigris virgata\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "pezophaps_solitaria",
+    "scientific_name": "Pezophaps solitaria",
+    "common_name": "Solitario de Rodrigues",
+    "query": "\"Pezophaps solitaria\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "phalacrocorax_perspicillatus",
+    "scientific_name": "Phalacrocorax perspicillatus",
+    "common_name": "Cormorán de Pallas",
+    "query": "\"Phalacrocorax perspicillatus\"",
+    "references": [
+      {
+        "title": "File:ExtbPallusCormorantovw.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AExtbPallusCormorantovw.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/ExtbPallusCormorantovw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 2137,
+        "artist": "Joseph Wolf<a rel=\"nofollow\" class=\"external autonumber\" href=\"http://www.invaluable.com/auction-lot/j.-wolf,-graculus-perspicillatus.-278-c-f07b842f39\">[1]</a>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1869",
+        "local_file": "references/species/phalacrocorax_perspicillatus_images/01_File_ExtbPallusCormorantovw.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
     "slug": "pinguinus_impennis",
     "scientific_name": "Pinguinus impennis",
     "common_name": "Alca gigante",
     "query": "\"Pinguinus impennis\"",
+    "references": [
+      {
+        "title": "File:Alca impennisAMF064LB.png",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAlca_impennisAMF064LB.png",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Alca_impennisAMF064LB.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "mime": "image/png",
+        "width": 1600,
+        "height": 1436,
+        "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:George_Edward_Lodge\" class=\"extiw\" title=\"w:en:George Edward Lodge\"><span title=\"British ornithologist (1860–1954)\">George Edward Lodge</span></a></bdi>",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "1899",
+        "local_file": "references/species/pinguinus_impennis_images/01_File_Alca_impennisAMF064LB.png.png"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "pomarea_pomarea",
+    "scientific_name": "Pomarea pomarea",
+    "common_name": "Monarca de Maupiti",
+    "query": "\"Pomarea pomarea\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "porphyrio_albus",
+    "scientific_name": "Porphyrio albus",
+    "common_name": "Calamón blanco",
+    "query": "\"Porphyrio albus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "prolagus_sardus",
+    "scientific_name": "Prolagus sardus",
+    "common_name": "Pika sarda",
+    "query": "\"Prolagus sardus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "prosobonia_ellisi",
+    "scientific_name": "Prosobonia ellisi",
+    "common_name": "Correlimos de Moorea",
+    "query": "\"Prosobonia ellisi\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "prosobonia_leucoptera",
+    "scientific_name": "Prosobonia leucoptera",
+    "common_name": "Correlimos de Tahití",
+    "query": "\"Prosobonia leucoptera\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "psittacula_bensoni",
+    "scientific_name": "Psittacula bensoni",
+    "common_name": "Periquito gris de Mauricio",
+    "query": "\"Psittacula bensoni\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "psittacula_exsul",
+    "scientific_name": "Psittacula exsul",
+    "common_name": "Periquito de Newton",
+    "query": "\"Psittacula exsul\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "pteropus_pilosus",
+    "scientific_name": "Pteropus pilosus",
+    "common_name": "Zorro volador de Guam",
+    "query": "\"Pteropus pilosus\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "quemisia_gravis",
+    "scientific_name": "Quemisia gravis",
+    "common_name": "Roedor gigante de La Española",
+    "query": "\"Quemisia gravis\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "raphus_cucullatus",
+    "scientific_name": "Raphus cucullatus",
+    "common_name": "Dodo",
+    "query": "\"Raphus cucullatus\"",
+    "references": [
+      {
+        "title": "File:Dodo head.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ADodo_head.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Dodo_head.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 814,
+        "artist": "William Clift 1775–1849",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "before 1848<div style=\"display: none;\">date QS:P,+1848-00-00T00:00:00Z/7,P1326,+1848-00-00T00:00:00Z/9</div>, first published in 2006",
+        "local_file": "references/species/raphus_cucullatus_images/01_File_Dodo_head.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "threskiornis_solitaria",
+    "scientific_name": "Threskiornis solitarius",
+    "common_name": "Ibis de Reunión",
+    "query": "\"Threskiornis solitarius\"",
+    "references": [],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "ursus_arctos_crowtheri",
+    "scientific_name": "Ursus arctos crowtheri",
+    "common_name": "Oso del Atlas",
+    "query": "\"Ursus arctos crowtheri\"",
+    "references": [
+      {
+        "title": "File:Atlasbear.jpg",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAtlasbear.jpg",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlasbear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "mime": "image/jpeg",
+        "width": 1600,
+        "height": 963,
+        "artist": "",
+        "license": "Public domain",
+        "license_url": "",
+        "date": "Roman mosaic, so clearly PD.",
+        "local_file": "references/species/ursus_arctos_crowtheri_images/01_File_Atlasbear.jpg.jpg"
+      }
+    ],
+    "note": "Referencias visuales; no son copias incorporadas al SVG final."
+  },
+  {
+    "slug": "zosterops_semiflavus",
+    "scientific_name": "Zosterops semiflavus",
+    "common_name": "Ojiblanco de Marianne",
+    "query": "\"Zosterops semiflavus\"",
     "references": [],
     "note": "Referencias visuales; no son copias incorporadas al SVG final."
   }

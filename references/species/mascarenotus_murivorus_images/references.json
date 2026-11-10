@@ -3,20 +3,6 @@
   "scientific_name": "Mascarenotus murivorus",
   "common_name": "Autillo de Rodrigues",
   "query": "\"Mascarenotus murivorus\"",
-  "references": [
-    {
-      "title": "File:Mascarenotus murivorus.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AMascarenotus_murivorus.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Mascarenotus_murivorus.jpg/1920px-Mascarenotus_murivorus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1098,
-      "artist": "Robert Mintern",
-      "license": "Public domain",
-      "license_url": "",
-      "date": "1879-01-01",
-      "local_file": "references/species/mascarenotus_murivorus_images/02_File_Mascarenotus_murivorus.jpg.jpg"
-    }
-  ],
+  "references": [],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

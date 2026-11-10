@@ -405,13 +405,24 @@ python tools/download_reference_images.py --species ara_gossei --limit 3
 Para el catálogo completo conviene respetar el límite de Wikimedia Commons:
 
 ```bash
-python tools/download_reference_images.py --limit 1 --delay 3
+python tools/download_reference_images.py --limit 1 --delay 5 --offset 0 --count 10
+python tools/download_reference_images.py --limit 1 --delay 5 --offset 10 --count 10
+python tools/download_reference_images.py --limit 1 --delay 5 --offset 20 --count 10
+python tools/download_reference_images.py --limit 1 --delay 5 --offset 30 --count 10
+python tools/download_reference_images.py --limit 1 --delay 5 --offset 40 --count 10
+python tools/download_reference_images.py --limit 1 --delay 5 --offset 50 --count 10
 ```
 
-Si Commons responde con `HTTP 429`, espera y vuelve a ejecutar el comando. El
-script guarda cada resultado de forma progresiva y no hay que borrar las
-carpetas ya creadas. Una especie sin una imagen fiable queda documentada sin
-referencias, en lugar de rellenarse con una imagen parecida pero engañosa.
+Los lotes actualizan `reference-images-index.json` sin borrar los resultados
+anteriores. Si Commons responde con `HTTP 429`, espera unos minutos y repite
+solo el lote que estaba ejecutándose. No hay que borrar las carpetas ya
+creadas. Una especie sin una imagen fiable queda documentada sin referencias,
+en lugar de rellenarse con una imagen parecida pero engañosa.
+
+El proceso completo no significa que todas las especies tengan tres imágenes:
+los taxones discutidos o conocidos solo por textos pueden no tener una imagen
+fiable en Commons. El objetivo es descargar todas las referencias abiertas que
+se puedan verificar, no recopilar imágenes con copyright dudoso.
 
 ## Tests
 

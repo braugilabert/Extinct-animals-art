@@ -3,33 +3,6 @@
   "scientific_name": "Lagorchestes leporides",
   "common_name": "Canguro rata de la isla de Bernier",
   "query": "\"Lagorchestes leporides\"",
-  "references": [
-    {
-      "title": "File:A monograph of the Macropodidæ, or family of kangaroos (9401181512).jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AA_monograph_of_the_Macropodid%C3%A6%2C_or_family_of_kangaroos_%289401181512%29.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/A_monograph_of_the_Macropodid%C3%A6%2C_or_family_of_kangaroos_%289401181512%29.jpg/1920px-A_monograph_of_the_Macropodid%C3%A6%2C_or_family_of_kangaroos_%289401181512%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1037,
-      "artist": "Gould, John",
-      "license": "Public domain",
-      "license_url": "",
-      "date": "between 1841 and 1842<div style=\"display: none;\">date QS:P,+1841-00-00T00:00:00Z/8,P1319,+1841-00-00T00:00:00Z/9,P1326,+1842-00-00T00:00:00Z/9</div>",
-      "local_file": "references/species/lagorchestes_leporides_images/01_File_A_monograph_of_the_Macropodid_or_family_of_kangaroos_9401181512_.jpg.jpg"
-    },
-    {
-      "title": "File:Lagorchestes leporides Gould.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3ALagorchestes_leporides_Gould.jpg",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Lagorchestes_leporides_Gould.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1027,
-      "artist": "<a href=\"//commons.wikimedia.org/wiki/John_Gould\" title=\"John Gould\">John Gould</a>",
-      "license": "Public domain",
-      "license_url": "",
-      "date": "1853",
-      "local_file": "references/species/lagorchestes_leporides_images/03_File_Lagorchestes_leporides_Gould.jpg.jpg"
-    }
-  ],
+  "references": [],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

@@ -3,6 +3,20 @@
   "scientific_name": "Ara guadeloupensis",
   "common_name": "Guacamayo de Guadalupe",
   "query": "\"Ara guadeloupensis\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Amazona.violacea.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAmazona.violacea.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Amazona.violacea.jpg/1920px-Amazona.violacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1555,
+      "artist": "Jean Babtiste du Tertre",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1667",
+      "local_file": "references/species/ara_guadeloupensis_images/01_File_Amazona.violacea.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

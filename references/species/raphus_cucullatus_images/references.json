@@ -3,6 +3,20 @@
   "scientific_name": "Raphus cucullatus",
   "common_name": "Dodo",
   "query": "\"Raphus cucullatus\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Dodo head.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ADodo_head.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Dodo_head.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 814,
+      "artist": "William Clift 1775–1849",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "before 1848<div style=\"display: none;\">date QS:P,+1848-00-00T00:00:00Z/7,P1326,+1848-00-00T00:00:00Z/9</div>, first published in 2006",
+      "local_file": "references/species/raphus_cucullatus_images/01_File_Dodo_head.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

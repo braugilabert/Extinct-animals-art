@@ -3,33 +3,6 @@
   "scientific_name": "Gallirallus dieffenbachii",
   "common_name": "Rascón de Dieffenbach",
   "query": "\"Gallirallus dieffenbachii\"",
-  "references": [
-    {
-      "title": "File:Gallirallus dieffenbachii Hullmandel.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AGallirallus_dieffenbachii_Hullmandel.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Gallirallus_dieffenbachii_Hullmandel.jpg/1920px-Gallirallus_dieffenbachii_Hullmandel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1160,
-      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Charles_Joseph_Hullmandel\" class=\"extiw\" title=\"w:en:Charles Joseph Hullmandel\"><span title=\"British lithographer of French descent (1789-1850)\">Charles Joseph Hullmandel</span></a></bdi>",
-      "license": "Public domain",
-      "license_url": "",
-      "date": "1844",
-      "local_file": "references/species/gallirallus_dieffenbachii_images/02_File_Gallirallus_dieffenbachii_Hullmandel.jpg.jpg"
-    },
-    {
-      "title": "File:MA I360062 TePapa Gallirallus-dieffenbachii lateral.jpg",
-      "page_url": "https://commons.wikimedia.org/wiki/File%3AMA_I360062_TePapa_Gallirallus-dieffenbachii_lateral.jpg",
-      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/MA_I360062_TePapa_Gallirallus-dieffenbachii_lateral.jpg/1920px-MA_I360062_TePapa_Gallirallus-dieffenbachii_lateral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "mime": "image/jpeg",
-      "width": 1600,
-      "height": 1067,
-      "artist": "Te Papa",
-      "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0",
-      "date": "1992-02-15",
-      "local_file": "references/species/gallirallus_dieffenbachii_images/03_File_MA_I360062_TePapa_Gallirallus-dieffenbachii_lateral.jpg.jpg"
-    }
-  ],
+  "references": [],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

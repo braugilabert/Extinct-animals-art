@@ -3,6 +3,20 @@
   "scientific_name": "Coturnix novaezelandiae",
   "common_name": "Codorniz de Nueva Zelanda / koreke",
   "query": "\"Coturnix novaezelandiae\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Emerald Hours in New Zealand (1906) · Lowth · 200.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AEmerald_Hours_in_New_Zealand_%281906%29_%C2%B7_Lowth_%C2%B7_200.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Emerald_Hours_in_New_Zealand_%281906%29_%C2%B7_Lowth_%C2%B7_200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1167,
+      "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1906",
+      "local_file": "references/species/coturnix_novaezelandiae_images/01_File_Emerald_Hours_in_New_Zealand_1906_Lowth_200.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }

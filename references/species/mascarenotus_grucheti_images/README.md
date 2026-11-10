@@ -1,9 +1,3 @@
 # Referencias visuales de Mascarenotus grucheti
 
 Descargadas desde Wikimedia Commons para estudiar forma, color y ambiente. No forman parte automáticamente de la ilustración final.
-
-## File:Reunion in France.svg
-- Archivo: `references/species/mascarenotus_grucheti_images/01_File_Reunion_in_France.svg.png`
-- Fuente: [https://commons.wikimedia.org/wiki/File%3AReunion_in_France.svg](https://commons.wikimedia.org/wiki/File%3AReunion_in_France.svg)
-- Autoría: <a href="//commons.wikimedia.org/wiki/User:TUBS" title="User:TUBS">TUBS</a><sup><span typeof="mw:File"><a href="//commons.wikimedia.org/wiki/User_talk:TUBS" title="User talk:TUBS"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Email_Silk.svg/20px-Email_Silk.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="15" height="15" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Email_Silk.svg/40px-Email_Silk.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="16" data-file-height="16"></a></span>  <span typeof="mw:File"><a href="http://toolserver.org/~daniel/WikiSense/Gallery.php?wikifam=commons.wikimedia.org&amp;img_user_text=TUBS" title="Gallery" rel="nofollow"><img alt="Gallery" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Gnome-emblem-photos.svg/20px-Gnome-emblem-photos.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail" decoding="async" loading="lazy" width="20" height="20" class="mw-file-element" srcset="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Gnome-emblem-photos.svg/40px-Gnome-emblem-photos.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x" data-file-width="48" data-file-height="48"></a></span></sup>
-- Licencia: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0

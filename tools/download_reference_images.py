@@ -61,7 +61,9 @@ def search_commons(query: str, limit: int = 3) -> list[dict]:
         results.append({
             "title": page.get("title", ""),
             "page_url": "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(page.get("title", "").replace(" ", "_")),
-            "image_url": info.get("thumburl") or info.get("url"),
+            # Preferimos el archivo original: las miniaturas de Commons
+            # aplican límites más estrictos a descargas automatizadas.
+            "image_url": info.get("url") or info.get("thumburl"),
             "mime": mime,
             "width": info.get("thumbwidth") or info.get("width"),
             "height": info.get("thumbheight") or info.get("height"),
@@ -92,12 +94,33 @@ def main() -> int:
     parser.add_argument("--species", help="slug de una especie concreta")
     parser.add_argument("--limit", type=int, default=3, help="referencias por especie")
     parser.add_argument("--delay", type=float, default=2.0, help="segundos entre peticiones para respetar Commons")
+    parser.add_argument("--offset", type=int, default=0, help="posición inicial del catálogo")
+    parser.add_argument("--count", type=int, default=None, help="número máximo de especies de este lote")
     args = parser.parse_args()
 
-    index = []
-    for slug, scientific_name, common_name in load_species(args.species):
+    index_path = REFERENCE_DIR / "reference-images-index.json"
+    if index_path.exists():
+        try:
+            index = json.loads(index_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            index = []
+    else:
+        index = []
+    species = load_species(args.species)
+    if args.count is not None:
+        species = species[args.offset:args.offset + args.count]
+    else:
+        species = species[args.offset:]
+    for slug, scientific_name, common_name in species:
         folder = REFERENCE_DIR / f"{slug}_images"
         folder.mkdir(parents=True, exist_ok=True)
+        manifest_path = folder / "references.json"
+        previous_references = []
+        if manifest_path.exists():
+            try:
+                previous_references = json.loads(manifest_path.read_text(encoding="utf-8")).get("references", [])
+            except (OSError, ValueError):
+                previous_references = []
         query = f'"{scientific_name}"'
         if scientific_name.endswith("spp."):
             query = f'"{scientific_name[:-4].strip()}" elephant bird illustration'
@@ -128,6 +151,9 @@ def main() -> int:
             item["local_file"] = str(destination.relative_to(ROOT)).replace("\\", "/")
             saved.append(item)
 
+        merged = {item.get("local_file", item.get("page_url")): item for item in previous_references}
+        merged.update({item.get("local_file", item.get("page_url")): item for item in saved})
+        saved = list(merged.values())
         manifest = {
             "slug": slug,
             "scientific_name": scientific_name,
@@ -136,7 +162,7 @@ def main() -> int:
             "references": saved,
             "note": "Referencias visuales; no son copias incorporadas al SVG final.",
         }
-        (folder / "references.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
         lines = [f"# Referencias visuales de {scientific_name}", "", "Descargadas desde Wikimedia Commons para estudiar forma, color y ambiente. No forman parte automáticamente de la ilustración final.", ""]
         for item in saved:
             lines.extend([
@@ -148,11 +174,13 @@ def main() -> int:
                 "",
             ])
         (folder / "README.md").write_text("\n".join(lines), encoding="utf-8")
+        index = [item for item in index if item.get("slug") != slug]
         index.append(manifest)
-        (REFERENCE_DIR / "reference-images-index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+        index.sort(key=lambda item: item.get("slug", ""))
+        index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"{slug}: {len(saved)} referencias")
 
-    (REFERENCE_DIR / "reference-images-index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0
 
 

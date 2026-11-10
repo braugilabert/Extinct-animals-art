@@ -3,6 +3,20 @@
   "scientific_name": "Ursus arctos crowtheri",
   "common_name": "Oso del Atlas",
   "query": "\"Ursus arctos crowtheri\"",
-  "references": [],
+  "references": [
+    {
+      "title": "File:Atlasbear.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAtlasbear.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlasbear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 963,
+      "artist": "",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "Roman mosaic, so clearly PD.",
+      "local_file": "references/species/ursus_arctos_crowtheri_images/01_File_Atlasbear.jpg.jpg"
+    }
+  ],
   "note": "Referencias visuales; no son copias incorporadas al SVG final."
 }
