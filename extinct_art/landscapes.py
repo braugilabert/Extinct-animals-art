@@ -168,6 +168,30 @@ def forest_foliage(pal, rng_for) -> str:
     ])
 
 
+def island_backdrop(pal, rng_for) -> str:
+    """Isla volcanica o tropical en el horizonte, sin imponer una isla concreta."""
+    r = rng_for("island-backdrop")
+    return "".join([
+        '<g id="backdrop">',
+        wash("M20 20 H360 V250 H20 Z", pal["sky"], r, opacity=.72, layers=2, jitter=1.8, edge=0),
+        sun_glow(286, 86, 25, pal["mist"], r),
+        wash("M20 260 C75 245 112 252 145 236 C181 218 198 160 224 143 C249 166 256 212 286 226 C314 239 335 231 360 224 V325 H20 Z", pal["mountains_far"], r, opacity=.7, jitter=1.4),
+        wash("M20 304 C92 277 143 304 204 283 C265 262 313 287 360 268 V370 H20 Z", pal["hill_near"], r, opacity=.62, jitter=1.3),
+        water_ripples(342, pal["mist"], r, count=6),
+        '</g>',
+    ])
+
+
+def island_foliage(pal, rng_for) -> str:
+    r = rng_for("island-foliage")
+    return "".join([
+        '<g id="foliage">',
+        wash("M20 470 C34 425 76 398 122 410 C96 437 82 458 70 470 Z", pal["foliage"], r, opacity=.78, jitter=1.2),
+        wash("M360 470 C346 425 310 402 270 416 C300 442 322 461 338 470 Z", pal["foliage"], r, opacity=.78, jitter=1.2),
+        '</g>',
+    ])
+
+
 LANDSCAPES = {
     "jamaica": {
         "label": "Blue Mountains, Jamaica",
@@ -188,6 +212,11 @@ LANDSCAPES = {
         "label": "costa rocosa e islas",
         "backdrop": coast_backdrop,
         "foliage": coast_foliage,
+    },
+    "island": {
+        "label": "isla y horizonte oceanico",
+        "backdrop": island_backdrop,
+        "foliage": island_foliage,
     },
     "bosque": {
         "label": "bosque húmedo",

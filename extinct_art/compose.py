@@ -84,6 +84,8 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
         if meta.get(key)
     )
     accessible_desc = meta.get("description", f"Ilustración tipo acuarela de {title}.")
+    if meta.get("location_label"):
+        research_desc = f"Ubicacion probable: {meta['location_label']}. " + research_desc
     if research_desc:
         accessible_desc = f"{accessible_desc} {research_desc}"
 
@@ -119,7 +121,7 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
     if grain:
         parts.append(paper_grain(CANVAS_W, CANVAS_H, pal["paper"], rng_for("grain")))
     if caption:
-        text = f'{meta["scientific_name"]} · {land["label"]}'
+        text = f'{meta["scientific_name"]} · {meta.get("location_label", land["label"])}'
         parts.append(
             f'<text x="{CANVAS_W / 2}" y="489" text-anchor="middle" font-size="12" '
             f'font-style="italic" font-family="{FONT}" fill="{pal["caption"]}">'

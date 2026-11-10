@@ -502,6 +502,15 @@ se puedan verificar, no recopilar imágenes con copyright dudoso.
 
 ## Uso normal: solo necesitas `generate.py`
 
+Para crear una especie nueva desde cero, consulta la guía detallada:
+
+[`docs/crear_especie_desde_cero.md`](docs/crear_especie_desde_cero.md)
+
+Las especies nuevas creadas con `new_species.py` pueden guardar sus datos
+visuales en `DRAWING_DATA` y sus fuentes en `RESEARCH_SOURCES` dentro de su
+propio módulo. `drawing_data.py` se conserva como catálogo central de las
+especies existentes para evitar duplicar información.
+
 Después de instalar las dependencias, el flujo habitual es muy sencillo:
 
 ```powershell
@@ -530,6 +539,41 @@ Los demás archivos cumplen funciones internas:
 Solo necesitarás editar archivos internos cuando quieras añadir una especie,
 corregir una fuente o mejorar su anatomía. Para el uso diario, el punto de
 entrada es siempre `generate.py`.
+
+## Comprobacion de fichas Markdown y modulos Python
+
+La informacion no se mantiene duplicada manualmente en 58 archivos Python.
+Cada modulo contiene la identidad basica, la distribucion, el habitat y la
+funcion `draw()`. Al cargar el catalogo, `extinct_art/species/__init__.py`
+incorpora automaticamente a ese modulo los campos investigados de
+`drawing_data.py`: descripcion, rasgos visuales, guia de dibujo,
+comparaciones prudentes, perfil anatomico, colores y fuentes.
+
+Esto significa que, durante una ejecucion normal, el modulo Python si recibe
+la informacion relevante de su ficha Markdown, pero existe una unica fuente
+de datos ampliados para evitar que la ficha y el codigo se separen. El comando
+`--validate` comprueba ahora que cada valor visual cargado tambien aparece en
+`references/species/<slug>.md`. Si falta algo, la validacion lo indica antes
+de generar imagenes.
+
+## Ubicacion geografica en la lamina
+
+Cada especie obtiene `META["location_label"]` a partir de la distribucion ya
+documentada en su ficha. Esa etiqueta aparece junto al nombre cientifico en
+el pie de la ilustracion, por ejemplo:
+
+```text
+Raphus cucullatus · Mauricio (isla)
+```
+
+La misma ubicacion selecciona un fondo regional cuando es razonable. Las
+especies de Mauricio, Rodrigues, Reunión, Madagascar, Lord Howe, Macquarie,
+Chatham, Tahití, Raiatea, Moorea, las Malvinas y otras islas usan un horizonte
+oceánico con relieve insular. `Ara gossei` conserva específicamente
+`Blue Mountains, Jamaica`. Las especies continentales o de localidad dudosa
+mantienen un fondo ecológico más prudente. La ubicación no inventa una
+localidad exacta: si la fuente solo dice una isla o región, eso es lo que se
+muestra.
 
 ## Tests
 

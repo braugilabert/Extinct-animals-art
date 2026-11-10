@@ -55,10 +55,23 @@ META = {{
 
 # Sustituye estos colores cuando la investigación los respalde.
 COLORS = {{}}
+PROFILE = {{"body_scale": 1.0}}
+
+# Datos visuales locales de esta especie. Completa estos campos despues de
+# investigar; no es necesario editar drawing_data.py para una especie nueva.
+DRAWING_DATA = {{
+    "description": "Descripcion util para construir la silueta.",
+    "visual_notes": "Rasgos que deben verse en la ilustracion.",
+    "drawing_notes": "Que esta documentado y que es hipotesis.",
+    "reference_taxa": "Especies actuales usadas solo como comparacion anatomica.",
+}}
+
+# Anade aqui las fuentes anatomicas o historicas mas importantes.
+RESEARCH_SOURCES = []
 
 
 def draw(rng_for) -> str:
-    return draw_taxon(rng_for, META, COLORS)
+    return draw_taxon(rng_for, META, COLORS, PROFILE)
 '''
 
 

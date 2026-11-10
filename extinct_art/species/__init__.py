@@ -9,6 +9,48 @@ from .drawing_data import DATA as DRAWING_DATA, RESEARCH_SOURCES
 from ..reference import palette_from_references
 
 
+def _location_for(meta):
+    """Convierte la distribucion de la ficha en una etiqueta y un escenario.
+
+    No intenta inventar una localidad exacta: solo normaliza lugares que ya
+    aparecen en META. La etiqueta se imprime en la lamina y ``landscape`` se
+    usa para escoger un fondo regional.
+    """
+    raw = str(meta.get("distribution", "")).strip()
+    text = raw.casefold()
+    rules = (
+        (("jamaica",), "Blue Mountains, Jamaica", "jamaica"),
+        (("mauricio", "mauritius"), "Mauricio (isla)", "island"),
+        (("rodrigues",), "Rodrigues (isla)", "island"),
+        (("reunion", "reunión", "reuni"), "Reunión (isla)", "island"),
+        (("madagascar",), "Madagascar", "island"),
+        (("malvinas", "falkland"), "Islas Malvinas", "island"),
+        (("lord howe",), "Isla Lord Howe", "island"),
+        (("macquarie",), "Isla Macquarie", "island"),
+        (("chatham",), "Islas Chatham", "island"),
+        (("guadalupe",), "Guadalupe", "island"),
+        (("tahiti",), "Tahití", "island"),
+        (("raiatea",), "Raiatea", "island"),
+        (("moorea",), "Moorea", "island"),
+        (("kosrae",), "Kosrae", "island"),
+        (("santa cruz",), "Santa Cruz, Antillas", "island"),
+        (("bonin",), "Islas Bonin", "island"),
+        (("seychelles",), "Seychelles", "island"),
+        (("nueva zelanda", "new zealand"), "Nueva Zelanda", "island"),
+        (("kangaroo",), "Isla Kangaroo, Australia", "island"),
+        (("bering",), "Isla de Bering", "island"),
+        (("atlántico norte", "atlantic"), "Atlántico norte", "costa"),
+        (("cabo", "sudáfrica", "south africa"), "Sudáfrica", "generic"),
+        (("caspio", "caspian"), "Mar Caspio", "costa"),
+        (("europa", "euroasia", "euroasi"), "Europa y Eurasia", "generic"),
+        (("cerdeña", "córcega", "sardinia"), "Cerdeña y Córcega", "island"),
+    )
+    for needles, label, landscape in rules:
+        if any(needle in text for needle in needles):
+            return label, landscape
+    return raw or "localidad no precisada", meta.get("landscape", "generic")
+
+
 def _load_species():
     found = {}
     for module_info in pkgutil.iter_modules(__path__):
@@ -18,11 +60,23 @@ def _load_species():
         meta = getattr(module, "META", None)
         draw = getattr(module, "draw", None)
         if isinstance(meta, dict) and callable(draw):
-            extra = DRAWING_DATA.get(meta.get("slug", module_info.name), {})
+            location_label, inferred_landscape = _location_for(meta)
+            meta["location_label"] = location_label
+            meta["location_landscape"] = inferred_landscape
+            if meta.get("landscape") == "generic" and inferred_landscape != "generic":
+                meta["landscape"] = inferred_landscape
+            # Las especies existentes usan el catálogo común. Las nuevas
+            # pueden declarar DRAWING_DATA dentro de su propio módulo para
+            # mantener toda su lógica visual en un solo archivo. Si ambos
+            # existen, la información local tiene prioridad.
+            central_extra = DRAWING_DATA.get(meta.get("slug", module_info.name), {})
+            local_extra = getattr(module, "DRAWING_DATA", {})
+            extra = {**central_extra, **local_extra}
             for key in ("description", "visual_notes", "drawing_notes", "reference_taxa"):
                 if extra.get(key):
                     meta[key] = extra[key]
-            if slug_sources := RESEARCH_SOURCES.get(meta.get("slug", module_info.name)):
+            slug_sources = getattr(module, "RESEARCH_SOURCES", None) or RESEARCH_SOURCES.get(meta.get("slug", module_info.name))
+            if slug_sources:
                 meta["research_sources"] = slug_sources
             slug = meta.get("slug", module_info.name)
             image_manifest = Path(__file__).resolve().parents[2] / "references" / "species" / f"{slug}_images" / "references.json"
@@ -63,4 +117,13 @@ def validate_species(project_root=None):
             ref = Path(project_root) / module.META["reference_file"]
             if not ref.exists():
                 errors.append(f"{slug}: no existe {module.META['reference_file']}")
+            else:
+                try:
+                    markdown = ref.read_text(encoding="utf-8")
+                    for key in ("description", "visual_notes", "drawing_notes", "reference_taxa"):
+                        value = module.META.get(key)
+                        if value and value not in markdown:
+                            errors.append(f"{slug}: META['{key}'] no coincide con la ficha Markdown")
+                except OSError as exc:
+                    errors.append(f"{slug}: no se pudo leer la ficha Markdown: {exc}")
     return errors
