@@ -20,8 +20,10 @@ META = {
 }
 
 # Colores iniciales: hipótesis visual, no reconstrucción definitiva.
+PROFILE = {"body_scale":0.9,"crest":True}
+
 COLORS = {}
 
 def draw(rng_for) -> str:
-    return draw_taxon(rng_for, META, COLORS)
+    return draw_taxon(rng_for, META, COLORS, PROFILE)
 

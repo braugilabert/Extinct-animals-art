@@ -23,11 +23,12 @@ def _profile(meta) -> int:
     return int(hashlib.sha256(slug).hexdigest()[:8], 16) % 3
 
 
-def draw_taxon(rng_for, meta, colors=None) -> str:
+def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
     """Dibuja una silueta de estudio con variación específica por especie."""
     kind = meta.get("kind", "bird")
     variant = _profile(meta)
     c = {**PALETTES.get(kind, PALETTES["bird"]), **(colors or {})}
+    profile = {"body_scale": 1.0, "head_scale": 1.0, "tail_scale": 1.0, **(profile or {})}
     # Variación de tono estable: evita que todas las especies de un grupo tengan
     # exactamente el mismo color aunque no se haya documentado una coloración.
     if variant == 1:
@@ -37,14 +38,15 @@ def draw_taxon(rng_for, meta, colors=None) -> str:
         c["dark"] = darken(c["dark"], .12)
     r = rng_for(f"taxon:{meta.get('slug', meta.get('scientific_name', 'species'))}")
     if kind == "mammal":
-        return _mammal(c, r, variant)
+        return _mammal(c, r, variant, profile)
     if kind == "reptile":
-        return _reptile(c, r, variant)
-    return _bird(c, r, variant)
+        return _reptile(c, r, variant, profile)
+    return _bird(c, r, variant, profile)
 
 
-def _bird(c, r, variant) -> str:
-    out = ['<g id="species">']
+def _bird(c, r, variant, profile) -> str:
+    transform = f'translate(200 230) scale({profile["body_scale"]:.2f}) translate(-200 -230)'
+    out = [f'<g id="species" transform="{transform}">']
     if variant == 0:
         body = "M150 158 C128 186 132 260 178 310 C207 330 250 304 254 254 C258 204 228 160 190 142 Z"
         wing = "M205 166 C245 196 249 268 226 326 C218 338 208 324 207 297 C196 244 194 201 205 166 Z"
@@ -72,13 +74,25 @@ def _bird(c, r, variant) -> str:
     if variant == 2:
         beak = "M108 148 C92 155 88 166 103 169 C116 165 123 156 127 147 Z"
     out.append(wash(beak, c["accent"], r, edge=0))
+    if profile.get("long_beak"):
+        out.append(stroke("M109 150 C91 153 82 160 75 169", c["accent"], 3, r, jitter=.4))
+    if profile.get("crest"):
+        out.append(stroke("M178 89 C170 67 176 52 184 42 M188 87 C188 63 197 52 205 45", c["body_hi"], 5, r, opacity=.75, jitter=.5))
+    if profile.get("flightless"):
+        out.append(stroke("M211 252 C224 276 230 296 231 315", c["body_hi"], 4, r, opacity=.5, jitter=.5))
+    if profile.get("stripes"):
+        for y in (195, 215, 235, 255, 275):
+            out.append(stroke(f"M215 {y} C230 {y+5} 239 {y+5} 247 {y}", c["light"], 3, r, opacity=.65, jitter=.4))
+    if profile.get("white_body"):
+        out.append(wash("M166 177 C150 210 157 260 185 288 C201 290 209 269 204 236 C200 205 185 182 166 177 Z", c["light"], r, opacity=.7, jitter=.7))
     out.append(stroke("M192 315 q-8 8 -4 20 M201 317 q-6 8 -2 18", c["dark"], 3, r, jitter=.4))
     out.append("</g>")
     return "".join(out)
 
 
-def _mammal(c, r, variant) -> str:
-    out = ['<g id="species">']
+def _mammal(c, r, variant, profile) -> str:
+    transform = f'translate(200 230) scale({profile["body_scale"]:.2f}) translate(-200 -230)'
+    out = [f'<g id="species" transform="{transform}">']
     body = "M112 230 C116 176 164 146 222 164 C264 178 282 224 256 268 C228 305 164 308 124 278 Z"
     if variant == 1:
         body = "M105 236 C116 170 176 145 236 172 C276 192 280 244 245 278 C205 309 140 302 112 270 Z"
@@ -100,12 +114,20 @@ def _mammal(c, r, variant) -> str:
         tail = "M242 260 C270 290 273 326 260 347"
     out.append(stroke(tail, c["body_hi"], 7, r, opacity=.7, jitter=.7))
     out.append(stroke("M145 270 L138 327 M205 273 L210 326 M240 261 L252 307", c["dark"], 6, r, jitter=.7))
+    if profile.get("horns"):
+        out.append(stroke("M112 145 C92 122 88 96 96 78 M125 143 C112 114 114 88 126 70", c["dark"], 5, r, jitter=.5))
+    if profile.get("mane"):
+        out.append(stroke("M148 151 C130 168 124 205 140 232 M156 145 C137 180 136 218 151 250", c["accent"], 7, r, opacity=.65, jitter=.7))
+    if profile.get("stripes"):
+        for y in (202, 220, 238, 256):
+            out.append(stroke(f"M190 {y} C215 {y+7} 238 {y+5} 256 {y-2}", c["dark"], 3, r, opacity=.65, jitter=.4))
     out.append("</g>")
     return "".join(out)
 
 
-def _reptile(c, r, variant) -> str:
-    out = ['<g id="species">']
+def _reptile(c, r, variant, profile) -> str:
+    transform = f'translate(200 230) scale({profile["body_scale"]:.2f}) translate(-200 -230)'
+    out = [f'<g id="species" transform="{transform}">']
     body = "M98 258 C130 215 188 198 260 225 C285 236 292 261 267 278 C207 300 142 292 98 258 Z"
     if variant == 1:
         body = "M82 270 C126 214 190 204 273 224 C302 235 300 264 270 280 C198 312 122 300 82 270 Z"
@@ -116,5 +138,9 @@ def _reptile(c, r, variant) -> str:
     points = [(145,242),(165,234),(185,230),(205,232),(225,240),(155,262),(180,258),(205,260),(230,262)]
     out.append(scale_marks(points, r, c["dark"], width=1.2, w=9, h=5, opacity=.6))
     out.append('<circle cx="299" cy="235" r="3.5" fill="' + c["dark"] + '"/>')
+    if profile.get("long_body"):
+        out.append(stroke("M95 275 C60 290 45 310 30 330", c["body"], 14, r, opacity=.8, jitter=1.0))
+    if profile.get("giant"):
+        out.append(stroke("M110 214 C145 185 218 181 270 210", c["body_hi"], 9, r, opacity=.55, jitter=.7))
     out.append("</g>")
     return "".join(out)
