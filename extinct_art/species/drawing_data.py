@@ -11,7 +11,7 @@ DATA = {
         "visual_notes": "Ave elefante ratita gigante; huevos excepcionalmente grandes; cuello largo y alas reducidas; plumaje marrón grisáceo hipotético.",
         "drawing_notes": "Documentado: ratita gigante, no voladora y de Madagascar. Hipótesis visual: silueta pesada, patas largas y plumaje pardo apagado; no dibujar un avestruz exacto ni afirmar un color concreto.",
         "reference_taxa": "Aepyornis; comparación funcional prudente con avestruz y casuario actuales, no como copia.",
-        "profile": {"body_scale": 1.34, "flightless": True, "long_legs": True, "giant": True},
+        "profile": {"body_scale": 1.34, "flightless": True, "long_legs": True, "long_neck": True, "giant": True, "ratite": True},
     },
     "alectroenas_nitidissimus": {
         "description": "Paloma grande de Mauricio conocida por pieles; cuerpo robusto de paloma frugívora, cabeza pequeña, pico corto y alas redondeadas. El azul intenso y los detalles de cuello deben tratarse como reconstrucción basada en Alectroenas, no como certeza absoluta.",

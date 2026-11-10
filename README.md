@@ -377,6 +377,60 @@ Al añadir una especie nueva, completa también su entrada en
 `drawing_data.py`, actualiza la sección de descripción de su ficha Markdown y
 marca claramente cualquier color, tamaño o conducta que sea una inferencia.
 
+### Mejora reciente: las especies ya no comparten una silueta unica
+
+La version anterior dibujaba casi todas las aves con el mismo cuerpo ovalado
+y resolvia la diferencia mediante colores y pequenos detalles. Eso producia
+imagenes reconocibles como acuarelas, pero no como animales diferentes. Ahora
+`base.py` selecciona una anatomia por familia y por rasgos de la ficha:
+
+- ratites y aves corredoras: torso vertical, cuello, patas largas y alas
+  reducidas;
+- loros y guacamayos: cabeza grande, pico curvado y cola diferenciada;
+- dodos, palomas terrestres y rascones: cuerpo horizontal pesado y patas
+  visibles;
+- buhos: disco facial y ojos frontales;
+- garzas, cormoranes y limicolas: cuello, pico y patas de ave acuatica;
+- paseriformes: cuerpo pequeno, pico fino y cola proporcionada;
+- ungulados: cuello, cuernos, crin y patas de mamifero con pezuñas;
+- felinos, canidos, osos, roedores, marsupiales, mustelidos y murcielagos:
+  siluetas cuadrupedas o membranas propias;
+- serpientes y geckos: cuerpo reptiliano, cabeza y textura escamosa propias.
+
+La prioridad de cada generacion es: anatomia documentada, proporcion,
+postura, rasgos diagnosticos, color y por ultimo textura artistica. El color
+de una referencia visual nunca puede convertir un dodo en un loro ni una
+serpiente en un lagarto.
+
+La informacion se organiza a partir de fuentes de museos, organizaciones
+zoologicas y literatura especializada. Para el dodo se mantiene la cautela de
+las reconstrucciones modernas: hay huesos abundantes, pero el tejido blando y
+el color exacto siguen siendo inciertos. Para *Dusicyon australis* se usan las
+medidas, patas cortas, orejas pequenas, pelaje mezclado y punta blanca de la
+cola documentados por fuentes zoologicas. Para *Psittacula exsul* se conservan
+los morfos verdes y azulados, las manchas rojas alares y el pico bicolor
+descritos en fuentes especializadas. Los enlaces concretos estan en
+`drawing_data.py` y en las fichas individuales.
+
+Esto mejora la fidelidad, pero no convierte una reconstruccion en una
+fotografia: cuando una especie solo se conoce por relatos, huesos o una
+ilustracion antigua, la ficha mantiene la incertidumbre y separa hechos de
+hipotesis.
+
+Para comprobar rapidamente la diferencia entre perfiles:
+
+```powershell
+python generate.py aepyornis --no-png --out output/comparativa
+python generate.py raphus_cucullatus --no-png --out output/comparativa
+python generate.py dusicyon_australis --no-png --out output/comparativa
+python generate.py hoplodactylus_delcourti --no-png --out output/comparativa
+```
+
+Si una especie nueva vuelve a parecer generica, no hay que tocar
+`generate.py`: se corrigen su `profile`, `description`, `visual_notes` y
+`drawing_notes` en `drawing_data.py`, se refleja la decision en su ficha
+Markdown y se ejecuta `python generate.py --validate`.
+
 ## Referencias visuales descargadas
 
 El script [`tools/download_reference_images.py`](tools/download_reference_images.py)

@@ -32,6 +32,16 @@ def _choose_landscape(meta, explicit: str | None, seed: int) -> str:
     preferred = meta.get("landscape", "generic")
     if preferred != "generic":
         return preferred
+    # La ficha ya contiene el contexto ecológico; úsalo antes de recurrir a
+    # una elección aleatoria. Así una especie marina no acaba siempre en el
+    # mismo paisaje montañoso que un mamífero de bosque.
+    context = " ".join(str(meta.get(k, "")) for k in ("habitat", "distribution", "description", "visual_notes")).lower()
+    if any(word in context for word in ("marino", "marina", "costa", "isla de bering", "atlántico", "playa", "oceán")):
+        return "costa"
+    if any(word in context for word in ("humedal", "marisma", "laguna", "pantano", "ribera", "río", "limícola", "garza", "pato", "oca")):
+        return "humedal"
+    if any(word in context for word in ("bosque", "selva", "monte húmedo", "vegetación densa", "forestal")):
+        return "bosque"
     # Las especies antiguas se benefician de un fondo variado, pero la misma
     # semilla sigue produciendo siempre el mismo resultado.
     options = ("generic", "humedal", "costa", "bosque")
