@@ -25,6 +25,67 @@ python generate.py ara_gossei --palette acuarela_antigua --seed 7
 
 El programa no convierte todavía automáticamente un texto o un boceto en una especie dibujada. La geometría debe escribirse a mano porque cada animal tiene una anatomía diferente. Sí queda preparado un flujo claro para introducir el nombre, la investigación, las fuentes, los bocetos y después traducirlos a formas SVG.
 
+## Diferencia entre las fichas Markdown y los módulos Python
+
+Cada especie tiene dos archivos relacionados, pero cumplen funciones distintas:
+
+| Archivo | Para qué sirve |
+| --- | --- |
+| `references/species/<especie>.md` | Es la ficha de investigación y planificación. Guarda lo que sabemos, las fuentes, la distribución, el hábitat, los rasgos anatómicos, los colores posibles, las dudas y los bocetos. No genera imágenes. |
+| `extinct_art/species/<especie>.py` | Es la ficha técnica del generador. Contiene los metadatos que usa el programa y la función `draw(rng_for)`, que devuelve las formas SVG del animal. Sí participa en la generación de imágenes. |
+
+La relación es esta:
+
+```text
+fuentes y bocetos
+        ↓
+ficha Markdown: qué sabemos y qué podemos representar
+        ↓ revisión y traducción manual
+módulo Python: cómo se dibuja mediante SVG
+        ↓
+generate.py → lámina SVG → PNG opcional
+```
+
+Por ejemplo, en la ficha Markdown de `pinguinus_impennis` se documenta que el
+alca gigante era un ave marina grande, no voladora, de costas del Atlántico
+norte. Después esa información se traduce al módulo Python: se elige el grupo
+`bird`, una silueta, colores, postura y paisaje. El programa no lee todavía el
+texto Markdown para dibujar automáticamente; la persona que investiga realiza
+esa traducción de forma consciente.
+
+La ficha Markdown es, por tanto, la fuente de conocimiento y memoria del
+proyecto. El módulo Python es la implementación visual. Si cambias solo la
+ficha Markdown, la imagen no cambiará hasta que actualices también el módulo
+Python. Si cambias solo el módulo Python, la imagen cambiará, pero la decisión
+visual quedará mal documentada.
+
+## Qué debe contener cada uno
+
+### Ficha Markdown
+
+Úsala para guardar:
+
+- nombres científicos, comunes e históricos;
+- distribución, hábitat y cronología;
+- tamaño, anatomía, plumaje, pelaje o escamas;
+- alimentación y comportamiento cuando se conozcan;
+- causas de extinción y nivel de certeza;
+- enlaces, libros, museos, ejemplares y licencias de imágenes;
+- decisiones artísticas y rasgos que son hipótesis.
+
+### Módulo Python
+
+Úsalo para guardar:
+
+- `META`: nombres, grupo, paisaje, descripción y datos de investigación;
+- `COLORS`: colores utilizados en la ilustración;
+- `draw(rng_for)`: geometría SVG del animal;
+- llamadas a `wash`, `stroke`, `blob` y `scale_marks` para el acabado de acuarela.
+
+No pegues una investigación larga dentro del módulo Python. Enlaza la ficha
+Markdown con `reference_file` y deja en `META` solo el resumen que necesita el
+generador.
+
 ## Instalación
 
 ```bash
@@ -84,7 +145,7 @@ Para crear automáticamente los dos archivos iniciales:
 python new_species.py dodo "Raphus cucullatus" "Dodo" --kind bird --landscape generic
 ```
 
-El comando crea el módulo Python y la ficha Markdown, y nunca sobrescribe una especie existente.
+El comando crea el módulo Python y la ficha Markdown, y nunca sobrescribe una especie existente. El módulo incluye también los campos `distribution`, `habitat`, `visual_notes` y `extinction_notes`; hay que rellenarlos con la investigación antes de dibujar la versión definitiva.
 
 ### Paso 2: crear la carpeta de trabajo
 
@@ -121,7 +182,7 @@ META = {
 }
 ```
 
-La función `draw` devuelve fragmentos SVG. Las fichas nuevas reutilizan `draw_taxon` de `extinct_art/species/base.py`, que ofrece una silueta inicial de ave, mamífero o reptil. Para una ilustración fiel hay que sustituir esa silueta por geometría específica usando `wash`, `stroke`, `blob` y `scale_marks` desde `extinct_art/brush.py`. El papel, el grano, el paisaje y la rama los añade `compose.py` automáticamente.
+La función `draw` devuelve fragmentos SVG. Las fichas nuevas reutilizan `draw_taxon` de `extinct_art/species/base.py`, que ofrece una silueta inicial de ave, mamífero o reptil. Para una ilustración fiel hay que sustituir esa silueta por geometría específica usando `wash`, `stroke`, `blob` y `scale_marks` desde `extinct_art/brush.py`. El papel, el grano, el paisaje y la rama los añade `compose.py` automáticamente. Los campos `distribution`, `habitat`, `visual_notes` y `extinction_notes` se conservan en `META` y se incluyen en la descripción accesible del SVG.
 
 ### Paso 5: registrar la especie
 
@@ -177,7 +238,7 @@ Conserva la ficha, las fuentes y los bocetos. El contenido de `output/` no es ne
 - `--describe` permite revisar los metadatos antes de generar una lámina.
 - Los tests comprueban la integridad del catálogo completo.
 
-Las fichas nuevas son una base visual inicial: los módulos funcionan y generan SVG, pero una reconstrucción anatómica rigurosa requiere sustituir la silueta genérica de cada especie por geometría específica después de revisar sus restos, ejemplares, láminas y descripciones.
+Las fichas nuevas son una base visual inicial: los módulos funcionan y generan SVG, y ahora contienen un resumen de investigación para orientar el dibujo. Una reconstrucción anatómica rigurosa requiere sustituir la silueta genérica de cada especie por geometría específica después de revisar sus restos, ejemplares, láminas y descripciones. Las fechas, sinonimias y colores deben volver a comprobarse antes de publicar.
 
 Estas son las mejoras que considero más útiles, ordenadas aproximadamente por prioridad:
 

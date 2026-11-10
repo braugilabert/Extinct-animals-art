@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinto en libertad; último cautivo hacia 1919.
+- Distribución: Europa oriental y estepa euroasiática.
+- Hábitat: estepa y pradera.
+- Rasgos visuales: caballo pequeño robusto, gris pardo y crin erguida.
+- Causas o hipótesis de desaparición: caza, competencia y domesticación.
+
+- Estado de trabajo: extinto en libertad; último cautivo hacia 1919.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

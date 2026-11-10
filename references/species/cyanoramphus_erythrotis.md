@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: subespecie extinta; 1890-1891.
+- Distribución: Macquarie.
+- Hábitat: matorral subantártico y tussock.
+- Rasgos visuales: perico verde; anidaba en tussock.
+- Causas o hipótesis de desaparición: gatos, perros y cambios de la isla.
+
+- Estado de trabajo: subespecie extinta; 1890-1891.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

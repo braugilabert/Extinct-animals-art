@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; 1876.
+- Distribución: islas Malvinas.
+- Hábitat: turbera, playa, llanura y roquedo.
+- Rasgos visuales: cánido mediano; pelaje pardo y punta de cola blanca.
+- Causas o hipótesis de desaparición: caza por piel y protección del ganado.
+
+- Estado de trabajo: extinta; 1876.
 - Último registro o fecha aproximada: el último individuo conocido murió probablemente en 1876.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

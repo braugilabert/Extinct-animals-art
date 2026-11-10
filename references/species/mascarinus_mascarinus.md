@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; 1834 en cautividad.
+- Distribución: Reunión.
+- Hábitat: bosque y claros.
+- Rasgos visuales: loro gris pardo de pico robusto.
+- Causas o hipótesis de desaparición: captura, caza y deforestación.
+
+- Estado de trabajo: extinta; 1834 en cautividad.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

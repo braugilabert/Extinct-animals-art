@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; mediados del XIX.
+- Distribución: Maupiti.
+- Hábitat: bosque tropical.
+- Rasgos visuales: monarca pequeño; plumaje poco documentado.
+- Causas o hipótesis de desaparición: pérdida de bosque y ratas.
+
+- Estado de trabajo: extinta; mediados del XIX.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

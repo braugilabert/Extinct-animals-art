@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; hacia 1777.
+- Distribución: Moorea.
+- Hábitat: playa, marisma y humedal.
+- Rasgos visuales: limícola pequeño.
+- Causas o hipótesis de desaparición: caza y depredadores introducidos.
+
+- Estado de trabajo: extinta; hacia 1777.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

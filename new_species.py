@@ -47,6 +47,10 @@ META = {{
     "description": "Interpretación artística de {scientific_name}, {common_name}.",
     "reference_file": "references/species/{slug}.md",
     "source_url": "https://www.gbif.org/species/search?q={scientific_name.replace(' ', '%20')}",
+    "distribution": "por documentar",
+    "habitat": "por documentar",
+    "visual_notes": "por documentar",
+    "extinction_notes": "por documentar",
 }}
 
 # Sustituye estos colores cuando la investigación los respalde.

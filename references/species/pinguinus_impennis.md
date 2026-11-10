@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; 1844.
+- Distribución: Atlántico norte.
+- Hábitat: costa rocosa e islas de cría.
+- Rasgos visuales: álcido grande negro y blanco, pico alto y alas reducidas.
+- Causas o hipótesis de desaparición: caza por carne, huevos y pieles.
+
+- Estado de trabajo: extinta; 1844.
 - Último registro o fecha aproximada: dos ejemplares fueron capturados en Eldey, Islandia, en 1844; se consideran los últimos confirmados.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; después de 1777.
+- Distribución: Raiatea.
+- Hábitat: bosque tropical.
+- Rasgos visuales: periquito documentado por ejemplares.
+- Causas o hipótesis de desaparición: caza, captura y depredadores.
+
+- Estado de trabajo: extinta; después de 1777.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

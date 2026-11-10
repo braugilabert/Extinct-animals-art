@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; probablemente poco después de 1840.
+- Distribución: islas Chatham.
+- Hábitat: matorral y suelo forestal.
+- Rasgos visuales: rascón no volador; patas fuertes.
+- Causas o hipótesis de desaparición: caza, gatos y perros introducidos.
+
+- Estado de trabajo: extinta; probablemente poco después de 1840.
 - Último registro o fecha aproximada: no fijar una fecha definitiva sin contrastar la fuente primaria o la ficha de conservación.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

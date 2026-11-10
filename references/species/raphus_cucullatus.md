@@ -11,7 +11,15 @@
 
 ## Estado y cronología
 
-- Estado de trabajo: investigación inicial basada en las fuentes enlazadas; distinguir especie, subespecie y población.
+### Datos de investigación utilizados por el módulo
+
+- Estado: extinta; 1662 o quizá 1680.
+- Distribución: Mauricio.
+- Hábitat: bosque y humedal.
+- Rasgos visuales: ave pesada no voladora, pico grande y patas robustas.
+- Causas o hipótesis de desaparición: caza y perros, gatos, cerdos y ratas.
+
+- Estado de trabajo: extinta; 1662 o quizá 1680.
 - Último registro o fecha aproximada: último avistamiento fiable hacia 1662, aunque se ha propuesto una fecha posterior cercana a 1680.
 - Causas o hipótesis: separar caza, pérdida de hábitat, especies introducidas, enfermedades y otras posibilidades; no presentar una hipótesis como hecho.
 

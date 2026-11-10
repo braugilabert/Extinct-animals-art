@@ -44,12 +44,25 @@ def build_svg(species: str = "ara_gossei", palette: str = "acuarela_antigua",
     x, y, w, h = CARD
     paint_edge = deckle_rect(x, y, w, h, rng_for("deckle"))
     title = f'{meta["scientific_name"]} ({meta["common_name"]})'
+    research_desc = " ".join(
+        f"{label}: {meta[key]}."
+        for key, label in (
+            ("status", "Estado"),
+            ("distribution", "Distribución"),
+            ("habitat", "Hábitat"),
+            ("visual_notes", "Rasgos visuales"),
+        )
+        if meta.get(key)
+    )
+    accessible_desc = meta.get("description", f"Ilustración tipo acuarela de {title}.")
+    if research_desc:
+        accessible_desc = f"{accessible_desc} {research_desc}"
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {CANVAS_W} {CANVAS_H}" '
         f'width="{CANVAS_W * 2}" height="{CANVAS_H * 2}" role="img">',
         f"<title>{escape(title)}</title>",
-        f"<desc>{escape(meta.get('description', f'Ilustración tipo acuarela de {title}.'))}</desc>",
+        f"<desc>{escape(accessible_desc)}</desc>",
         "<defs>",
         f'<clipPath id="paint"><path d="{paint_edge}"/></clipPath>',
         '<radialGradient id="paperglow" cx="0.5" cy="0.45" r="0.75">'

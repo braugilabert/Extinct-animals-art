@@ -18,7 +18,7 @@ META = {
     "slug": "ara_gossei",
     "kind": "bird",
     "landscape": "jamaica",
-    "status": "hipotética",
+    "status": "hipotética; posiblemente extinta",
     "description": (
         "Interpretación artística de Ara gossei, un guacamayo descrito a partir "
         "de relatos y una lámina posterior; su identificación con Ara tricolor "
@@ -26,6 +26,10 @@ META = {
     ),
     "reference_file": "references/species/ara_gossei.md",
     "source_url": "https://www.gbif.org/species/search?q=Ara%20gossei",
+    "distribution": "Jamaica",
+    "habitat": "bosque tropical",
+    "visual_notes": "guacamayo rojo; posible relación con Ara tricolor",
+    "extinction_notes": "caza hipotética e identificación discutida",
     "research_status": "investigación inicial: revisar la fuente enlazada y la ficha Markdown antes de publicar",
     "research_limitations": "la anatomía completa, el color y la cronología pueden estar incompletos o discutidos",
 }
