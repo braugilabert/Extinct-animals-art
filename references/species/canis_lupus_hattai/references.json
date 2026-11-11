@@ -1,0 +1,22 @@
+{
+  "slug": "canis_lupus_hattai",
+  "scientific_name": "Canis lupus hattai",
+  "common_name": "Lobo de Hokkaido",
+  "query": "\"Canis lupus hattai\"",
+  "references": [
+    {
+      "title": "File:Yezo wolf at Hokkaido University.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AYezo_wolf_at_Hokkaido_University.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Yezo_wolf_at_Hokkaido_University.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1315,
+      "artist": "<a href=\"https://en.wikipedia.org/wiki/User:William_Harris\" class=\"extiw\" title=\"en:User:William Harris\">William Harris</a>",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "date": "2016-01-18",
+      "local_file": "references/species/canis_lupus_hattai/01_File_Yezo_wolf_at_Hokkaido_University.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

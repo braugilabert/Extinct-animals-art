@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; siglo XVII",
     "description": "Interpretación artística de Lophopsittacus mauritianus, Loro de pico ancho de Mauricio. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/lophopsittacus_mauritianus.md",
+    "reference_file": "references/species/lophopsittacus_mauritianus/lophopsittacus_mauritianus.md",
     "source_url": "https://www.gbif.org/species/search?q=Lophopsittacus%20mauritianus",
     "distribution": "Mauricio",
     "habitat": "bosque y humedal",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Loro de pico ancho de Mauricio, probablemente grande y de cabeza voluminosa. La anatomía se conoce sobre todo por restos; usar pico ancho, cola relativamente corta y plumaje verde grisáceo o pardo como hipótesis.', 'visual_notes': 'Loro grande de cabeza y pico anchos; cola no extremadamente larga; coloración incierta.', 'drawing_notes': 'Distinguirlo de Ara: más compacto y de cola más corta, con pico ancho.', 'reference_taxa': 'Restos de Lophopsittacus y loros de pico robusto actuales.', 'profile': {'body_scale': 1.08, 'parrot': True, 'short_tail': True, 'large_bill': True}}
+RESEARCH_SOURCES = []

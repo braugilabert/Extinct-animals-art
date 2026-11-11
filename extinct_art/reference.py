@@ -25,7 +25,7 @@ def _average_rgb(path: Path) -> tuple[int, int, int] | None:
 
 def palette_from_references(project_root: Path, slug: str) -> dict[str, str]:
     """Devuelve colores de referencia, o un diccionario vacío si no hay imágenes."""
-    manifest_path = project_root / "references" / "species" / f"{slug}_images" / "references.json"
+    manifest_path = project_root / "references" / "species" / slug / "references.json"
     if not manifest_path.exists():
         return {}
     try:

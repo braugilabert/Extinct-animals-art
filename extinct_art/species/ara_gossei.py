@@ -24,7 +24,7 @@ META = {
         "de relatos y una lámina posterior; su identificación con Ara tricolor "
         "sigue siendo discutida."
     ),
-    "reference_file": "references/species/ara_gossei.md",
+    "reference_file": "references/species/ara_gossei/ara_gossei.md",
     "source_url": "https://www.gbif.org/species/search?q=Ara%20gossei",
     "distribution": "Jamaica",
     "habitat": "bosque tropical",
@@ -168,3 +168,8 @@ def draw(rng_for) -> str:
 
     p.append("</g>")
     return "".join(p)
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Taxón hipotético de Jamaica posiblemente relacionado con Ara tricolor. Representar un guacamayo rojo de cola larga, pero mantener la etiqueta de reconstrucción hipotética porque no hay una descripción anatómica completa.', 'visual_notes': 'Guacamayo rojo; cola larga, pico grande y zonas azules solo si se adopta la comparación con Ara tricolor.', 'drawing_notes': 'La relación con Ara tricolor es una hipótesis, no una identificación segura.', 'reference_taxa': 'Ara tricolor; Ara macao como comparación de forma, no de identidad.', 'profile': {'body_scale': 1.0, 'parrot': True, 'long_tail': True, 'large_bill': True}}
+RESEARCH_SOURCES = []

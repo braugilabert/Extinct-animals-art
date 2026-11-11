@@ -1,0 +1,22 @@
+{
+  "slug": "panthera_leo_melanochaitus",
+  "scientific_name": "Panthera leo melanochaitus",
+  "common_name": "León del Cabo",
+  "query": "\"Panthera leo melanochaitus\"",
+  "references": [
+    {
+      "title": "File:Cape Lion.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ACape_Lion.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cape_Lion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1128,
+      "artist": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "circa 1860<div style=\"display: none;\">date QS:P,+1860-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+      "local_file": "references/species/panthera_leo_melanochaitus/01_File_Cape_Lion.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

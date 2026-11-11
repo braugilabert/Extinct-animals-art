@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; siglo XIX",
     "description": "Interpretación artística de Lagorchestes leporides, Canguro rata de la isla de Bernier. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/lagorchestes_leporides.md",
+    "reference_file": "references/species/lagorchestes_leporides/lagorchestes_leporides.md",
     "source_url": "https://www.gbif.org/species/search?q=Lagorchestes%20leporides",
     "distribution": "sudeste de Australia",
     "habitat": "matorral y pradera",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Canguro liebre oriental; macrópodo pequeño de orejas largas, patas posteriores desarrolladas y cola larga. Las fuentes describen tonos rojizos o pardos, con vientre más claro.', 'visual_notes': 'Wallaby liebre; cuerpo compacto, patas posteriores largas, orejas grandes, cola larga y pelaje pardo rojizo.', 'drawing_notes': 'Usar una silueta saltadora y esbelta, no la de un canguro gigante.', 'reference_taxa': 'Lagorchestes hirsutus.', 'profile': {'body_scale': 0.84, 'marsupial': True, 'long_tail': True, 'long_legs': True}, 'colors': {'body': '#956449', 'body_hi': '#C09268', 'dark': '#4B352B', 'accent': '#8E4939'}}
+RESEARCH_SOURCES = []

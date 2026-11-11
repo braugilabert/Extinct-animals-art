@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta en libertad; hacia 1858",
     "description": "Interpretación artística de Panthera leo melanochaitus, León del Cabo. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/panthera_leo_melanochaitus.md",
+    "reference_file": "references/species/panthera_leo_melanochaitus/panthera_leo_melanochaitus.md",
     "source_url": "https://www.gbif.org/species/search?q=Panthera%20leo%20melanochaitus",
     "distribution": "región del Cabo",
     "habitat": "sabana y matorral",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'León del Cabo, población o subespecie histórica de Sudáfrica. Usar león grande de cuerpo musculoso; la melena oscura y extendida aparece en relatos pero no debe darse por segura para todos los machos.', 'visual_notes': 'León robusto de sabana; pelaje leonado y posible melena oscura, especialmente en machos.', 'drawing_notes': 'Mantener anatomía de león, no de tigre; la melena oscura es una variante documentada/discutida.', 'reference_taxa': 'Panthera leo; registros históricos del león del Cabo.', 'profile': {'body_scale': 1.18, 'mane': True, 'cat': True}, 'colors': {'body': '#876746', 'body_hi': '#B09268', 'dark': '#48352B', 'accent': '#604033'}}
+RESEARCH_SOURCES = []

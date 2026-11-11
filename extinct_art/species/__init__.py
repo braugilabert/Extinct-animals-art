@@ -5,7 +5,6 @@ import importlib
 import pkgutil
 from pathlib import Path
 
-from .drawing_data import DATA as DRAWING_DATA, RESEARCH_SOURCES
 from ..reference import palette_from_references
 
 
@@ -65,21 +64,17 @@ def _load_species():
             meta["location_landscape"] = inferred_landscape
             if meta.get("landscape") == "generic" and inferred_landscape != "generic":
                 meta["landscape"] = inferred_landscape
-            # Las especies existentes usan el catálogo común. Las nuevas
-            # pueden declarar DRAWING_DATA dentro de su propio módulo para
-            # mantener toda su lógica visual en un solo archivo. Si ambos
-            # existen, la información local tiene prioridad.
-            central_extra = DRAWING_DATA.get(meta.get("slug", module_info.name), {})
-            local_extra = getattr(module, "DRAWING_DATA", {})
-            extra = {**central_extra, **local_extra}
+            # Cada módulo contiene sus propios datos visuales: la ficha Python
+            # es la única fuente de datos ejecutable de esa especie.
+            extra = getattr(module, "DRAWING_DATA", {})
             for key in ("description", "visual_notes", "drawing_notes", "reference_taxa"):
                 if extra.get(key):
                     meta[key] = extra[key]
-            slug_sources = getattr(module, "RESEARCH_SOURCES", None) or RESEARCH_SOURCES.get(meta.get("slug", module_info.name))
+            slug_sources = getattr(module, "RESEARCH_SOURCES", None)
             if slug_sources:
                 meta["research_sources"] = slug_sources
             slug = meta.get("slug", module_info.name)
-            image_manifest = Path(__file__).resolve().parents[2] / "references" / "species" / f"{slug}_images" / "references.json"
+            image_manifest = Path(__file__).resolve().parents[2] / "references" / "species" / slug / "references.json"
             if image_manifest.exists():
                 try:
                     import json
@@ -109,6 +104,13 @@ def validate_species(project_root=None):
         missing = required - set(module.META)
         if missing:
             errors.append(f"{slug}: faltan META: {', '.join(sorted(missing))}")
+        drawing_data = getattr(module, "DRAWING_DATA", None)
+        if not isinstance(drawing_data, dict):
+            errors.append(f"{slug}: falta DRAWING_DATA en el mÃ³dulo Python")
+        else:
+            missing_visual = {"description", "visual_notes", "drawing_notes", "reference_taxa"} - set(drawing_data)
+            if missing_visual:
+                errors.append(f"{slug}: faltan DRAWING_DATA: {', '.join(sorted(missing_visual))}")
         if module.META.get("kind") not in {"bird", "mammal", "reptile"}:
             errors.append(f"{slug}: kind debe ser bird, mammal o reptile")
         if not str(module.META.get("source_url", "")).startswith(("http://", "https://")):

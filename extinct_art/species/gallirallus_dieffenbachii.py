@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; probablemente poco después de 1840",
     "description": "Interpretación artística de Gallirallus dieffenbachii, Rascón de Dieffenbach. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/gallirallus_dieffenbachii.md",
+    "reference_file": "references/species/gallirallus_dieffenbachii/gallirallus_dieffenbachii.md",
     "source_url": "https://www.gbif.org/species/search?q=Gallirallus%20dieffenbachii",
     "distribution": "islas Chatham",
     "habitat": "matorral y suelo forestal",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Rascón de Dieffenbach de Chatham; rascón insular no volador con patas fuertes y alas reducidas. El plumaje exacto es incierto; usar marrón grisáceo y pico corto-mediano.', 'visual_notes': 'Rascón terrestre robusto, alas reducidas, patas fuertes y cola corta.', 'drawing_notes': 'Cuerpo bajo y postura de ave caminadora; no darle la silueta de un pato.', 'reference_taxa': 'Gallirallus australis y otros rascones insulares.', 'profile': {'body_scale': 1.08, 'flightless': True, 'long_legs': True, 'ground_bird': True}}
+RESEARCH_SOURCES = []

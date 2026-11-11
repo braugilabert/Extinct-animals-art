@@ -1,0 +1,22 @@
+{
+  "slug": "ara_erythrocephala",
+  "scientific_name": "Ara erythrocephala",
+  "common_name": "Guacamayo de cabeza roja",
+  "query": "\"Ara erythrocephala\"",
+  "references": [
+    {
+      "title": "File:Ara erythrocephala.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAra_erythrocephala.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ara_erythrocephala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2220,
+      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Gerrard_Keulemans\" class=\"extiw\" title=\"w:en:John Gerrard Keulemans\"><span title=\"Dutch bird artist (1842-1912)\">John Gerrard Keulemans</span></a></bdi>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "before 1907<div style=\"display: none;\">date QS:P,+1907-00-00T00:00:00Z/7,P1326,+1907-00-00T00:00:00Z/9</div>",
+      "local_file": "references/species/ara_erythrocephala/01_File_Ara_erythrocephala.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

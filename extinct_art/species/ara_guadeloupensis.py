@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "probablemente extinta; siglo XVIII",
     "description": "Interpretación artística de Ara guadeloupensis, Guacamayo de Guadalupe. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/ara_guadeloupensis.md",
+    "reference_file": "references/species/ara_guadeloupensis/ara_guadeloupensis.md",
     "source_url": "https://www.gbif.org/species/search?q=Ara%20guadeloupensis",
     "distribution": "Guadalupe",
     "habitat": "bosque tropical",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Guacamayo de Guadalupe conocido sobre todo por relatos históricos. Usar silueta grande de Ara, cola larga y pico curvado; el plumaje no está confirmado y debe ser sobrio.', 'visual_notes': 'Guacamayo antillano grande; cola larga, pico robusto; coloración incierta.', 'drawing_notes': 'No convertir los relatos en una especie roja o azul concreta sin marcarlo como hipótesis.', 'reference_taxa': 'Ara tricolor y Ara macao para la morfología general.', 'profile': {'body_scale': 1.0, 'parrot': True, 'long_tail': True, 'large_bill': True}}
+RESEARCH_SOURCES = []

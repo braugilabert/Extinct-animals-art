@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; década de 1960",
     "description": "Interpretación artística de Lagorchestes asomatus, Canguro rata de la isla de Barrow. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/lagorchestes_asomatus.md",
+    "reference_file": "references/species/lagorchestes_asomatus/lagorchestes_asomatus.md",
     "source_url": "https://www.gbif.org/species/search?q=Lagorchestes%20asomatus",
     "distribution": "Australia central",
     "habitat": "desierto y matorral árido",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Canguro liebre del desierto central; pequeño macrópodo de patas traseras grandes, cuerpo ligero, orejas largas y cola larga. El pelaje probablemente era arena o pardo rojizo.', 'visual_notes': 'Macrópodo pequeño; patas traseras largas, orejas grandes, cola larga y pelaje arenoso.', 'drawing_notes': 'La postura debe sugerir salto y equilibrio con la cola, no un conejo de cuatro patas.', 'reference_taxa': 'Lagorchestes hirsutus y otros wallabies liebre.', 'profile': {'body_scale': 0.82, 'marsupial': True, 'long_tail': True, 'long_legs': True}}
+RESEARCH_SOURCES = []

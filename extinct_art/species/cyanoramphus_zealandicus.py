@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; siglo XIX",
     "description": "Interpretación artística de Cyanoramphus zealandicus, Perico de la isla Norfolk. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/cyanoramphus_zealandicus.md",
+    "reference_file": "references/species/cyanoramphus_zealandicus/cyanoramphus_zealandicus.md",
     "source_url": "https://www.gbif.org/species/search?q=Cyanoramphus%20zealandicus",
     "distribution": "Tahití",
     "habitat": "bosque tropical",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Perico de Tahití o kākāriki de frente negra. Fuentes históricas lo sitúan dentro de un grupo de pericos verdes de cola larga; el nombre respalda una frente oscura, pero el resto del plumaje debe considerarse reconstrucción.', 'visual_notes': 'Perico verde; frente negra sugerida por el nombre; cola larga y pico claro.', 'drawing_notes': 'La frente negra es una hipótesis nominal, no una paleta completamente documentada.', 'reference_taxa': 'Cyanoramphus novaezelandiae y otros pericos del Pacífico.', 'profile': {'body_scale': 0.82, 'parrot': True, 'long_tail': True, 'dark_face': True}, 'colors': {'body': '#619050', 'body_hi': '#A6B96A', 'dark': '#26372E', 'accent': '#A35A45'}}
+RESEARCH_SOURCES = ['https://www.birdsnz.org.nz/society-publications/checklist-2022/psittaciformes-parrots/']

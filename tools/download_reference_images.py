@@ -112,7 +112,7 @@ def main() -> int:
     else:
         species = species[args.offset:]
     for slug, scientific_name, common_name in species:
-        folder = REFERENCE_DIR / f"{slug}_images"
+        folder = REFERENCE_DIR / slug
         folder.mkdir(parents=True, exist_ok=True)
         manifest_path = folder / "references.json"
         previous_references = []

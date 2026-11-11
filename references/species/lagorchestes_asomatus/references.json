@@ -1,0 +1,22 @@
+{
+  "slug": "lagorchestes_asomatus",
+  "scientific_name": "Lagorchestes asomatus",
+  "common_name": "Canguro rata de la isla de Barrow",
+  "query": "\"Lagorchestes asomatus\"",
+  "references": [
+    {
+      "title": "File:Lag cons.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ALag_cons.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lag_cons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1033,
+      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:John_Gould\" class=\"extiw\" title=\"w:en:John Gould\"><span title=\"English ornithologist (1804–1881)\">John Gould</span></a></bdi>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1853",
+      "local_file": "references/species/lagorchestes_asomatus/01_File_Lag_cons.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

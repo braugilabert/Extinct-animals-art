@@ -31,7 +31,7 @@ Cada especie tiene dos archivos relacionados, pero cumplen funciones distintas:
 
 | Archivo | Para qué sirve |
 | --- | --- |
-| `references/species/<especie>.md` | Es la ficha de investigación y planificación. Guarda lo que sabemos, las fuentes, la distribución, el hábitat, los rasgos anatómicos, los colores posibles, las dudas y los bocetos. No genera imágenes. |
+| `references/species/<especie>/<especie>.md` | Es la ficha de investigación y planificación. Guarda lo que sabemos, las fuentes, la distribución, el hábitat, los rasgos anatómicos, los colores posibles, las dudas y los bocetos. No genera imágenes. |
 | `extinct_art/species/<especie>.py` | Es la ficha técnica del generador. Contiene los metadatos que usa el programa y la función `draw(rng_for)`, que devuelve las formas SVG del animal. Sí participa en la generación de imágenes. |
 
 La relación es esta:
@@ -162,7 +162,7 @@ references/
 
 ### Paso 3: completar la investigación
 
-Copia [`docs/plantilla-especie.md`](docs/plantilla-especie.md) y guárdala como `references/species/<identificador>.md`. Incluye nombre científico y nombres históricos o comunes, fecha y lugar aproximados de desaparición, descripción anatómica, hábitat, grado de certeza, fuentes, decisiones visuales y advertencias para no presentar una hipótesis como un hecho.
+Copia [`docs/plantilla-especie.md`](docs/plantilla-especie.md) y guárdala como `references/species/<identificador>/<identificador>.md`. Incluye nombre científico y nombres históricos o comunes, fecha y lugar aproximados de desaparición, descripción anatómica, hábitat, grado de certeza, fuentes, decisiones visuales y advertencias para no presentar una hipótesis como un hecho.
 
 Los bocetos pueden guardarse en `references/species/<identificador>_bocetos/`. Anota para cada imagen su autoría, licencia y enlace de origen. Un boceto puede orientar la postura, el tamaño, la silueta o los colores, pero no se incorpora automáticamente al SVG.
 
@@ -319,22 +319,14 @@ que las especies tengan diferencias de textura, color y ambiente.
 
 ## Datos visuales investigados y perfiles anatómicos
 
-Cada especie tiene ahora una capa de información visual en
-`extinct_art/species/drawing_data.py`. Esta capa se carga automáticamente al
-iniciar el catálogo y amplía `META` con:
+Cada especie guarda en su propio módulo Python `DRAWING_DATA` con la
+descripción útil para dibujar, los rasgos visuales, las hipótesis, los
+taxones de comparación y el perfil anatómico. Las fuentes importantes se
+guardan en `RESEARCH_SOURCES`. La ficha Markdown de la misma especie conserva
+la investigación completa y las decisiones de dibujo.
 
-- `description`: descripción práctica para construir la ilustración;
-- `visual_notes`: rasgos que deben verse en la silueta;
-- `drawing_notes`: qué está respaldado y qué debe tratarse como hipótesis;
-- `reference_taxa`: especies actuales usadas únicamente como comparación
-  funcional;
-- `profile`: rasgos que puede dibujar `species/base.py`;
-- `research_sources`: enlaces externos usados cuando hay información anatómica
-  especialmente detallada.
-
-Las fichas Markdown de `references/species/` contienen la misma información en
-la sección **Descripción útil para el dibujo**. La guía general está en
-[`references/species/drawing-data.md`](references/species/drawing-data.md).
+La guía general está en
+[`docs/crear_especie_desde_cero.md`](docs/crear_especie_desde_cero.md).
 
 ### Cómo se usan las especies actuales
 
@@ -373,8 +365,7 @@ python generate.py dusicyon_australis --describe
 python generate.py --validate
 ```
 
-Al añadir una especie nueva, completa también su entrada en
-`drawing_data.py`, actualiza la sección de descripción de su ficha Markdown y
+Al añadir una especie nueva, completa `DRAWING_DATA` dentro de su módulo, actualiza la sección de descripción de su ficha Markdown y
 marca claramente cualquier color, tamaño o conducta que sea una inferencia.
 
 ### Mejora reciente: las especies ya no comparten una silueta unica
@@ -410,7 +401,7 @@ medidas, patas cortas, orejas pequenas, pelaje mezclado y punta blanca de la
 cola documentados por fuentes zoologicas. Para *Psittacula exsul* se conservan
 los morfos verdes y azulados, las manchas rojas alares y el pico bicolor
 descritos en fuentes especializadas. Los enlaces concretos estan en
-`drawing_data.py` y en las fichas individuales.
+`DRAWING_DATA` y en las fichas individuales.
 
 Esto mejora la fidelidad, pero no convierte una reconstruccion en una
 fotografia: cuando una especie solo se conoce por relatos, huesos o una
@@ -428,7 +419,7 @@ python generate.py hoplodactylus_delcourti --no-png --out output/comparativa
 
 Si una especie nueva vuelve a parecer generica, no hay que tocar
 `generate.py`: se corrigen su `profile`, `description`, `visual_notes` y
-`drawing_notes` en `drawing_data.py`, se refleja la decision en su ficha
+`drawing_notes` en `DRAWING_DATA`, se refleja la decision en su ficha
 Markdown y se ejecuta `python generate.py --validate`.
 
 ## Referencias visuales descargadas
@@ -438,7 +429,7 @@ busca referencias en Wikimedia Commons y crea una carpeta por especie:
 
 ```text
 references/species/
-└── pinguinus_impennis_images/
+└── pinguinus_impennis/
     ├── 01_referencia.jpg
     ├── references.json
     └── README.md
@@ -455,7 +446,7 @@ con Pillow y obtiene una paleta media de referencia. `species/base.py` mezcla
 esa paleta de forma muy suave con los colores de `COLORS` y del perfil de la
 especie. Así las ilustraciones tienen en cuenta las láminas y bocetos usados,
 pero una imagen con un fondo o un mapa no puede cambiar por sí sola la
-anatomía: la forma sigue dependiendo de `META`, `PROFILE`, `drawing_data.py` y
+anatomía: la forma sigue dependiendo de `META`, `PROFILE`, `DRAWING_DATA` y
 la investigación Markdown.
 
 Si no hay imagen descargada o Pillow no está instalado, la generación continúa
@@ -508,8 +499,7 @@ Para crear una especie nueva desde cero, consulta la guía detallada:
 
 Las especies nuevas creadas con `new_species.py` pueden guardar sus datos
 visuales en `DRAWING_DATA` y sus fuentes en `RESEARCH_SOURCES` dentro de su
-propio módulo. `drawing_data.py` se conserva como catálogo central de las
-especies existentes para evitar duplicar información.
+propio módulo. Cada especie mantiene su propio `DRAWING_DATA`; no existe un catálogo central.
 
 Después de instalar las dependencias, el flujo habitual es muy sencillo:
 
@@ -520,7 +510,7 @@ python generate.py pinguinus_impennis --seed 12
 ```
 
 El comando principal carga automáticamente las fichas Markdown, los datos de
-`drawing_data.py`, los perfiles de `species/base.py`, las paletas, los
+`DRAWING_DATA`, los perfiles de `species/base.py`, las paletas, los
 paisajes, las referencias visuales locales y las texturas. No tienes que
 ejecutar `compose.py`, `base.py`, `reference.py` ni los módulos individuales
 de `species/` directamente.
@@ -528,9 +518,8 @@ de `species/` directamente.
 Los demás archivos cumplen funciones internas:
 
 - `extinct_art/species/*.py`: instrucciones visuales de cada especie;
-- `references/species/*.md`: investigación y decisiones de dibujo;
-- `drawing_data.py`: datos visuales ampliados que conectan investigación y
-  generación;
+- `references/species/<especie>/<especie>.md`: investigación y decisiones de dibujo;
+- `DRAWING_DATA` y `RESEARCH_SOURCES` dentro de cada módulo: datos visuales y fuentes;
 - `compose.py`, `base.py`, `brush.py`, `palettes.py` y `landscapes.py`:
   componentes reutilizables cargados por `generate.py`;
 - `tools/download_reference_images.py`: herramienta opcional para actualizar
@@ -542,19 +531,14 @@ entrada es siempre `generate.py`.
 
 ## Comprobacion de fichas Markdown y modulos Python
 
-La informacion no se mantiene duplicada manualmente en 58 archivos Python.
-Cada modulo contiene la identidad basica, la distribucion, el habitat y la
-funcion `draw()`. Al cargar el catalogo, `extinct_art/species/__init__.py`
-incorpora automaticamente a ese modulo los campos investigados de
-`drawing_data.py`: descripcion, rasgos visuales, guia de dibujo,
-comparaciones prudentes, perfil anatomico, colores y fuentes.
+Cada especie mantiene sus datos visuales dentro de su propio módulo Python, en
+`DRAWING_DATA`, junto con `RESEARCH_SOURCES` cuando hay fuentes anatómicas o
+históricas importantes. La ficha Markdown de esa especie conserva la
+investigación completa y las decisiones de dibujo.
 
-Esto significa que, durante una ejecucion normal, el modulo Python si recibe
-la informacion relevante de su ficha Markdown, pero existe una unica fuente
-de datos ampliados para evitar que la ficha y el codigo se separen. El comando
-`--validate` comprueba ahora que cada valor visual cargado tambien aparece en
-`references/species/<slug>.md`. Si falta algo, la validacion lo indica antes
-de generar imagenes.
+El cargador comprueba que el módulo tenga `META`, `DRAWING_DATA` y `draw()` y
+que su ficha exista en `references/species/<slug>/<slug>.md`. `--validate`
+comprueba además que la información visual del módulo aparece en la ficha.
 
 ## Ubicacion geografica en la lamina
 

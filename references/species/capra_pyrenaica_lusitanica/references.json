@@ -1,0 +1,22 @@
+{
+  "slug": "capra_pyrenaica_lusitanica",
+  "scientific_name": "Capra pyrenaica lusitanica",
+  "common_name": "Cabra montés portuguesa",
+  "query": "\"Capra pyrenaica lusitanica\"",
+  "references": [
+    {
+      "title": "File:Ilustração Portugueza, n 131, Lisboa, 24-8-1908 0017 Capra pyrenaica lusitanica.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AIlustra%C3%A7%C3%A3o_Portugueza%2C_n_131%2C_Lisboa%2C_24-8-1908_0017_Capra_pyrenaica_lusitanica.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Ilustra%C3%A7%C3%A3o_Portugueza%2C_n_131%2C_Lisboa%2C_24-8-1908_0017_Capra_pyrenaica_lusitanica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2526,
+      "artist": "<a class=\"external text\" href=\"https://pt.wikipedia.org/wiki/Ricardo_Jorge\">Dr. Ricardo Jorge</a>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1908-08-24",
+      "local_file": "references/species/capra_pyrenaica_lusitanica/01_File_Ilustra_o_Portugueza_n_131_Lisboa_24-8-1908_0017_Capra_pyrenaica_lusitanica.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

@@ -45,7 +45,7 @@ META = {{
     "landscape": "{landscape}",
     "status": "por verificar",
     "description": "Interpretación artística de {scientific_name}, {common_name}.",
-    "reference_file": "references/species/{slug}.md",
+    "reference_file": "references/species/{slug}/{slug}.md",
     "source_url": "https://www.gbif.org/species/search?q={scientific_name.replace(' ', '%20')}",
     "distribution": "por documentar",
     "habitat": "por documentar",
@@ -58,7 +58,7 @@ COLORS = {{}}
 PROFILE = {{"body_scale": 1.0}}
 
 # Datos visuales locales de esta especie. Completa estos campos despues de
-# investigar; no es necesario editar drawing_data.py para una especie nueva.
+# investigar; no es necesario editar otro archivo central para una especie nueva.
 DRAWING_DATA = {{
     "description": "Descripcion util para construir la silueta.",
     "visual_notes": "Rasgos que deben verse en la ilustracion.",
@@ -140,12 +140,13 @@ def main() -> int:
         raise SystemExit(f"Paisaje desconocido: {args.landscape}. Disponibles: {', '.join(LANDSCAPES)}")
 
     module_path = MODULE_DIR / f"{args.slug}.py"
-    reference_path = REFERENCE_DIR / f"{args.slug}.md"
+    species_reference_dir = REFERENCE_DIR / args.slug
+    reference_path = species_reference_dir / f"{args.slug}.md"
     if module_path.exists() or reference_path.exists():
         raise SystemExit(f"Ya existe una ficha o módulo para {args.slug}; no se sobrescribe.")
 
     MODULE_DIR.mkdir(parents=True, exist_ok=True)
-    REFERENCE_DIR.mkdir(parents=True, exist_ok=True)
+    species_reference_dir.mkdir(parents=True, exist_ok=True)
     module_path.write_text(module_text(args.slug, args.scientific_name, args.common_name, args.kind, args.landscape), encoding="utf-8")
     reference_path.write_text(reference_text(args.slug, args.scientific_name, args.common_name, args.kind), encoding="utf-8")
     print(f"Módulo: {module_path}")

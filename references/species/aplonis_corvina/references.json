@@ -1,0 +1,22 @@
+{
+  "slug": "aplonis_corvina",
+  "scientific_name": "Aplonis corvina",
+  "common_name": "Estornino de Kosrae",
+  "query": "\"Aplonis corvina\"",
+  "references": [
+    {
+      "title": "File:Aplonis corvina.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAplonis_corvina.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Aplonis_corvina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 1838,
+      "artist": "F.H. von Kittlitz",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1831",
+      "local_file": "references/species/aplonis_corvina/01_File_Aplonis_corvina.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

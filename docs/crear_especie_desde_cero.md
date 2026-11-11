@@ -6,7 +6,7 @@ registrarla manualmente en una lista.
 ## Flujo general
 
 ```text
-investigar → ficha Markdown → módulo Python → drawing_data.py
+investigar → ficha Markdown → módulo Python
 → perfil anatómico → validar → generar con generate.py
 ```
 
@@ -23,7 +23,7 @@ distribución, hábitat y estado. Creará:
 
 ```text
 extinct_art/species/nueva_especie.py
-references/species/nueva_especie.md
+references/species/nueva_especie/nueva_especie.md
 ```
 
 Usa minúsculas, guiones bajos y ningún acento en el nombre del archivo:
@@ -34,7 +34,7 @@ Raphus cucullatus → raphus_cucullatus
 
 ## 2. Completar la ficha Markdown
 
-Abre `references/species/nueva_especie.md` y completa especialmente
+Abre `references/species/nueva_especie/nueva_especie.md` y completa especialmente
 **Descripción útil para el dibujo**. Incluye, cuando existan fuentes fiables:
 
 - tamaño, peso y proporciones;
@@ -62,7 +62,7 @@ META = {
     "landscape": "generic",
     "status": "extinta",
     "description": "Descripción breve.",
-    "reference_file": "references/species/nueva_especie.md",
+    "reference_file": "references/species/nueva_especie/nueva_especie.md",
     "source_url": "https://www.gbif.org/",
     "distribution": "región o isla documentada",
     "habitat": "hábitat documentado",
@@ -104,48 +104,9 @@ RESEARCH_SOURCES = [
 
 El asistente ya incluye estas variables en el nuevo módulo.
 
-### Especies antiguas del proyecto
+No hay que editar un catálogo central: los datos visuales de esta especie viven en su propio módulo Python.
 
-Las especies que ya existían siguen usando `drawing_data.py` como catálogo
-central. Es intencionado: evita duplicar y mantener dos versiones de los datos
-de 58 especies. El cargador acepta ambos sistemas y da prioridad a los datos
-locales si una especie nueva los tiene.
-
-Si prefieres completar una especie antigua dentro de su módulo, puedes copiar
-allí `DRAWING_DATA` y `RESEARCH_SOURCES`; no es necesario migrar todas las
-demás especies.
-
-## 5. Completar `drawing_data.py`
-
-Añade en `extinct_art/species/drawing_data.py` una entrada con la misma clave
-que el `slug`:
-
-```python
-"nueva_especie": {
-    "description": "Descripción útil para construir la silueta.",
-    "visual_notes": "Rasgos que deben verse.",
-    "drawing_notes": "Datos documentados e hipótesis.",
-    "reference_taxa": "Especies actuales usadas solo como comparación.",
-    "profile": {
-        "body_scale": 1.0,
-        "parrot": True,
-    },
-    "colors": {
-        "body": "#607052",
-        "body_hi": "#A4B17C",
-        "dark": "#303A2A",
-        "light": "#E8DDB5",
-        "accent": "#A8503E",
-    },
-},
-```
-
-La ficha Markdown es la documentación completa; `drawing_data.py` contiene la
-versión estructurada que necesita el dibujo. Al cargar el catálogo,
-`species/__init__.py` combina automáticamente esos datos con `META` y
-`PROFILE` del módulo Python.
-
-## 6. Elegir el perfil anatómico
+## 5. Elegir el perfil anatómico
 
 Usa únicamente perfiles compatibles con la descripción:
 
@@ -184,7 +145,7 @@ También existen rasgos complementarios:
 No actives un rasgo solo porque produzca una imagen más llamativa: debe estar
 respaldado por una fuente o marcado como hipótesis.
 
-## 7. Añadir referencias visuales
+## 6. Añadir referencias visuales
 
 Si existen ilustraciones o fotografías con licencia adecuada:
 
@@ -195,14 +156,14 @@ python tools/download_reference_images.py --species nueva_especie --limit 3
 Se guardarán en:
 
 ```text
-references/species/nueva_especie_images/
+references/species/nueva_especie/
 ```
 
 Las referencias sirven para documentar rasgos y extraer una paleta orientativa.
 No se copian automáticamente dentro del animal: la anatomía sigue dependiendo
 de la ficha y del perfil.
 
-## 8. Validar
+## 7. Validar
 
 ```powershell
 python generate.py --validate
@@ -212,7 +173,7 @@ python generate.py nueva_especie --describe
 La validación comprueba módulos, fichas, metadatos obligatorios, URLs y que los
 datos visuales cargados también aparecen en la ficha Markdown.
 
-## 9. Generar
+## 8. Generar
 
 ```powershell
 python generate.py nueva_especie
@@ -228,7 +189,7 @@ python generate.py nueva_especie --landscape bosque
 
 La misma semilla produce la misma versión reproducible.
 
-## 10. Revisar el resultado
+## 9. Revisar el resultado
 
 Comprueba si:
 
@@ -241,10 +202,10 @@ Comprueba si:
 - no se han añadido detalles sin respaldo.
 
 Si parece genérica, corrige primero `profile`, `visual_notes` y
-`drawing_notes` en `drawing_data.py`. Si el perfil no basta, modifica o crea
+`drawing_notes` en `DRAWING_DATA`. Si el perfil no basta, modifica o crea
 una función anatómica específica en `base.py` o en el módulo de la especie.
 
-## 11. Qué archivos se ejecutan
+## 10. Qué archivos se ejecutan
 
 En el uso normal solo necesitas:
 
@@ -256,7 +217,7 @@ El flujo interno es:
 
 ```text
 generate.py → compose.py → species/__init__.py
-→ módulo de especie + drawing_data.py → base.py o draw() propio
+→ módulo de especie → base.py o draw() propio
 → paisajes, pinceles y paletas → SVG y PNG en output/
 ```
 

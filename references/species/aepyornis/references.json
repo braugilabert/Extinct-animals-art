@@ -1,0 +1,22 @@
+{
+  "slug": "aepyornis",
+  "scientific_name": "Aepyornis spp.",
+  "common_name": "Ave elefante de Madagascar",
+  "query": "\"Aepyornis\" elephant bird illustration",
+  "references": [
+    {
+      "title": "File:Aepyornis maximus (pajaroelfantgigante).png",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3AAepyornis_maximus_%28pajaroelfantgigante%29.png",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Aepyornis_maximus_%28pajaroelfantgigante%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 1600,
+      "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Pagodroma721&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Pagodroma721 (page does not exist)\">Pagodroma721</a>",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "date": "2023-01-27",
+      "local_file": "references/species/aepyornis/01_File_Aepyornis_maximus_pajaroelfantgigante_.png.png"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

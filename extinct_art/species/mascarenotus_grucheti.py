@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; siglo XVII-XVIII",
     "description": "Interpretación artística de Mascarenotus grucheti, Autillo de Reunión. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/mascarenotus_grucheti.md",
+    "reference_file": "references/species/mascarenotus_grucheti/mascarenotus_grucheti.md",
     "source_url": "https://www.gbif.org/species/search?q=Mascarenotus%20grucheti",
     "distribution": "Reunión",
     "habitat": "bosque insular",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Autillo de Reunión; pequeño búho de bosque, probablemente de cuerpo compacto, cabeza grande y ojos prominentes. El plumaje puede representarse pardo moteado, como hipótesis de un búho forestal.', 'visual_notes': 'Búho pequeño; cabeza redonda, ojos grandes y plumaje pardo moteado.', 'drawing_notes': 'La cabeza y los ojos son más seguros que el patrón de plumas.', 'reference_taxa': 'Mascarenotus murivorus y búhos del género Otus.', 'profile': {'body_scale': 0.78, 'owl': True, 'short_tail': True, 'speckled': True}}
+RESEARCH_SOURCES = []

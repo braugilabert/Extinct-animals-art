@@ -1,0 +1,22 @@
+{
+  "slug": "cyanoramphus_zealandicus",
+  "scientific_name": "Cyanoramphus zealandicus",
+  "common_name": "Perico de la isla Norfolk",
+  "query": "\"Cyanoramphus zealandicus\"",
+  "references": [
+    {
+      "title": "File:Cyanoramphus zealandicus 1849.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ACyanoramphus_zealandicus_1849.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Cyanoramphus_zealandicus_1849.jpg/1920px-Cyanoramphus_zealandicus_1849.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2040,
+      "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Marc_Athanase_Parfait_%C5%92illet_des_Murs\" class=\"extiw\" title=\"w:en:Marc Athanase Parfait Œillet des Murs\"><span title=\"French ornithologist, politician and historian (1804-1894)\">Marc Athanase Parfait Oeillet Des Murs</span></a></bdi>",
+      "license": "Public domain",
+      "license_url": "",
+      "date": "1849",
+      "local_file": "references/species/cyanoramphus_zealandicus/01_File_Cyanoramphus_zealandicus_1849.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}

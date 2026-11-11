@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; siglo XVIII",
     "description": "Interpretación artística de Mascarenotus murivorus, Autillo de Rodrigues. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/mascarenotus_murivorus.md",
+    "reference_file": "references/species/mascarenotus_murivorus/mascarenotus_murivorus.md",
     "source_url": "https://www.gbif.org/species/search?q=Mascarenotus%20murivorus",
     "distribution": "Rodrigues",
     "habitat": "bosque y zona abierta",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Autillo de Rodrigues; búho pequeño de ojos grandes y hábitos forestales. Usar cabeza redonda, cuerpo compacto, cola corta y tonos pardo grisáceos moteados.', 'visual_notes': 'Autillo pequeño; ojos grandes, cabeza redondeada y plumaje pardo moteado.', 'drawing_notes': 'No añadir penachos prominentes sin evidencia; la forma de autillo es suficiente.', 'reference_taxa': 'Mascarenotus grucheti y Otus actuales.', 'profile': {'body_scale': 0.8, 'owl': True, 'short_tail': True, 'speckled': True}}
+RESEARCH_SOURCES = []

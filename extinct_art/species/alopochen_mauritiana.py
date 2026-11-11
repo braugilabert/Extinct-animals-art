@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; antes de 1698",
     "description": "Interpretación artística de Alopochen mauritiana, Ganso de Mauricio. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/alopochen_mauritiana.md",
+    "reference_file": "references/species/alopochen_mauritiana/alopochen_mauritiana.md",
     "source_url": "https://www.gbif.org/species/search?q=Alopochen%20mauritiana",
     "distribution": "Mauricio",
     "habitat": "humedal y costa",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Oca insular de Mauricio, conocida de restos y referencias históricas. Representar un ganso de cuerpo compacto y cuello medio en humedal o costa; la coloración no está fijada.', 'visual_notes': 'Ganso de tamaño medio-grande; cuerpo redondeado, cuello medio y pico ancho; colores pardo oliva hipotéticos.', 'drawing_notes': 'Priorizar la silueta de anátida terrestre y marcar la coloración como inferida.', 'reference_taxa': 'Alopochen aegyptiaca y anátidas insulares actuales.', 'profile': {'body_scale': 1.02, 'waterbird': True, 'large_bill': True}}
+RESEARCH_SOURCES = []

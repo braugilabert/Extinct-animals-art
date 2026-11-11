@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; hacia 1875",
     "description": "Interpretación artística de Psittacula exsul, Periquito de Newton. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/psittacula_exsul.md",
+    "reference_file": "references/species/psittacula_exsul/psittacula_exsul.md",
     "source_url": "https://www.gbif.org/species/search?q=Psittacula%20exsul",
     "distribution": "Rodrigues",
     "habitat": "bosque y matorral",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Periquito de Newton de Rodrigues, de unos 40 cm según World Parrot Trust. Descripciones históricas mencionan morfos verdes o azul verdosos, cabeza más oscura, alas con rojo y pico superior rojo e inferior negro; separar estas variantes.', 'visual_notes': 'Periquito grande de cola larga; verde o azul verdoso, cabeza oscura, posible rojo alar y pico bicolor.', 'drawing_notes': 'La ficha permite una versión verde y otra azulada, pero no mezclarlas sin indicarlo como morfo histórico.', 'reference_taxa': 'Psittacula exsul; descripción histórica de Tafforet y World Parrot Trust.', 'profile': {'body_scale': 1.05, 'parrot': True, 'long_tail': True, 'large_bill': True}, 'colors': {'body': '#617F78', 'body_hi': '#8EAAA0', 'dark': '#263C3B', 'accent': '#B4473F'}}
+RESEARCH_SOURCES = ['https://parrots.org/encyclopedia/newtons-parakeet/', 'https://boc-online.org/bulletins/downloads/BBOC1343-Hume.pdf']

@@ -9,7 +9,7 @@ META = {
     "landscape": "generic",
     "status": "extinta; siglo XVIII",
     "description": "Interpretación artística de Pezophaps solitaria, Solitario de Rodrigues. Consultar la ficha de references/species antes de publicar.",
-    "reference_file": "references/species/pezophaps_solitaria.md",
+    "reference_file": "references/species/pezophaps_solitaria/pezophaps_solitaria.md",
     "source_url": "https://www.gbif.org/species/search?q=Pezophaps%20solitaria",
     "distribution": "Rodrigues",
     "habitat": "bosque seco y zona abierta",
@@ -27,3 +27,8 @@ COLORS = {}
 def draw(rng_for) -> str:
     return draw_taxon(rng_for, META, COLORS, PROFILE)
 
+
+
+# Datos visuales investigados y usados por draw().
+DRAWING_DATA = {'description': 'Solitario de Rodrigues, pariente del dodo y ave no voladora grande. Tenía cuerpo robusto, alas reducidas y patas fuertes; el plumaje se suele reconstruir en marrón grisáceo, con incertidumbre histórica.', 'visual_notes': 'Ave terrestre grande, cuerpo pesado, alas reducidas, patas robustas y cola corta; pardo grisáceo hipotético.', 'drawing_notes': 'La relación con el dodo ayuda a la silueta, pero no debe copiarse exactamente: el solitario era más esbelto y de cuello distinto.', 'reference_taxa': 'Pezophaps solitarius; dodo Raphus cucullatus como pariente, no como molde exacto.', 'profile': {'body_scale': 1.2, 'flightless': True, 'short_tail': True, 'ground_bird': True}}
+RESEARCH_SOURCES = []

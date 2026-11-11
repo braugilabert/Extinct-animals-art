@@ -1,0 +1,22 @@
+{
+  "slug": "bos_primigenius_primigenius",
+  "scientific_name": "Bos primigenius primigenius",
+  "common_name": "Uro",
+  "query": "\"Bos primigenius primigenius\"",
+  "references": [
+    {
+      "title": "File:Copenhagen Aurochse.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File%3ACopenhagen_Aurochse.jpg",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Copenhagen_Aurochse.jpg/1920px-Copenhagen_Aurochse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "mime": "image/jpeg",
+      "width": 1600,
+      "height": 2071,
+      "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/30669460@N06\">Marcus Sümnick</a> from Rostock, Germany",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "date": "2011-02-26 11:35",
+      "local_file": "references/species/bos_primigenius_primigenius/01_File_Copenhagen_Aurochse.jpg.jpg"
+    }
+  ],
+  "note": "Referencias visuales; no son copias incorporadas al SVG final."
+}
