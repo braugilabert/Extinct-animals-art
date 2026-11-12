@@ -403,6 +403,36 @@ los morfos verdes y azulados, las manchas rojas alares y el pico bicolor
 descritos en fuentes especializadas. Los enlaces concretos estan en
 `DRAWING_DATA` y en las fichas individuales.
 
+### Correccion de fidelidad anatomica aplicada
+
+El motor ya no decide la silueta únicamente por `kind` y `body_scale`. En
+`species/base.py` se añadió una capa de selección por taxón que activa formas
+más concretas cuando la documentación lo permite:
+
+- `Raphus cucullatus`: cuerpo redondeado y pesado, alas reducidas, pico ancho
+  y patas cortas: no se representa como un ave corredora genérica.
+- `Pezophaps solitaria`: paloma terrestre grande, erguida, con alas reducidas
+  y patas relativamente largas.
+- `Aepyornis`: ratita gigante con cuello y patas largos y escala corporal
+  reforzada.
+- `Pinguinus impennis` y `Phalacrocorax perspicillatus`: aves marinas con
+  postura erguida, alas cortas y pico diferenciado.
+- `Equus quagga quagga`: rayas concentradas en cabeza, cuello y tren delantero;
+  la grupa permanece predominantemente parda, como indican las descripciones.
+- `Pteropus`: membranas de murciélago y hocico de zorro, no alas de ave.
+
+Esta capa se combina con el `PROFILE`, `COLORS` y `DRAWING_DATA` de cada
+módulo. Las fichas Markdown describen la evidencia y el módulo Python la
+convierte en geometría SVG. Si una especie no tiene suficiente evidencia para
+una anatomía propia, el programa utiliza deliberadamente una reconstrucción
+prudente de su grupo, en vez de inventar detalles.
+
+Las referencias visuales descargadas ayudan a documentar y modular la paleta,
+pero no se copian automáticamente como silueta. Para una mejora anatómica
+real hay que traducir los rasgos descritos en `DRAWING_DATA` a una función
+específica o a un nuevo perfil de `base.py`. Así se evita confundir una imagen
+histórica, que puede ser errónea, con una prueba anatómica.
+
 Esto mejora la fidelidad, pero no convierte una reconstruccion en una
 fotografia: cuando una especie solo se conoce por relatos, huesos o una
 ilustracion antigua, la ficha mantiene la incertidumbre y separa hechos de

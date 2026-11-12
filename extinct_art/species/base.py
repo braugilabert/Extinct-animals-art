@@ -23,6 +23,37 @@ def _profile(meta) -> int:
     return int(hashlib.sha256(slug).hexdigest()[:8], 16) % 3
 
 
+def _species_profile(meta, profile):
+    """Completa el perfil con rasgos anatómicos derivados del taxón.
+
+    ``PROFILE`` sigue siendo la fuente principal de cada ficha, pero estos
+    ajustes protegen el resultado cuando una ficha antigua solo tenía escala
+    y color. No inventan una especie: activan una silueta conservadora para
+    taxones cuya forma general está bien documentada.
+    """
+    slug = str(meta.get("slug", "")).lower()
+    result = dict(profile or {})
+    if slug == "raphus_cucullatus":
+        result.update({"dodo": True, "round_body": True, "short_legs": True,
+                       "large_bill": True, "short_tail": True})
+    elif slug == "pezophaps_solitaria":
+        result.update({"solitaire": True, "round_body": True, "large_bill": True,
+                       "short_tail": True, "long_legs": True})
+    elif slug == "aepyornis":
+        result.update({"ratite": True, "long_neck": True, "long_legs": True,
+                       "giant": True, "body_scale": max(result.get("body_scale", 1.0), 1.25)})
+    elif slug in {"equus_quagga_quagga"}:
+        result.update({"quagga": True, "horse": True, "long_body": True,
+                       "stripes_front": True})
+    elif slug in {"pinguinus_impennis", "phalacrocorax_perspicillatus"}:
+        result.update({"waterbird": True, "short_wings": True, "upright": True})
+    elif slug.startswith("pteropus_"):
+        result.update({"bat": True, "long_body": True})
+    elif slug.startswith("panthera_"):
+        result.update({"cat": True})
+    return result
+
+
 def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
     """Dibuja una silueta de estudio con variación específica por especie."""
     kind = meta.get("kind", "bird")
@@ -35,6 +66,7 @@ def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
         if reference_palette.get(key) and key in c:
             c[key] = mix(c[key], reference_palette[key], .18)
     profile = {"body_scale": 1.0, "head_scale": 1.0, "tail_scale": 1.0, **(profile or {})}
+    profile = _species_profile(meta, profile)
     # Variación de tono estable: evita que todas las especies de un grupo tengan
     # exactamente el mismo color aunque no se haya documentado una coloración.
     if variant == 1:
@@ -59,6 +91,10 @@ def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
         if profile.get("gecko"):
             return _gecko(c, r, profile)
         return _reptile(c, r, variant, profile)
+    if profile.get("dodo"):
+        return _dodo(c, r, profile)
+    if profile.get("solitaire"):
+        return _solitaire(c, r, profile)
     if profile.get("ratite"):
         return _ratite(c, r, profile)
     if profile.get("owl"):
@@ -139,6 +175,38 @@ def _ground_bird(c, r, profile) -> str:
     out.append(wash("M88 176 C72 180 68 192 84 196 C97 194 106 186 112 176 Z", c["accent"], r, edge=0, jitter=.4))
     out.append(stroke("M160 278 Q151 323 148 368 M207 279 Q214 322 221 366", c["dark"], 4, r, jitter=.5))
     out.append(stroke("M148 368 l-10 6 M148 368 l4 7 M221 366 l-9 7 M221 366 l7 5", c["dark"], 2, r, jitter=.3))
+    return "".join(out + ["</g>"])
+
+
+def _dodo(c, r, profile) -> str:
+    """Dodo: cuerpo redondeado, alas pequeñas, pico ancho y patas cortas."""
+    s = profile.get("body_scale", 1.0)
+    out = [f'<g id="species" transform="translate(200 230) scale({s:.2f}) translate(-200 -230)">']
+    out.append(wash("M105 244 C108 195 145 164 201 165 C253 165 280 204 270 250 C262 291 215 312 157 298 C121 289 103 270 105 244 Z", c["body"], r, layers=3, jitter=.9))
+    out.append(wash("M137 218 C149 189 181 180 211 192 C226 207 222 245 204 260 C177 269 149 256 137 218 Z", c["body_hi"], r, opacity=.72, jitter=.7))
+    out.append(wash("M111 190 C91 169 95 140 119 125 C145 116 163 139 153 166 L140 207 Z", c["body_hi"], r, jitter=.6))
+    out.append(wash("M113 141 C91 133 70 143 68 160 C83 174 105 170 125 154 Z", c["light"], r, jitter=.4))
+    out.append(wash("M70 158 C79 173 103 173 120 156 C116 183 93 191 73 177 Z", c["accent"], r, jitter=.4, edge=0))
+    out.append('<circle cx="126" cy="145" r="4.5" fill="' + c["dark"] + '"/><circle cx="127.5" cy="143.5" r="1.3" fill="#F7F1E4"/>')
+    out.append(stroke("M111 254 Q105 292 106 326 M193 278 Q196 309 203 335", c["dark"], 5, r, jitter=.5))
+    out.append(stroke("M106 326 q-10 6 -16 3 M106 326 q7 7 14 5 M203 335 q-10 6 -17 3 M203 335 q8 6 15 4", c["dark"], 2.2, r, jitter=.3))
+    out.append(stroke("M150 199 Q183 218 216 200 M145 222 Q181 242 222 222 M151 247 Q182 263 211 249", c["dark"], 2, r, opacity=.32, jitter=.35))
+    return "".join(out + ["</g>"])
+
+
+def _solitaire(c, r, profile) -> str:
+    """Pezophaps: paloma terrestre grande, erguida y de alas reducidas."""
+    s = profile.get("body_scale", 1.0)
+    out = [f'<g id="species" transform="translate(200 230) scale({s:.2f}) translate(-200 -230)">']
+    out.append(wash("M123 253 C119 207 148 169 193 165 C235 163 264 196 258 244 C252 286 217 305 169 299 C139 294 126 278 123 253 Z", c["body"], r, layers=2, jitter=1.0))
+    out.append(wash("M145 219 C151 192 181 178 210 188 C225 204 225 240 208 256 C183 264 155 252 145 219 Z", c["body_hi"], r, opacity=.7, jitter=.7))
+    out.append(wash("M130 185 C120 158 132 133 157 127 C180 129 188 151 175 174 L158 205 Z", c["body_hi"], r, jitter=.6))
+    out.append(wash("M151 134 C132 124 113 132 108 148 C123 158 143 155 160 146 Z", c["light"], r, jitter=.4))
+    out.append('<circle cx="157" cy="139" r="4" fill="' + c["dark"] + '"/>')
+    out.append(wash("M109 148 C92 151 86 164 99 171 C113 169 122 158 127 149 Z", c["accent"], r, edge=0, jitter=.4))
+    out.append(stroke("M158 282 Q151 335 148 388 M214 282 Q220 335 226 388", c["dark"], 4, r, jitter=.5))
+    out.append(stroke("M148 388 l-10 6 M148 388 l5 7 M226 388 l-9 7 M226 388 l7 5", c["dark"], 2, r, jitter=.3))
+    out.append(stroke("M145 214 Q174 231 207 215 M143 237 Q177 252 211 237", c["dark"], 1.8, r, opacity=.3, jitter=.3))
     return "".join(out + ["</g>"])
 
 
@@ -245,6 +313,15 @@ def _ungulate(c, r, profile) -> str:
     out.append(wash(neck, c["body_hi"], r, layers=2, jitter=.7))
     out.append(wash("M116 132 C91 119 76 127 70 146 C88 155 107 153 125 144 Z", c["light"], r, jitter=.4))
     out.append('<circle cx="111" cy="137" r="4" fill="' + c["dark"] + '"/>')
+    if profile.get("quagga"):
+        # El quagga no llevaba rayas uniformes: se concentran en la cabeza,
+        # cuello y tren delantero, mientras la grupa queda parda.
+        for y, end in ((166, 150), (180, 158), (194, 165), (208, 171), (222, 177)):
+            out.append(stroke(f"M112 {y} Q130 {y+7} {end} {y+1}", c["dark"], 3.2, r,
+                              opacity=.78, jitter=.35))
+        out.append(wash("M198 183 C224 184 253 198 265 220 L252 255 C230 264 211 258 201 244 Z",
+                        c["body_hi"], r, opacity=.42, jitter=.6))
+        out.append(stroke("M220 259 Q228 286 236 316", c["body_hi"], 4, r, opacity=.65, jitter=.4))
     if profile.get("horns"):
         horn = "M118 127 C95 105 86 77 95 55 M133 124 C120 97 122 70 135 48"
         if profile.get("goat"):
