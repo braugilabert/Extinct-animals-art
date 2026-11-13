@@ -42,6 +42,9 @@ def _species_profile(meta, profile):
     elif slug == "aepyornis":
         result.update({"ratite": True, "long_neck": True, "long_legs": True,
                        "giant": True, "body_scale": max(result.get("body_scale", 1.0), 1.25)})
+    elif slug.startswith("dromaius_"):
+        result.update({"ratite": True, "long_neck": True, "long_legs": True,
+                       "body_scale": max(result.get("body_scale", 1.0), 1.15)})
     elif slug in {"equus_quagga_quagga"}:
         result.update({"quagga": True, "horse": True, "long_body": True,
                        "stripes_front": True})
@@ -51,6 +54,50 @@ def _species_profile(meta, profile):
         result.update({"bat": True, "long_body": True})
     elif slug.startswith("panthera_"):
         result.update({"cat": True})
+    elif slug.startswith(("ara_", "cyanoramphus_", "psittacula_", "lophopsittacus_", "necropsittacus_", "mascarinus_")):
+        result.update({"parrot": True, "long_tail": True, "large_bill": True})
+        if slug.startswith("ara_"):
+            result.update({"red_head": True, "long_tail": True})
+        elif slug.startswith("cyanoramphus_"):
+            result.update({"yellow_body": True, "long_tail": True})
+        elif slug == "psittacula_exsul":
+            result.update({"red_head": True, "dark_face": True})
+        elif slug.startswith("lophopsittacus_") or slug.startswith("necropsittacus_"):
+            result.update({"crest": True, "long_tail": True})
+    elif slug.startswith("mascarenotus_"):
+        result.update({"owl": True, "round_body": True})
+    elif slug.startswith(("nycticorax_", "threskiornis_", "prosobonia_", "phalacrocorax_")):
+        result.update({"waterbird": True, "long_neck": True, "long_beak": True})
+        if slug.startswith("nycticorax_"):
+            result.update({"dark_face": True, "crest": True})
+        elif slug.startswith("threskiornis_"):
+            result.update({"white_body": True, "long_neck": True})
+        elif slug.startswith("prosobonia_"):
+            result.update({"short_wings": True, "long_beak": True})
+    elif slug.startswith(("alopochen_", "porphyrio_")):
+        result.update({"waterbird": True, "long_beak": True})
+    elif slug.startswith(("gallirallus_", "aphanapteryx_", "coturnix_")):
+        result.update({"ground_bird": True})
+    elif slug.startswith(("aplonis_", "carpodacus_", "coua_", "megalurus_", "pomarea_", "zosterops_")):
+        result.update({"songbird": True})
+    elif slug.startswith(("canis_", "dusicyon_")):
+        result.update({"wolf": True, "pointed_muzzle": True, "bushy_tail": True})
+    elif slug.startswith("equus_"):
+        result.update({"horse": True, "long_body": True})
+    elif slug.startswith(("capra_", "bos_", "hippotragus_")):
+        result.update({"ungulate": True})
+    elif slug.startswith("lagorchestes_"):
+        result.update({"marsupial": True, "short_legs": True, "bushy_tail": True})
+    elif slug.startswith(("prolagus_", "quemisia_")):
+        result.update({"rodent": True, "short_legs": True})
+    elif slug.startswith("neovison_"):
+        result.update({"mustelid": True, "short_legs": True})
+    elif slug.startswith("ursus_"):
+        result.update({"bear": True, "round_body": True, "short_legs": True})
+    elif slug.startswith("borikenophis_"):
+        result.update({"snake_head": True, "long_body": True})
+    elif slug.startswith("hoplodactylus_"):
+        result.update({"gecko": True, "giant": True})
     return result
 
 
@@ -75,6 +122,8 @@ def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
         c["body_hi"] = lighten(c["body_hi"], .18)
         c["dark"] = darken(c["dark"], .12)
     r = rng_for(f"taxon:{meta.get('slug', meta.get('scientific_name', 'species'))}")
+    if meta.get("slug") == "aepyornis":
+        return _aepyornis(c, r, profile)
     if kind == "mammal":
         if profile.get("bat"):
             return _bat(c, r, profile)
@@ -112,8 +161,10 @@ def draw_taxon(rng_for, meta, colors=None, profile=None) -> str:
 
 def _ratite(c, r, profile) -> str:
     """Ave corredora: torso vertical, cuello largo y patas dominantes."""
-    s = profile.get("body_scale", 1.0)
-    out = [f'<g id="species" transform="translate(200 230) scale({s:.2f}) translate(-200 -230)">']
+    # El dibujo base ocupa casi todo el alto del cuadro. Se limita la escala
+    # para que perfiles antiguos como Dromaius 1.30 no corten cabeza ni patas.
+    s = min(profile.get("body_scale", 1.0), 1.08)
+    out = [f'<g id="species" transform="translate(200 250) scale({s:.2f}) translate(-200 -230)">']
     out.append(wash("M145 274 C132 225 145 182 178 174 C214 166 242 198 244 250 C242 288 218 316 180 314 C157 310 148 296 145 274 Z", c["body"], r, layers=2, jitter=1.1))
     out.append(wash("M180 181 C176 151 178 113 187 84 C191 73 202 73 207 85 C204 119 207 151 214 181 Z", c["body_hi"], r, layers=2, jitter=.7))
     out.append(wash("M181 83 C178 67 184 53 198 49 C214 52 220 66 214 83 C207 91 192 91 181 83 Z", c["body_hi"], r, jitter=.5))
@@ -122,6 +173,33 @@ def _ratite(c, r, profile) -> str:
     out.append(stroke("M166 276 Q158 348 150 414 M211 278 Q222 348 231 414", c["dark"], 5, r, jitter=.7))
     out.append(stroke("M150 414 q-10 7 -16 5 M150 414 q5 8 12 8 M231 414 q-9 8 -16 7 M231 414 q8 6 14 5", c["dark"], 2.2, r, jitter=.4))
     out.append(dry_brush("M155 210 Q190 230 229 210 M153 232 Q190 250 232 231 M157 254 Q190 272 226 253", c["body_hi"], r, width=2, passes=3, opacity=.34))
+    return "".join(out + ["</g>"])
+
+
+def _aepyornis(c, r, profile) -> str:
+    """Ave elefante: silueta grande, cuello robusto y cabeza pequeña.
+
+    Aepyornis necesita una composición propia: la escala de una ratita común
+    cortaba la cabeza y las patas contra el borde de la lámina.
+    """
+    out = ['<g id="species">']
+    body = "M104 292 C98 239 124 195 171 181 C224 165 278 199 287 257 C294 314 259 355 202 363 C145 368 109 342 104 292 Z"
+    neck = "M164 196 C150 164 132 128 137 91 C141 68 158 58 177 70 C172 108 178 151 198 188 L195 207 Z"
+    head = "M137 78 C119 70 111 53 122 38 C136 22 162 27 175 42 C185 56 177 75 159 84 Z"
+    beak = "M125 49 C105 44 91 52 88 64 C101 73 118 68 132 59 Z"
+    out.append(wash(body, c["body"], r, layers=3, jitter=1.0))
+    out.append(wash("M130 239 C138 204 163 190 194 194 C226 201 245 231 239 273 C232 306 207 327 174 322 C143 317 126 285 130 239 Z", c["body_hi"], r, opacity=.42, jitter=.8))
+    out.append(wash(neck, c["body_hi"], r, layers=2, jitter=.7))
+    out.append(wash(head, c["body_hi"], r, layers=2, jitter=.5))
+    out.append(wash(beak, c["dark"], r, jitter=.35, edge=0))
+    out.append('<circle cx="148" cy="49" r="4.2" fill="' + c["dark"] + '"/><circle cx="149.2" cy="47.7" r="1.2" fill="#F7F1E4"/>')
+    # Alas pequeñas, integradas en el cuerpo y no alas de ave voladora.
+    out.append(wash("M225 218 C258 225 269 254 255 290 C245 301 232 291 226 270 Z", c["dark"], r, opacity=.55, jitter=.7))
+    out.append(stroke("M146 231 Q184 249 223 229 M138 255 Q181 275 235 252 M140 282 Q184 301 226 281 M150 310 Q185 327 213 310", c["body_hi"], 2.2, r, opacity=.35, jitter=.4))
+    out.append(stroke("M157 345 Q150 386 146 427 M230 345 Q236 387 242 427", c["dark"], 5, r, jitter=.5))
+    out.append(stroke("M146 427 q-11 6 -18 4 M146 427 q7 7 15 5 M242 427 q-10 7 -18 4 M242 427 q8 6 16 4", c["dark"], 2.2, r, jitter=.3))
+    # Huevo discreto como referencia de la historia natural de la especie.
+    out.append('<ellipse cx="285" cy="407" rx="13" ry="17" fill="' + c["light"] + '" fill-opacity=".78"/>')
     return "".join(out + ["</g>"])
 
 
