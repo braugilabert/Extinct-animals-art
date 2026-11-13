@@ -48,6 +48,75 @@ python -m pip install -r requirements.txt
 necesitar Cairo nativo; Inkscape sirve como alternativa para convertir SVG a
 PNG. El programa avisa si no encuentra ningún motor de renderizado.
 
+## Configurar Ollama en Windows
+
+Ollama es opcional. El modo SVG funciona sin él. Si quieres que el proyecto
+analice automáticamente las fichas y las referencias visuales, sigue estos
+pasos desde PowerShell.
+
+### 1. Comprobar Ollama
+
+```powershell
+ollama --version
+```
+
+Si el comando no existe, instala Ollama para Windows desde su instalador
+oficial. Normalmente sus modelos se guardan en:
+
+```text
+C:\Users\Usuario\.ollama\models
+```
+
+Todos los modelos descargados con Ollama se mantienen juntos en esa carpeta.
+La ubicación y la variable `OLLAMA_MODELS` se explican en la
+[FAQ oficial de Ollama](https://docs.ollama.com/faq#where-are-models-stored).
+
+### 2. Descargar el modelo de visión
+
+```powershell
+ollama pull qwen2.5vl:7b
+```
+
+Comprueba que aparece junto a tus otros modelos:
+
+```powershell
+ollama list
+```
+
+### 3. Iniciar el servidor
+
+Abre la aplicación de Ollama desde el menú Inicio. Si el programa indica que
+no puede conectarse a `127.0.0.1:11434`, inicia el servidor manualmente:
+
+```powershell
+ollama serve
+```
+
+Deja esa ventana abierta mientras uses `--ollama`.
+
+### 4. Diferencia entre Ollama y PowerShell
+
+No escribas `python generate.py ...` dentro de la conversación de un modelo.
+`ollama run` abre un chat; el modelo interpreta el texto, pero no ejecuta
+comandos del proyecto. El comando `generate.py` se escribe en otra ventana de
+PowerShell, dentro de la carpeta del proyecto:
+
+```powershell
+cd "C:\Users\Usuario\Documents\cosas-ia\Extinct-animals-art"
+python generate.py aepyornis --ollama
+```
+
+Si pruebas el modelo manualmente con:
+
+```powershell
+ollama run qwen2.5vl:7b
+```
+
+puedes salir escribiendo `Ctrl+C` o `Ctrl+D`. Después vuelve a PowerShell y
+ejecuta `generate.py`. No es necesario escribir previamente una pregunta como
+`Describe una especie extinta con rigor científico`: el programa envía por sí
+solo la ficha, los metadatos y las referencias.
+
 
 ## Comandos importantes
 
@@ -58,7 +127,94 @@ python generate.py --validate
 python generate.py ara_gossei --no-png
 python generate.py ara_gossei --landscape jamaica --palette sepia --seed 19
 python generate.py --all-species --no-png
+python generate.py aepyornis --ollama
 ```
+
+`--ollama` no pinta un PNG desde cero: analiza la ficha Markdown, los metadatos
+Python y hasta cinco referencias visuales. Su análisis se aplica de forma
+limitada al SVG mediante rasgos anatómicos y colores permitidos, y además
+guarda un informe `output/<especie>_ollama.md` con anatomía, ambiente, prompt
+positivo, prompt negativo e incertidumbres. El informe permite revisar qué ha
+propuesto el modelo antes de convertirlo en una reconstrucción específica.
+
+Para usarlo:
+
+```powershell
+ollama serve
+ollama pull qwen2.5vl:7b
+python generate.py aepyornis --ollama --no-png
+```
+
+Si usas otro modelo de visión:
+
+```powershell
+python generate.py ara_gossei --ollama --ollama-model llama3.2-vision
+```
+
+Si Ollama no está iniciado, la generación normal funciona, pero el comando
+termina con un aviso y no crea el informe.
+
+## ComfyUI Portable por terminal
+
+ComfyUI es opcional y no hace falta instalar la aplicación de escritorio. En
+Windows con NVIDIA puedes usar el paquete portable oficial:
+
+[Descargar ComfyUI Portable NVIDIA](https://github.com/Comfy-Org/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z)
+
+En esta instalación se ha descomprimido en:
+
+```text
+C:\Users\Usuario\Documents\cosas-ia\ComfyUI-portable\ComfyUI_windows_portable
+```
+
+Si lo descomprimes en otra ubicación, sustituye esa ruta en los comandos.
+
+Dentro de esa carpeta se puede iniciar el servidor desde PowerShell:
+
+```powershell
+cd "C:\Users\Usuario\Documents\cosas-ia\ComfyUI-portable\ComfyUI_windows_portable"
+.\run_nvidia_gpu.bat
+```
+
+La ventana debe quedarse abierta y el servidor debe responder en
+`http://127.0.0.1:8188`. No es necesario utilizar la interfaz web: el proyecto
+se comunica con la API local.
+
+Coloca el checkpoint en:
+
+```text
+C:\Users\Usuario\Documents\cosas-ia\ComfyUI-portable\ComfyUI_windows_portable\ComfyUI\models\checkpoints
+```
+
+Para la primera prueba se ha utilizado `sd_xl_base_1.0.safetensors`, descargado
+desde [la ficha oficial de SDXL Base en Hugging Face](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/sd_xl_base_1.0.safetensors).
+El archivo debe quedar directamente dentro de `models\checkpoints`, no dentro
+de otra subcarpeta.
+
+Después puedes generar una versión pintada desde el proyecto:
+
+```powershell
+python generate.py pinguinus_impennis --comfyui `
+  --checkpoint "sd_xl_base_1.0.safetensors" `
+  --width 768 --comfyui-steps 20 --comfyui-denoise 0.55
+```
+
+El resultado será:
+
+```text
+output/pinguinus_impennis_acuarela_antigua_s7.svg
+output/pinguinus_impennis_acuarela_antigua_s7.png
+output/pinguinus_impennis_acuarela_antigua_s7_comfy.png
+```
+
+El SVG/PNG original es el boceto y `_comfy.png` es el resultado pintado por
+ComfyUI. Para una RTX 4060 de 8 GB empezaremos con 768×960, batch 1 y 24 pasos.
+El primer workflow usa img2img: recibe el boceto SVG rasterizado y lo pinta con
+el checkpoint y la descripción de la especie. La prueba inicial con
+`Pinguinus impennis` ya se ha ejecutado correctamente en la RTX 4060. Todavía
+no es el flujo final de referencias: el siguiente salto de calidad será añadir
+ControlNet/IP-Adapter para que las ilustraciones locales de cada especie
+influyan directamente en la composición y se conserve mejor la silueta.
 
 ## Organización de una especie
 
@@ -193,6 +349,7 @@ contienen `META` y `draw()`.
 | `extinct_art/landscapes.py` | Fondos regionales |
 | `extinct_art/palettes.py` | Paletas de la lámina |
 | `extinct_art/reference.py` | Manifiestos y paletas de referencias |
+| `extinct_art/ollama_support.py` | Análisis opcional local de fichas e imágenes |
 | `references/species/` | Fichas Markdown, fuentes e imágenes |
 | `output/` | Resultados generados; se puede regenerar |
 
